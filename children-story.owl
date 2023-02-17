@@ -552,6 +552,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Role</IRI>
+        <Literal>the function assumed or part played by a person or thing in a particular situation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Story</IRI>
         <Literal xml:lang="en">Base class for all entries</Literal>
     </AnnotationAssertion>
