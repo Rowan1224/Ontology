@@ -224,6 +224,9 @@
         <NamedIndividual IRI="#Asia"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Baby_Shark"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Biography"/>
     </Declaration>
     <Declaration>
@@ -463,6 +466,10 @@
         <NamedIndividual IRI="#Asia"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Story"/>
+        <NamedIndividual IRI="#Baby_Shark"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Non-Fiction"/>
         <NamedIndividual IRI="#Biography"/>
     </ClassAssertion>
@@ -517,6 +524,10 @@
     <ClassAssertion>
         <Class IRI="#Other"/>
         <NamedIndividual IRI="#Mermaid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Non-Human"/>
+        <NamedIndividual IRI="#Object"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Gender"/>
@@ -650,6 +661,11 @@
         <NamedIndividual IRI="#Protagonist"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTargetAudience"/>
+        <NamedIndividual IRI="#Baby_Shark"/>
+        <NamedIndividual IRI="#toddler"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasGender"/>
         <NamedIndividual IRI="#Jerry"/>
         <NamedIndividual IRI="#Male"/>
@@ -683,6 +699,16 @@
         <ObjectProperty IRI="#hasMedium"/>
         <NamedIndividual IRI="#TheLittleMermaid_1837"/>
         <NamedIndividual IRI="#book"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTargetAudience"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
+        <NamedIndividual IRI="#grade_schooler"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTargetAudience"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
+        <NamedIndividual IRI="#teen"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#byParties"/>
