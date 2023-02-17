@@ -1083,11 +1083,8 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
-<<<<<<< HEAD
         <AnonymousIndividual nodeID="_:genid2147483650"/>
-=======
         <AnonymousIndividual nodeID="_:genid2147483652"/>
->>>>>>> f39ed50db102d9e3b910ec9f82c1b545f214000b
         <Literal>One thing to figure out is whether or not this tells us what we want; that is, does this imply that we must have at least one property of humanCreator, which could be either hasAuthor or hasEditor?</Literal>
     </AnnotationAssertion>
 </Ontology>
