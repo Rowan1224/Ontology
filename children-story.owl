@@ -529,8 +529,28 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Audio</IRI>
+        <Literal>an engaging form of communication that combines speech and music into compelling narratives</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Characters</IRI>
         <Literal>person in a novel, play, or film. (oxford languages)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Continent</IRI>
+        <Literal>any of the world&apos;s main continuous expanses of land (Europe, Asia, Africa, North and South America, Australia, Antarctica). (Oxford Languages)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Country</IRI>
+        <Literal>a nation with its own government, occupying a particular territory. (oxford Languages)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Fiction</IRI>
+        <Literal>literature in the form of prose that describes imaginary events and people. (oxford languages)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -559,6 +579,31 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nature</IRI>
+        <Literal>the basic or inherent features, character, or qualities of something. (oxford language)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Non-Fiction</IRI>
+        <Literal>prose writing that is informative or factual rather than fictional. (oxford languages)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Parties</IRI>
+        <Literal>Entites that create stories</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Publication</IRI>
+        <Literal>the preparation and issuing of a book, journal, or piece of music for public sale. (oxford language)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Purpose</IRI>
+        <Literal>the reason for which something is done or created or for which something exists. (oxford languages)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Role</IRI>
         <Literal>the function assumed or part played by a person or thing in a particular situation.</Literal>
     </AnnotationAssertion>
@@ -571,6 +616,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Story</IRI>
         <Literal xml:lang="en">Story</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TargetAudience</IRI>
+        <Literal>a particular group at which a product such as a film or advertisement is aimed. (oxford languages)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
@@ -709,12 +759,12 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <AnonymousIndividual nodeID="_:genid2147483652"/>
+        <AnonymousIndividual nodeID="_:genid2147483650"/>
         <Literal>One thing to figure out is whether or not this tells us what we want; that is, does this imply that we must have at least one property of humanCreator, which could be either hasAuthor or hasEditor?</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <AnonymousIndividual nodeID="_:genid2147483653"/>
+        <AnonymousIndividual nodeID="_:genid2147483651"/>
         <Literal>One thing to figure out is whether or not this tells us what we want; that is, does this imply that we must have at least one property of humanCreator, which could be either hasAuthor or hasEditor?</Literal>
     </AnnotationAssertion>
 </Ontology>
