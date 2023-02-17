@@ -227,6 +227,12 @@
         <NamedIndividual IRI="#Disney"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Educational"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Entertainment"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Fantasy"/>
     </Declaration>
     <Declaration>
@@ -236,10 +242,16 @@
         <NamedIndividual IRI="#Folklore"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Hans_Christian_Anderson"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Historical"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Idioms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Indoctrination"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Jerry"/>
@@ -281,10 +293,16 @@
         <NamedIndividual IRI="#Tom"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Tom_and_Jerry"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#USA"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Ursula"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#William_Hanna"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#book"/>
@@ -417,6 +435,14 @@
         <NamedIndividual IRI="#Disney"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Purpose"/>
+        <NamedIndividual IRI="#Educational"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Purpose"/>
+        <NamedIndividual IRI="#Entertainment"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Fiction"/>
         <NamedIndividual IRI="#Fantasy"/>
     </ClassAssertion>
@@ -429,12 +455,20 @@
         <NamedIndividual IRI="#Folklore"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Hans_Christian_Anderson"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Non-Fiction"/>
         <NamedIndividual IRI="#Historical"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Genres"/>
         <NamedIndividual IRI="#Idioms"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Purpose"/>
+        <NamedIndividual IRI="#Indoctrination"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Characters"/>
@@ -489,12 +523,20 @@
         <NamedIndividual IRI="#Tom"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Story"/>
+        <NamedIndividual IRI="#Tom_and_Jerry"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#USA"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Characters"/>
         <NamedIndividual IRI="#Ursula"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#William_Hanna"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Lexical"/>
@@ -524,6 +566,10 @@
         <Class IRI="#Age"/>
         <NamedIndividual IRI="#4-12"/>
     </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1989"/>
+    </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasNature"/>
         <NamedIndividual IRI="#Ariel"/>
@@ -540,6 +586,11 @@
         <NamedIndividual IRI="#Animal"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#byParties"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
+        <NamedIndividual IRI="#Hans_Christian_Anderson"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasCharacter"/>
         <NamedIndividual IRI="#TheLittleMermaid_1837"/>
         <NamedIndividual IRI="#Ariel"/>
@@ -550,9 +601,34 @@
         <NamedIndividual IRI="#Ursula"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMedium"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
+        <NamedIndividual IRI="#book"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#byParties"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1989"/>
+        <NamedIndividual IRI="#Disney"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasNature"/>
         <NamedIndividual IRI="#Tom"/>
         <NamedIndividual IRI="#Animal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#byParties"/>
+        <NamedIndividual IRI="#Tom_and_Jerry"/>
+        <NamedIndividual IRI="#William_Hanna"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#Tom_and_Jerry"/>
+        <NamedIndividual IRI="#Jerry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#Tom_and_Jerry"/>
+        <NamedIndividual IRI="#Tom"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasNature"/>
@@ -982,12 +1058,12 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <AnonymousIndividual nodeID="_:genid2147483648"/>
+        <AnonymousIndividual nodeID="_:genid2147483650"/>
         <Literal>One thing to figure out is whether or not this tells us what we want; that is, does this imply that we must have at least one property of humanCreator, which could be either hasAuthor or hasEditor?</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <AnonymousIndividual nodeID="_:genid2147483649"/>
+        <AnonymousIndividual nodeID="_:genid2147483651"/>
         <Literal>One thing to figure out is whether or not this tells us what we want; that is, does this imply that we must have at least one property of humanCreator, which could be either hasAuthor or hasEditor?</Literal>
     </AnnotationAssertion>
 </Ontology>
