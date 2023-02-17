@@ -161,6 +161,9 @@
         <ObjectProperty IRI="#hasNature"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasOtherVersions"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasPurpose"/>
     </Declaration>
     <Declaration>
@@ -209,7 +212,13 @@
         <DataProperty IRI="#humanCreator"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Adam_and_Eve"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Adventure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Africa"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Animal"/>
@@ -224,10 +233,16 @@
         <NamedIndividual IRI="#Asia"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Australia"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Baby_Shark"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Biography"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Denmark"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Disney"/>
@@ -239,6 +254,9 @@
         <NamedIndividual IRI="#Entertainment"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Europe"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Fantasy"/>
     </Declaration>
     <Declaration>
@@ -248,16 +266,34 @@
         <NamedIndividual IRI="#Folklore"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Germany"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Goldilocks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Goldilocks_and_the_Three_Bears"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gretel"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Hans_Christian_Anderson"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hansel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hansel_and_Gretel"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Historical"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Idioms"/>
+        <NamedIndividual IRI="#Indoctrination"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Indoctrination"/>
+        <NamedIndividual IRI="#Japan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Jerry"/>
@@ -266,7 +302,13 @@
         <NamedIndividual IRI="#Male"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Mama_Built_a_Little_Nest"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Mermaid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#North_America"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Object"/>
@@ -278,13 +320,19 @@
         <NamedIndividual IRI="#Protagonist"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Proverb"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Religious"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SeaWitch"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Song"/>
+        <NamedIndividual IRI="#South_America"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#South_Korea"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Supporting"/>
@@ -296,6 +344,9 @@
         <NamedIndividual IRI="#TheLittleMermaid_1989"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#The_Poisonous_Mushroom"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Tom"/>
     </Declaration>
     <Declaration>
@@ -305,7 +356,13 @@
         <NamedIndividual IRI="#USA"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#United_Kingdom"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Ursula"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Warner_Bros"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#William_Hanna"/>
@@ -314,13 +371,25 @@
         <NamedIndividual IRI="#book"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#boy"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#comics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#girl"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#grade_schooler"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#man"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#pre-schooler"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#song"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#teen"/>
@@ -332,10 +401,16 @@
         <NamedIndividual IRI="#video"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#woman"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#1-3"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#13-18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#18+"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#3-5"/>
@@ -370,6 +445,18 @@
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dcterms:bibliographicCitation"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Children"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#TargetAudience"/>
+            <ObjectComplementOf>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#hasAge"/>
+                    <NamedIndividual IRI="#18+"/>
+                </ObjectHasValue>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Children&apos;s_Story"/>
         <ObjectIntersectionOf>
@@ -437,6 +524,10 @@
         <Class IRI="#Story"/>
     </SubClassOf>
     <DisjointClasses>
+        <Class IRI="#Author"/>
+        <Class IRI="#Organization"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Fiction"/>
         <Class IRI="#Non-Fiction"/>
     </DisjointClasses>
@@ -448,6 +539,10 @@
     <ClassAssertion>
         <Class IRI="#Genres"/>
         <NamedIndividual IRI="#Adventure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Continent"/>
+        <NamedIndividual IRI="#Africa"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Non-Human"/>
@@ -466,12 +561,26 @@
         <NamedIndividual IRI="#Asia"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Continent"/>
+        <NamedIndividual IRI="#Australia"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Story"/>
         <NamedIndividual IRI="#Baby_Shark"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Non-Fiction"/>
         <NamedIndividual IRI="#Biography"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class IRI="#Country"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasLocation"/>
+                <NamedIndividual IRI="#Europe"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+        <NamedIndividual IRI="#Denmark"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Organization"/>
@@ -486,6 +595,10 @@
         <NamedIndividual IRI="#Entertainment"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Continent"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Fiction"/>
         <NamedIndividual IRI="#Fantasy"/>
     </ClassAssertion>
@@ -498,20 +611,56 @@
         <NamedIndividual IRI="#Folklore"/>
     </ClassAssertion>
     <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class IRI="#Country"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasLocation"/>
+                <NamedIndividual IRI="#Europe"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+        <NamedIndividual IRI="#Germany"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Characters"/>
+        <NamedIndividual IRI="#Goldilocks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Story"/>
+        <NamedIndividual IRI="#Goldilocks_and_the_Three_Bears"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Characters"/>
+        <NamedIndividual IRI="#Gretel"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Author"/>
         <NamedIndividual IRI="#Hans_Christian_Anderson"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Characters"/>
+        <NamedIndividual IRI="#Hansel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Story"/>
+        <NamedIndividual IRI="#Hansel_and_Gretel"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Non-Fiction"/>
         <NamedIndividual IRI="#Historical"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Genres"/>
-        <NamedIndividual IRI="#Idioms"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Purpose"/>
         <NamedIndividual IRI="#Indoctrination"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class IRI="#Country"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasLocation"/>
+                <NamedIndividual IRI="#Asia"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+        <NamedIndividual IRI="#Japan"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Characters"/>
@@ -522,8 +671,16 @@
         <NamedIndividual IRI="#Male"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Story"/>
+        <NamedIndividual IRI="#Mama_Built_a_Little_Nest"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Other"/>
         <NamedIndividual IRI="#Mermaid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Continent"/>
+        <NamedIndividual IRI="#North_America"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Non-Human"/>
@@ -539,6 +696,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Genres"/>
+        <NamedIndividual IRI="#Proverb"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genres"/>
         <NamedIndividual IRI="#Religious"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -546,12 +707,18 @@
         <NamedIndividual IRI="#SeaWitch"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Audio"/>
-        <NamedIndividual IRI="#Song"/>
+        <Class IRI="#Continent"/>
+        <NamedIndividual IRI="#South_America"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Lexical"/>
-        <NamedIndividual IRI="#Song"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Country"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasLocation"/>
+                <NamedIndividual IRI="#Asia"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+        <NamedIndividual IRI="#South_Korea"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Role"/>
@@ -566,28 +733,53 @@
         <NamedIndividual IRI="#TheLittleMermaid_1989"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Story"/>
+        <NamedIndividual IRI="#The_Poisonous_Mushroom"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Characters"/>
         <NamedIndividual IRI="#Tom"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="#Story"/>
-            <ObjectComplementOf>
-                <ObjectSomeValuesFrom>
-                    <ObjectProperty IRI="#hasMedium"/>
-                    <Class IRI="#Lexical"/>
-                </ObjectSomeValuesFrom>
-            </ObjectComplementOf>
-        </ObjectIntersectionOf>
+        <Class IRI="#Story"/>
         <NamedIndividual IRI="#Tom_and_Jerry"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Country"/>
+        <ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasMedium"/>
+                <Class IRI="#Lexical"/>
+            </ObjectSomeValuesFrom>
+        </ObjectComplementOf>
+        <NamedIndividual IRI="#Tom_and_Jerry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class IRI="#Country"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasLocation"/>
+                <NamedIndividual IRI="#North_America"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
         <NamedIndividual IRI="#USA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class IRI="#Country"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasLocation"/>
+                <NamedIndividual IRI="#Europe"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+        <NamedIndividual IRI="#United_Kingdom"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Characters"/>
         <NamedIndividual IRI="#Ursula"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#Warner_Bros"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Author"/>
@@ -602,28 +794,76 @@
         <NamedIndividual IRI="#book"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Human"/>
+        <NamedIndividual IRI="#boy"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Visual"/>
         <NamedIndividual IRI="#comics"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Children"/>
+        <Class IRI="#Human"/>
+        <NamedIndividual IRI="#girl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class IRI="#Children"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasAge"/>
+                <NamedIndividual IRI="#5-12"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
         <NamedIndividual IRI="#grade_schooler"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Children"/>
+        <Class IRI="#Human"/>
+        <NamedIndividual IRI="#man"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class IRI="#Children"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasAge"/>
+                <NamedIndividual IRI="#3-5"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
         <NamedIndividual IRI="#pre-schooler"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Children"/>
+        <Class IRI="#Audio"/>
+        <NamedIndividual IRI="#song"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lexical"/>
+        <NamedIndividual IRI="#song"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class IRI="#Children"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasAge"/>
+                <NamedIndividual IRI="#13-18"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
         <NamedIndividual IRI="#teen"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Children"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Children"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasAge"/>
+                <NamedIndividual IRI="#1-3"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
         <NamedIndividual IRI="#toddler"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Visual"/>
         <NamedIndividual IRI="#video"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Human"/>
+        <NamedIndividual IRI="#woman"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Age"/>
@@ -635,16 +875,16 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Age"/>
+        <NamedIndividual IRI="#18+"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Age"/>
         <NamedIndividual IRI="#3-5"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Age"/>
         <NamedIndividual IRI="#5-12"/>
     </ClassAssertion>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
-        <NamedIndividual IRI="#TheLittleMermaid_1989"/>
-    </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasGender"/>
         <NamedIndividual IRI="#Ariel"/>
@@ -661,9 +901,104 @@
         <NamedIndividual IRI="#Protagonist"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLocation"/>
+        <NamedIndividual IRI="#Baby_Shark"/>
+        <NamedIndividual IRI="#South_Korea"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMedium"/>
+        <NamedIndividual IRI="#Baby_Shark"/>
+        <NamedIndividual IRI="#song"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPurpose"/>
+        <NamedIndividual IRI="#Baby_Shark"/>
+        <NamedIndividual IRI="#Entertainment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasTargetAudience"/>
         <NamedIndividual IRI="#Baby_Shark"/>
         <NamedIndividual IRI="#toddler"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGender"/>
+        <NamedIndividual IRI="#Goldilocks"/>
+        <NamedIndividual IRI="#Female"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNature"/>
+        <NamedIndividual IRI="#Goldilocks"/>
+        <NamedIndividual IRI="#girl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#Goldilocks_and_the_Three_Bears"/>
+        <NamedIndividual IRI="#Goldilocks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenres"/>
+        <NamedIndividual IRI="#Goldilocks_and_the_Three_Bears"/>
+        <NamedIndividual IRI="#Folklore"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTargetAudience"/>
+        <NamedIndividual IRI="#Goldilocks_and_the_Three_Bears"/>
+        <NamedIndividual IRI="#grade_schooler"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGender"/>
+        <NamedIndividual IRI="#Gretel"/>
+        <NamedIndividual IRI="#Female"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNature"/>
+        <NamedIndividual IRI="#Gretel"/>
+        <NamedIndividual IRI="#girl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGender"/>
+        <NamedIndividual IRI="#Hansel"/>
+        <NamedIndividual IRI="#Male"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNature"/>
+        <NamedIndividual IRI="#Hansel"/>
+        <NamedIndividual IRI="#boy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#Hansel_and_Gretel"/>
+        <NamedIndividual IRI="#Gretel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#Hansel_and_Gretel"/>
+        <NamedIndividual IRI="#Hansel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenres"/>
+        <NamedIndividual IRI="#Hansel_and_Gretel"/>
+        <NamedIndividual IRI="#Folklore"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLocation"/>
+        <NamedIndividual IRI="#Hansel_and_Gretel"/>
+        <NamedIndividual IRI="#Germany"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMedium"/>
+        <NamedIndividual IRI="#Hansel_and_Gretel"/>
+        <NamedIndividual IRI="#book"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPurpose"/>
+        <NamedIndividual IRI="#Hansel_and_Gretel"/>
+        <NamedIndividual IRI="#Educational"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTargetAudience"/>
+        <NamedIndividual IRI="#Hansel_and_Gretel"/>
+        <NamedIndividual IRI="#grade_schooler"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasGender"/>
@@ -674,6 +1009,21 @@
         <ObjectProperty IRI="#hasNature"/>
         <NamedIndividual IRI="#Jerry"/>
         <NamedIndividual IRI="#Animal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLocation"/>
+        <NamedIndividual IRI="#Mama_Built_a_Little_Nest"/>
+        <NamedIndividual IRI="#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPurpose"/>
+        <NamedIndividual IRI="#Mama_Built_a_Little_Nest"/>
+        <NamedIndividual IRI="#Educational"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTargetAudience"/>
+        <NamedIndividual IRI="#Mama_Built_a_Little_Nest"/>
+        <NamedIndividual IRI="#pre-schooler"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#byParties"/>
@@ -696,9 +1046,24 @@
         <NamedIndividual IRI="#Fantasy"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenres"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
+        <NamedIndividual IRI="#Folklore"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLocation"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
+        <NamedIndividual IRI="#Denmark"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasMedium"/>
         <NamedIndividual IRI="#TheLittleMermaid_1837"/>
         <NamedIndividual IRI="#book"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOtherVersions"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1989"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasTargetAudience"/>
@@ -731,9 +1096,24 @@
         <NamedIndividual IRI="#Fantasy"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenres"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1989"/>
+        <NamedIndividual IRI="#Folklore"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLocation"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1989"/>
+        <NamedIndividual IRI="#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasMedium"/>
         <NamedIndividual IRI="#TheLittleMermaid_1989"/>
         <NamedIndividual IRI="#video"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPurpose"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1989"/>
+        <NamedIndividual IRI="#Entertainment"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasTargetAudience"/>
@@ -746,6 +1126,21 @@
         <NamedIndividual IRI="#teen"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLocation"/>
+        <NamedIndividual IRI="#The_Poisonous_Mushroom"/>
+        <NamedIndividual IRI="#Germany"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPurpose"/>
+        <NamedIndividual IRI="#The_Poisonous_Mushroom"/>
+        <NamedIndividual IRI="#Indoctrination"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTargetAudience"/>
+        <NamedIndividual IRI="#The_Poisonous_Mushroom"/>
+        <NamedIndividual IRI="#grade_schooler"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasGender"/>
         <NamedIndividual IRI="#Tom"/>
         <NamedIndividual IRI="#Male"/>
@@ -754,6 +1149,11 @@
         <ObjectProperty IRI="#hasNature"/>
         <NamedIndividual IRI="#Tom"/>
         <NamedIndividual IRI="#Animal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#byParties"/>
+        <NamedIndividual IRI="#Tom_and_Jerry"/>
+        <NamedIndividual IRI="#Warner_Bros"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#byParties"/>
@@ -769,6 +1169,11 @@
         <ObjectProperty IRI="#hasCharacter"/>
         <NamedIndividual IRI="#Tom_and_Jerry"/>
         <NamedIndividual IRI="#Tom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMedium"/>
+        <NamedIndividual IRI="#Tom_and_Jerry"/>
+        <NamedIndividual IRI="#video"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasTargetAudience"/>
@@ -824,6 +1229,18 @@
         <ObjectProperty IRI="#isPublication"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasAge"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasGender"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasOtherVersions"/>
+    </SymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasLocation"/>
+    </TransitiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#byParties"/>
         <Class IRI="#Publication"/>
@@ -845,16 +1262,16 @@
         <Class IRI="#Story"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasLocation"/>
-        <Class IRI="#Publication"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasMedium"/>
         <Class IRI="#Story"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasNature"/>
         <Class IRI="#Characters"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOtherVersions"/>
+        <Class IRI="#Story"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPurpose"/>
@@ -903,6 +1320,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasNature"/>
         <Class IRI="#Nature"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOtherVersions"/>
+        <Class IRI="#Story"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasPurpose"/>
@@ -1105,6 +1526,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#TargetAudience</IRI>
         <Literal>a particular group at which a product such as a film or advertisement is aimed. (oxford languages)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <IRI>#TheLittleMermaid_1989</IRI>
+        <IRI>#TheLittleMermaid_1837</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
