@@ -1,0 +1,713 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://children-story.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://children-story.owl">
+    <Prefix name="" IRI="https://children-story.owl"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="wot" IRI="http://xmlns.com/wot/0.1/"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="units" IRI="http://visus.mit.edu/fontomri/0.01/units.owl#"/>
+    <Prefix name="bibtex" IRI="http://purl.org/net/nknouf/ns/bibtex#"/>
+    <Prefix name="dctype" IRI="http://purl.org/dc/dcmitype/"/>
+    <Prefix name="dcterms" IRI="http://purl.org/dc/terms/"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal xml:lang="mit.edu&gt;">Nick Knouf &lt;nknouf</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <Literal>2003-12-29</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal>Transformation of bibTeX into an OWL ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://visus.mit.edu/bibtex/0.01/bibtex.owl</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <Literal>fMRI, ontology, fMRI analysis, foo, bar</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal>bibtex.owl: an ontology for bibTeX entries</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Possible ontology to describe bibTeX entries.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>bibtex ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>0.01</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Age"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Audio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Author"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Characters"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Children"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Continent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Genres"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lexical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Non-Fiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Non-Human"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parties"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Publication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Purpose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Story"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TargetAudience"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Visual"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#byParties"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAge"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCharacters"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGender"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGenres"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMedium"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNature"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPurpose"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRole"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTargetAudience"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPublication"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAuthor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasContents"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEdition"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEditor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLanguage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPublisher"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSeries"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTitle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasURL"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#howPublished"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#humanCreator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Asia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Disney"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Song"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#USA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#book"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#comics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#video"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:abstract"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:bibliographicCitation"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Audio"/>
+        <Class IRI="#Medium"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Author"/>
+        <Class IRI="#Parties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Children"/>
+        <Class IRI="#TargetAudience"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Continent"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Country"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fiction"/>
+        <Class IRI="#Genres"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <Class IRI="#Nature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lexical"/>
+        <Class IRI="#Medium"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Non-Fiction"/>
+        <Class IRI="#Genres"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Non-Human"/>
+        <Class IRI="#Nature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <Class IRI="#Parties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Visual"/>
+        <Class IRI="#Medium"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Continent"/>
+        <NamedIndividual IRI="#Asia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#Disney"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Audio"/>
+        <NamedIndividual IRI="#Song"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lexical"/>
+        <NamedIndividual IRI="#Song"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#USA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lexical"/>
+        <NamedIndividual IRI="#book"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Visual"/>
+        <NamedIndividual IRI="#book"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Visual"/>
+        <NamedIndividual IRI="#comics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Visual"/>
+        <NamedIndividual IRI="#video"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCharacters"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasLocation"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNature"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPurpose"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasRole"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isPublication"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#byParties"/>
+        <Class IRI="#Publication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAge"/>
+        <Class IRI="#Children"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCharacters"/>
+        <Class IRI="#Story"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGender"/>
+        <Class IRI="#Characters"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGenres"/>
+        <Class IRI="#Story"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLocation"/>
+        <Class IRI="#Publication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMedium"/>
+        <Class IRI="#Story"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNature"/>
+        <Class IRI="#Characters"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPurpose"/>
+        <Class IRI="#Story"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRole"/>
+        <Class IRI="#Characters"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTargetAudience"/>
+        <Class IRI="#Story"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isPublication"/>
+        <Class IRI="#Story"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#byParties"/>
+        <Class IRI="#Parties"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAge"/>
+        <Class IRI="#Age"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCharacters"/>
+        <Class IRI="#Characters"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGender"/>
+        <Class IRI="#Gender"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGenres"/>
+        <Class IRI="#Genres"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLocation"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMedium"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNature"/>
+        <Class IRI="#Nature"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPurpose"/>
+        <Class IRI="#Purpose"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRole"/>
+        <Class IRI="#Role"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTargetAudience"/>
+        <Class IRI="#TargetAudience"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isPublication"/>
+        <Class IRI="#Publication"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasAuthor"/>
+        <DataProperty IRI="#humanCreator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasEditor"/>
+        <DataProperty IRI="#humanCreator"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAuthor"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasContents"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEdition"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEditor"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLanguage"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPublisher"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSeries"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTitle"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasURL"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasYear"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#howPublished"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#humanCreator"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
+        <Literal>this is a test title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Age</IRI>
+        <Literal>the length of time that a person has lived or a thing has existed: Oxford Languages</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Characters</IRI>
+        <Literal>person in a novel, play, or film. (oxford languages)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Gender</IRI>
+        <Literal>the male sex or the female sex, especially when considered with reference to social and cultural differences rather than biological ones, or one of a range of other identities that do not correspond to established ideas of male and female. (oxford languages)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Genres</IRI>
+        <Literal>a style or category of art, music, or literature. (oxford languages)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Location</IRI>
+        <Literal>The place where story was published</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Medium</IRI>
+        <Literal xml:lang="en">The format of the story.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Medium</IRI>
+        <Literal xml:lang="en">Medium</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Story</IRI>
+        <Literal xml:lang="en">Base class for all entries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Story</IRI>
+        <Literal xml:lang="en">Story</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#hasAuthor</IRI>
+        <Literal>This is tricky due to the fact that order is not (generally) preserved in RDF documents.  The problem arises when you want to have an author list where the order is _extremely_ important.  How shall we do that?  Perhaps we want to define &quot;hasPrimaryAuthor&quot;, &quot;hasSecondaryAuthor&quot;, &quot;hasTertiaryAuthor&quot;, and &quot;hasRemainingAuthors&quot;, or something of that sort.  This will be have to given more thought.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasAuthor</IRI>
+        <Literal xml:lang="en">The name(s) of the author(s), in the format described in the LaTeX book.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAuthor</IRI>
+        <Literal xml:lang="en">has author</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasContents</IRI>
+        <Literal xml:lang="en">A Table of Contents.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasContents</IRI>
+        <Literal xml:lang="en">has contents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasEdition</IRI>
+        <Literal xml:lang="en">The edition of a book--for example, &quot;Second&quot;. This should be an ordinal, and should have the first letter capitalized, as shown here; the standard styles convert to lower case when necessary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasEdition</IRI>
+        <Literal xml:lang="en">has edition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#hasEditor</IRI>
+        <Literal>Again, the same issues that arose with the &quot;hasAuthor&quot; property apply here.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasEditor</IRI>
+        <Literal xml:lang="en">Name(s) of editor(s), typed as indicated in the LaTeX book. If there is also an author field, then the editor field gives the editor of the book or collection in which the reference appears.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasEditor</IRI>
+        <Literal xml:lang="en">has editor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasLanguage</IRI>
+        <Literal xml:lang="en">The language the document is in.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLanguage</IRI>
+        <Literal xml:lang="en">has language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#hasPublisher</IRI>
+        <Literal>This is a case where an ObjectProperty might be a better choice, where the range is some set of publisher names defined in another ontology.  That would allow all of the metadata for the publisher to be incorporated as needed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasPublisher</IRI>
+        <Literal xml:lang="en">The publisher&apos;s name.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPublisher</IRI>
+        <Literal xml:lang="en">has publisher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSeries</IRI>
+        <Literal xml:lang="en">The name of a series or set of books. When citing an entire book, the the title field gives its title and an optional series field gives the name of a series or multi-volume set in which the book is published.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSeries</IRI>
+        <Literal xml:lang="en">has series</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasTitle</IRI>
+        <Literal xml:lang="en">The work&apos;s title, typed as explained in the LaTeX book.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTitle</IRI>
+        <Literal xml:lang="en">has title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasURL</IRI>
+        <Literal xml:lang="en">The WWW Universal Resource Locator that points to the item being referenced. This often is used for technical reports to point to the ftp or web site where the postscript source of the report is located.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasURL</IRI>
+        <Literal xml:lang="en">has URL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasYear</IRI>
+        <Literal xml:lang="en">The year of publication or, for an unpublished work, the year it was written. Generally it should consist of four numerals, such as 1984, although the standard styles can handle any year whose last four nonpunctuation characters are numerals, such as &apos;(about 1984)&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasYear</IRI>
+        <Literal xml:lang="en">has year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#howPublished</IRI>
+        <Literal xml:lang="en">How something strange has been published. The first word should be capitalized.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#howPublished</IRI>
+        <Literal xml:lang="en">how published</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#humanCreator</IRI>
+        <Literal xml:lang="en">A generic human creator category, necessary in order to contain both author and editor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#humanCreator</IRI>
+        <Literal xml:lang="en">human creator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <AnonymousIndividual nodeID="_:genid2147483648"/>
+        <Literal>One thing to figure out is whether or not this tells us what we want; that is, does this imply that we must have at least one property of humanCreator, which could be either hasAuthor or hasEditor?</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
+        <Literal>One thing to figure out is whether or not this tells us what we want; that is, does this imply that we must have at least one property of humanCreator, which could be either hasAuthor or hasEditor?</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
