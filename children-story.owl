@@ -209,6 +209,9 @@
         <NamedIndividual IRI="#Disney"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Female"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Song"/>
     </Declaration>
     <Declaration>
@@ -305,6 +308,10 @@
     <ClassAssertion>
         <Class IRI="#Organization"/>
         <NamedIndividual IRI="#Disney"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gender"/>
+        <NamedIndividual IRI="#Female"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Audio"/>
@@ -702,12 +709,12 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <AnonymousIndividual nodeID="_:genid2147483648"/>
+        <AnonymousIndividual nodeID="_:genid2147483652"/>
         <Literal>One thing to figure out is whether or not this tells us what we want; that is, does this imply that we must have at least one property of humanCreator, which could be either hasAuthor or hasEditor?</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <AnonymousIndividual nodeID="_:genid2147483649"/>
+        <AnonymousIndividual nodeID="_:genid2147483653"/>
         <Literal>One thing to figure out is whether or not this tells us what we want; that is, does this imply that we must have at least one property of humanCreator, which could be either hasAuthor or hasEditor?</Literal>
     </AnnotationAssertion>
 </Ontology>
