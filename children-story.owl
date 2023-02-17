@@ -110,6 +110,9 @@
         <Class IRI="#Organization"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Other"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Parties"/>
     </Declaration>
     <Declaration>
@@ -137,7 +140,7 @@
         <ObjectProperty IRI="#hasAge"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasCharacters"/>
+        <ObjectProperty IRI="#hasCharacter"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasGender"/>
@@ -203,19 +206,85 @@
         <DataProperty IRI="#humanCreator"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Adventure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Animal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Antagonist"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ariel"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Asia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Biography"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Disney"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Fantasy"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Female"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Folklore"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Historical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Idioms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Jerry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Male"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mermaid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Object"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Others"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Protagonist"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Religious"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SeaWitch"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Song"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Supporting"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheLittleMermaid_1989"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tom"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#USA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ursula"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#book"/>
@@ -225,6 +294,15 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#video"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#0-3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#13-18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#4-12"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
@@ -298,20 +376,93 @@
         <Class IRI="#Parties"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Other"/>
+        <Class IRI="#Nature"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Visual"/>
         <Class IRI="#Medium"/>
     </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Human"/>
+        <Class IRI="#Non-Human"/>
+        <Class IRI="#Other"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Genres"/>
+        <NamedIndividual IRI="#Adventure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Non-Human"/>
+        <NamedIndividual IRI="#Animal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Role"/>
+        <NamedIndividual IRI="#Antagonist"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Characters"/>
+        <NamedIndividual IRI="#Ariel"/>
+    </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Continent"/>
         <NamedIndividual IRI="#Asia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Non-Fiction"/>
+        <NamedIndividual IRI="#Biography"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Organization"/>
         <NamedIndividual IRI="#Disney"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Fiction"/>
+        <NamedIndividual IRI="#Fantasy"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Gender"/>
         <NamedIndividual IRI="#Female"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genres"/>
+        <NamedIndividual IRI="#Folklore"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Non-Fiction"/>
+        <NamedIndividual IRI="#Historical"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genres"/>
+        <NamedIndividual IRI="#Idioms"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Characters"/>
+        <NamedIndividual IRI="#Jerry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gender"/>
+        <NamedIndividual IRI="#Male"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Other"/>
+        <NamedIndividual IRI="#Mermaid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gender"/>
+        <NamedIndividual IRI="#Others"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Role"/>
+        <NamedIndividual IRI="#Protagonist"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genres"/>
+        <NamedIndividual IRI="#Religious"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Other"/>
+        <NamedIndividual IRI="#SeaWitch"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Audio"/>
@@ -322,8 +473,28 @@
         <NamedIndividual IRI="#Song"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Role"/>
+        <NamedIndividual IRI="#Supporting"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Story"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Story"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1989"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Characters"/>
+        <NamedIndividual IRI="#Tom"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#USA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Characters"/>
+        <NamedIndividual IRI="#Ursula"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Lexical"/>
@@ -341,8 +512,60 @@
         <Class IRI="#Visual"/>
         <NamedIndividual IRI="#video"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Age"/>
+        <NamedIndividual IRI="#0-3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Age"/>
+        <NamedIndividual IRI="#13-18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Age"/>
+        <NamedIndividual IRI="#4-12"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNature"/>
+        <NamedIndividual IRI="#Ariel"/>
+        <NamedIndividual IRI="#Mermaid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRole"/>
+        <NamedIndividual IRI="#Ariel"/>
+        <NamedIndividual IRI="#Protagonist"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNature"/>
+        <NamedIndividual IRI="#Jerry"/>
+        <NamedIndividual IRI="#Animal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
+        <NamedIndividual IRI="#Ariel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
+        <NamedIndividual IRI="#Ursula"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNature"/>
+        <NamedIndividual IRI="#Tom"/>
+        <NamedIndividual IRI="#Animal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNature"/>
+        <NamedIndividual IRI="#Ursula"/>
+        <NamedIndividual IRI="#SeaWitch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRole"/>
+        <NamedIndividual IRI="#Ursula"/>
+        <NamedIndividual IRI="#Antagonist"/>
+    </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasCharacters"/>
+        <ObjectProperty IRI="#hasCharacter"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -374,7 +597,7 @@
         <Class IRI="#Children"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasCharacters"/>
+        <ObjectProperty IRI="#hasCharacter"/>
         <Class IRI="#Story"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -422,7 +645,7 @@
         <Class IRI="#Age"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasCharacters"/>
+        <ObjectProperty IRI="#hasCharacter"/>
         <Class IRI="#Characters"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -709,12 +932,12 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <AnonymousIndividual nodeID="_:genid2147483652"/>
+        <AnonymousIndividual nodeID="_:genid2147483648"/>
         <Literal>One thing to figure out is whether or not this tells us what we want; that is, does this imply that we must have at least one property of humanCreator, which could be either hasAuthor or hasEditor?</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <AnonymousIndividual nodeID="_:genid2147483653"/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
         <Literal>One thing to figure out is whether or not this tells us what we want; that is, does this imply that we must have at least one property of humanCreator, which could be either hasAuthor or hasEditor?</Literal>
     </AnnotationAssertion>
 </Ontology>
