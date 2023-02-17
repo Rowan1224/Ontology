@@ -134,6 +134,9 @@
         <Class IRI="#Visual"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Children&apos;s_Story"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#byParties"/>
     </Declaration>
     <Declaration>
@@ -224,9 +227,6 @@
         <NamedIndividual IRI="#Biography"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Comedy"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Disney"/>
     </Declaration>
     <Declaration>
@@ -314,16 +314,31 @@
         <NamedIndividual IRI="#comics"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#grade_schooler"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pre-schooler"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#teen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#toddler"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#video"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#0-3"/>
+        <NamedIndividual IRI="#1-3"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#13-18"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#4-12"/>
+        <NamedIndividual IRI="#3-5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#5-12"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
@@ -352,6 +367,16 @@
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dcterms:bibliographicCitation"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Children&apos;s_Story"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Story"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasTargetAudience"/>
+                <Class IRI="#Children"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Audio"/>
         <Class IRI="#Medium"/>
@@ -404,6 +429,14 @@
         <Class IRI="#Visual"/>
         <Class IRI="#Medium"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Children&apos;s_Story"/>
+        <Class IRI="#Story"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Fiction"/>
+        <Class IRI="#Non-Fiction"/>
+    </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Human"/>
         <Class IRI="#Non-Human"/>
@@ -432,10 +465,6 @@
     <ClassAssertion>
         <Class IRI="#Non-Fiction"/>
         <NamedIndividual IRI="#Biography"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Genres"/>
-        <NamedIndividual IRI="#Comedy"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Organization"/>
@@ -530,7 +559,15 @@
         <NamedIndividual IRI="#Tom"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Story"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Story"/>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasMedium"/>
+                    <Class IRI="#Lexical"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
         <NamedIndividual IRI="#Tom_and_Jerry"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -558,12 +595,28 @@
         <NamedIndividual IRI="#comics"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Children"/>
+        <NamedIndividual IRI="#grade_schooler"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Children"/>
+        <NamedIndividual IRI="#pre-schooler"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Children"/>
+        <NamedIndividual IRI="#teen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Children"/>
+        <NamedIndividual IRI="#toddler"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Visual"/>
         <NamedIndividual IRI="#video"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Age"/>
-        <NamedIndividual IRI="#0-3"/>
+        <NamedIndividual IRI="#1-3"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Age"/>
@@ -571,7 +624,11 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Age"/>
-        <NamedIndividual IRI="#4-12"/>
+        <NamedIndividual IRI="#3-5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Age"/>
+        <NamedIndividual IRI="#5-12"/>
     </ClassAssertion>
     <DifferentIndividuals>
         <NamedIndividual IRI="#TheLittleMermaid_1837"/>
@@ -653,6 +710,21 @@
         <NamedIndividual IRI="#video"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTargetAudience"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1989"/>
+        <NamedIndividual IRI="#grade_schooler"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTargetAudience"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1989"/>
+        <NamedIndividual IRI="#teen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGender"/>
+        <NamedIndividual IRI="#Tom"/>
+        <NamedIndividual IRI="#Male"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasNature"/>
         <NamedIndividual IRI="#Tom"/>
         <NamedIndividual IRI="#Animal"/>
@@ -673,14 +745,19 @@
         <NamedIndividual IRI="#Tom"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasGenres"/>
+        <ObjectProperty IRI="#hasTargetAudience"/>
         <NamedIndividual IRI="#Tom_and_Jerry"/>
-        <NamedIndividual IRI="#Comedy"/>
+        <NamedIndividual IRI="#grade_schooler"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMedium"/>
+        <ObjectProperty IRI="#hasTargetAudience"/>
         <NamedIndividual IRI="#Tom_and_Jerry"/>
-        <NamedIndividual IRI="#video"/>
+        <NamedIndividual IRI="#pre-schooler"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTargetAudience"/>
+        <NamedIndividual IRI="#Tom_and_Jerry"/>
+        <NamedIndividual IRI="#toddler"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasGender"/>
