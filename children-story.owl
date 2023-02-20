@@ -140,6 +140,9 @@
         <Class IRI="#Visual"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Year"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Children&apos;s_Story"/>
     </Declaration>
     <Declaration>
@@ -908,6 +911,10 @@
         <NamedIndividual IRI="#18+"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Year"/>
+        <NamedIndividual IRI="#1837"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Age"/>
         <NamedIndividual IRI="#3-5"/>
     </ClassAssertion>
@@ -1387,6 +1394,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasTargetAudience"/>
         <Class IRI="#TargetAudience"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasYear"/>
+        <Class IRI="#Year"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isPublication"/>
