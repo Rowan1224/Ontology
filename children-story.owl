@@ -56,16 +56,10 @@
         <Literal>0.01</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="#Age"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Audio"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Author"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Century"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Characters"/>
@@ -104,9 +98,6 @@
         <Class IRI="#Nature"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Nineteenth"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Non-Fiction"/>
     </Declaration>
     <Declaration>
@@ -140,9 +131,6 @@
         <Class IRI="#Visual"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Year"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Children&apos;s_Story"/>
     </Declaration>
     <Declaration>
@@ -150,9 +138,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#byParties"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasAge"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasCharacter"/>
@@ -185,9 +170,6 @@
         <ObjectProperty IRI="#hasTargetAudience"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasYear"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#isPublication"/>
     </Declaration>
     <Declaration>
@@ -218,10 +200,16 @@
         <DataProperty IRI="#hasURL"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasYear"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#howPublished"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#humanCreator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#minTargetAge"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Adam_and_Eve"/>
@@ -392,46 +380,16 @@
         <NamedIndividual IRI="#girl"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#grade_schooler"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#man"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#pre-schooler"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#song"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#teen"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#toddler"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#video"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#woman"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1-3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#13-18"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#18+"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1837"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#3-5"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#5-12"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
@@ -464,26 +422,18 @@
         <Class IRI="#Children"/>
         <ObjectIntersectionOf>
             <Class IRI="#TargetAudience"/>
-            <ObjectComplementOf>
-                <ObjectHasValue>
-                    <ObjectProperty IRI="#hasAge"/>
-                    <NamedIndividual IRI="#18+"/>
-                </ObjectHasValue>
-            </ObjectComplementOf>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Nineteenth"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Century"/>
-            <ObjectIntersectionOf>
-                <ObjectMinCardinality cardinality="1801">
-                    <ObjectProperty IRI="#hasYear"/>
-                </ObjectMinCardinality>
-                <ObjectMaxCardinality cardinality="1900">
-                    <ObjectProperty IRI="#hasYear"/>
-                </ObjectMaxCardinality>
-            </ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#minTargetAge"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">18</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -527,10 +477,6 @@
     <SubClassOf>
         <Class IRI="#Lexical"/>
         <Class IRI="#Medium"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Nineteenth"/>
-        <Class IRI="#Century"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Non-Fiction"/>
@@ -839,28 +785,8 @@
         <NamedIndividual IRI="#girl"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="#Children"/>
-            <ObjectHasValue>
-                <ObjectProperty IRI="#hasAge"/>
-                <NamedIndividual IRI="#5-12"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-        <NamedIndividual IRI="#grade_schooler"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Human"/>
         <NamedIndividual IRI="#man"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="#Children"/>
-            <ObjectHasValue>
-                <ObjectProperty IRI="#hasAge"/>
-                <NamedIndividual IRI="#3-5"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-        <NamedIndividual IRI="#pre-schooler"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Audio"/>
@@ -871,56 +797,12 @@
         <NamedIndividual IRI="#song"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="#Children"/>
-            <ObjectHasValue>
-                <ObjectProperty IRI="#hasAge"/>
-                <NamedIndividual IRI="#13-18"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-        <NamedIndividual IRI="#teen"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="#Children"/>
-            <ObjectHasValue>
-                <ObjectProperty IRI="#hasAge"/>
-                <NamedIndividual IRI="#1-3"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-        <NamedIndividual IRI="#toddler"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Visual"/>
         <NamedIndividual IRI="#video"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Human"/>
         <NamedIndividual IRI="#woman"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Age"/>
-        <NamedIndividual IRI="#1-3"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Age"/>
-        <NamedIndividual IRI="#13-18"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Age"/>
-        <NamedIndividual IRI="#18+"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Year"/>
-        <NamedIndividual IRI="#1837"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Age"/>
-        <NamedIndividual IRI="#3-5"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Age"/>
-        <NamedIndividual IRI="#5-12"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasGender"/>
@@ -953,11 +835,6 @@
         <NamedIndividual IRI="#Entertainment"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTargetAudience"/>
-        <NamedIndividual IRI="#Baby_Shark"/>
-        <NamedIndividual IRI="#toddler"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasGender"/>
         <NamedIndividual IRI="#Goldilocks"/>
         <NamedIndividual IRI="#Female"/>
@@ -976,11 +853,6 @@
         <ObjectProperty IRI="#hasGenres"/>
         <NamedIndividual IRI="#Goldilocks_and_the_Three_Bears"/>
         <NamedIndividual IRI="#Folklore"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTargetAudience"/>
-        <NamedIndividual IRI="#Goldilocks_and_the_Three_Bears"/>
-        <NamedIndividual IRI="#grade_schooler"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasGender"/>
@@ -1033,11 +905,6 @@
         <NamedIndividual IRI="#Educational"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTargetAudience"/>
-        <NamedIndividual IRI="#Hansel_and_Gretel"/>
-        <NamedIndividual IRI="#grade_schooler"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasGender"/>
         <NamedIndividual IRI="#Jerry"/>
         <NamedIndividual IRI="#Male"/>
@@ -1056,11 +923,6 @@
         <ObjectProperty IRI="#hasPurpose"/>
         <NamedIndividual IRI="#Mama_Built_a_Little_Nest"/>
         <NamedIndividual IRI="#Educational"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTargetAudience"/>
-        <NamedIndividual IRI="#Mama_Built_a_Little_Nest"/>
-        <NamedIndividual IRI="#pre-schooler"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#byParties"/>
@@ -1103,21 +965,6 @@
         <NamedIndividual IRI="#TheLittleMermaid_1989"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTargetAudience"/>
-        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
-        <NamedIndividual IRI="#grade_schooler"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTargetAudience"/>
-        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
-        <NamedIndividual IRI="#teen"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasYear"/>
-        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
-        <NamedIndividual IRI="#1837"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#byParties"/>
         <NamedIndividual IRI="#TheLittleMermaid_1989"/>
         <NamedIndividual IRI="#Disney"/>
@@ -1158,16 +1005,6 @@
         <NamedIndividual IRI="#Entertainment"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTargetAudience"/>
-        <NamedIndividual IRI="#TheLittleMermaid_1989"/>
-        <NamedIndividual IRI="#grade_schooler"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTargetAudience"/>
-        <NamedIndividual IRI="#TheLittleMermaid_1989"/>
-        <NamedIndividual IRI="#teen"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasLocation"/>
         <NamedIndividual IRI="#The_Poisonous_Mushroom"/>
         <NamedIndividual IRI="#Germany"/>
@@ -1176,11 +1013,6 @@
         <ObjectProperty IRI="#hasPurpose"/>
         <NamedIndividual IRI="#The_Poisonous_Mushroom"/>
         <NamedIndividual IRI="#Indoctrination"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTargetAudience"/>
-        <NamedIndividual IRI="#The_Poisonous_Mushroom"/>
-        <NamedIndividual IRI="#grade_schooler"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasGender"/>
@@ -1218,21 +1050,6 @@
         <NamedIndividual IRI="#video"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTargetAudience"/>
-        <NamedIndividual IRI="#Tom_and_Jerry"/>
-        <NamedIndividual IRI="#grade_schooler"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTargetAudience"/>
-        <NamedIndividual IRI="#Tom_and_Jerry"/>
-        <NamedIndividual IRI="#pre-schooler"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTargetAudience"/>
-        <NamedIndividual IRI="#Tom_and_Jerry"/>
-        <NamedIndividual IRI="#toddler"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasGender"/>
         <NamedIndividual IRI="#Ursula"/>
         <NamedIndividual IRI="#Female"/>
@@ -1247,6 +1064,86 @@
         <NamedIndividual IRI="#Ursula"/>
         <NamedIndividual IRI="#Antagonist"/>
     </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasYear"/>
+        <NamedIndividual IRI="#Baby_Shark"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2017</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minTargetAge"/>
+        <NamedIndividual IRI="#Baby_Shark"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasYear"/>
+        <NamedIndividual IRI="#Goldilocks_and_the_Three_Bears"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1837</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minTargetAge"/>
+        <NamedIndividual IRI="#Goldilocks_and_the_Three_Bears"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasYear"/>
+        <NamedIndividual IRI="#Hansel_and_Gretel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1812</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minTargetAge"/>
+        <NamedIndividual IRI="#Hansel_and_Gretel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasYear"/>
+        <NamedIndividual IRI="#Mama_Built_a_Little_Nest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2014</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minTargetAge"/>
+        <NamedIndividual IRI="#Mama_Built_a_Little_Nest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasYear"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1860</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minTargetAge"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasYear"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1989"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1989</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minTargetAge"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1989"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasYear"/>
+        <NamedIndividual IRI="#The_Poisonous_Mushroom"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1938</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minTargetAge"/>
+        <NamedIndividual IRI="#The_Poisonous_Mushroom"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasYear"/>
+        <NamedIndividual IRI="#Tom_and_Jerry"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1940</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minTargetAge"/>
+        <NamedIndividual IRI="#Tom_and_Jerry"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#belongsTo"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
@@ -1276,9 +1173,6 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#hasAge"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasGender"/>
     </FunctionalObjectProperty>
     <SymmetricObjectProperty>
@@ -1294,10 +1188,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#byParties"/>
         <Class IRI="#Publication"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasAge"/>
-        <Class IRI="#Children"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCharacter"/>
@@ -1336,24 +1226,12 @@
         <Class IRI="#Story"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasYear"/>
-        <Class IRI="#Century"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isPublication"/>
         <Class IRI="#Story"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#belongsTo"/>
-        <Class IRI="#Century"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#byParties"/>
         <Class IRI="#Parties"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasAge"/>
-        <Class IRI="#Age"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCharacter"/>
@@ -1396,10 +1274,6 @@
         <Class IRI="#TargetAudience"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasYear"/>
-        <Class IRI="#Year"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#isPublication"/>
         <Class IRI="#Publication"/>
     </ObjectPropertyRange>
@@ -1411,6 +1285,14 @@
         <DataProperty IRI="#hasEditor"/>
         <DataProperty IRI="#humanCreator"/>
     </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasYear"/>
+        <Class IRI="#Publication"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#minTargetAge"/>
+        <Class IRI="#TargetAudience"/>
+    </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#hasAuthor"/>
         <Datatype abbreviatedIRI="xsd:string"/>
@@ -1448,6 +1330,10 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasYear"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#howPublished"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -1455,15 +1341,14 @@
         <DataProperty IRI="#humanCreator"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#minTargetAge"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:title"/>
         <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
         <Literal>this is a test title</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Age</IRI>
-        <Literal>the length of time that a person has lived or a thing has existed: Oxford Languages</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
