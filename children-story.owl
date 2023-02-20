@@ -65,6 +65,9 @@
         <Class IRI="#Author"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Century"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Characters"/>
     </Declaration>
     <Declaration>
@@ -101,6 +104,9 @@
         <Class IRI="#Nature"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Nineteenth"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Non-Fiction"/>
     </Declaration>
     <Declaration>
@@ -131,10 +137,19 @@
         <Class IRI="#TargetAudience"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Twentieth"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Visual"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Year"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Children&apos;s_Story"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsTo"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#byParties"/>
@@ -173,6 +188,9 @@
         <ObjectProperty IRI="#hasTargetAudience"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasYear"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isPublication"/>
     </Declaration>
     <Declaration>
@@ -201,9 +219,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasURL"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasYear"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#howPublished"/>
@@ -413,6 +428,9 @@
         <NamedIndividual IRI="#18+"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#1837"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#3-5"/>
     </Declaration>
     <Declaration>
@@ -500,6 +518,10 @@
         <Class IRI="#Medium"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Nineteenth"/>
+        <Class IRI="#Century"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Non-Fiction"/>
         <Class IRI="#Genres"/>
     </SubClassOf>
@@ -514,6 +536,10 @@
     <SubClassOf>
         <Class IRI="#Other"/>
         <Class IRI="#Nature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Twentieth"/>
+        <Class IRI="#Century"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Visual"/>
@@ -878,6 +904,10 @@
         <NamedIndividual IRI="#18+"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Year"/>
+        <NamedIndividual IRI="#1837"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Age"/>
         <NamedIndividual IRI="#3-5"/>
     </ClassAssertion>
@@ -1076,6 +1106,11 @@
         <NamedIndividual IRI="#teen"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasYear"/>
+        <NamedIndividual IRI="#TheLittleMermaid_1837"/>
+        <NamedIndividual IRI="#1837"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#byParties"/>
         <NamedIndividual IRI="#TheLittleMermaid_1989"/>
         <NamedIndividual IRI="#Disney"/>
@@ -1206,6 +1241,10 @@
         <NamedIndividual IRI="#Antagonist"/>
     </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#belongsTo"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCharacter"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -1241,6 +1280,10 @@
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#hasLocation"/>
     </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongsTo"/>
+        <Class IRI="#Publication"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#byParties"/>
         <Class IRI="#Publication"/>
@@ -1286,9 +1329,17 @@
         <Class IRI="#Story"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasYear"/>
+        <Class IRI="#Century"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isPublication"/>
         <Class IRI="#Story"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongsTo"/>
+        <Class IRI="#Century"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#byParties"/>
         <Class IRI="#Parties"/>
@@ -1338,6 +1389,10 @@
         <Class IRI="#TargetAudience"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasYear"/>
+        <Class IRI="#Year"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#isPublication"/>
         <Class IRI="#Publication"/>
     </ObjectPropertyRange>
@@ -1384,10 +1439,6 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasURL"/>
         <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasYear"/>
-        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#howPublished"/>
@@ -1636,16 +1687,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasURL</IRI>
         <Literal xml:lang="en">has URL</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasYear</IRI>
-        <Literal xml:lang="en">The year of publication or, for an unpublished work, the year it was written. Generally it should consist of four numerals, such as 1984, although the standard styles can handle any year whose last four nonpunctuation characters are numerals, such as &apos;(about 1984)&apos;.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasYear</IRI>
-        <Literal xml:lang="en">has year</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
