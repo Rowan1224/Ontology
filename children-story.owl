@@ -86,9 +86,6 @@
         <Class IRI="#Gender"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Genres"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Human"/>
     </Declaration>
     <Declaration>
@@ -551,10 +548,6 @@
     <SubClassOf>
         <Class IRI="#Fiction"/>
         <Class IRI="http://comicmeta.org/cbo/Genres"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Genres"/>
-        <Class IRI="#Fiction"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Human"/>
@@ -1630,10 +1623,6 @@
         <Class IRI="#Gender"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasGenres"/>
-        <Class IRI="#Genres"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasLocation"/>
         <Class IRI="#Location"/>
     </ObjectPropertyRange>
@@ -1794,11 +1783,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Gender</IRI>
         <Literal>the male sex or the female sex, especially when considered with reference to social and cultural differences rather than biological ones, or one of a range of other identities that do not correspond to established ideas of male and female. (oxford languages)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Genres</IRI>
-        <Literal>a style or category of art, music, or literature. (oxford languages)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
