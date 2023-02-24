@@ -56,6 +56,12 @@
         <Literal>0.01</Literal>
     </Annotation>
     <Declaration>
+        <Class IRI="http://comicmeta.org/cbo/Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Animal"/>
     </Declaration>
     <Declaration>
@@ -457,6 +463,45 @@
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dcterms:bibliographicCitation"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/Comix"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/War"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/Horror"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/Western"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/Crime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://comicmeta.org/cbo/genre"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/FunnyAnimal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/SuperHero"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/Romance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/ScienceFiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://comicmeta.org/cbo/Team"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/Adult"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="#Children&apos;s_Story"/>
         <ObjectIntersectionOf>
@@ -476,6 +521,10 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
+        <Class IRI="http://comicmeta.org/cbo/Team"/>
+        <Class IRI="http://comicmeta.org/cbo/Agent"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Animal"/>
         <Class IRI="#Non-Human"/>
     </SubClassOf>
@@ -488,6 +537,10 @@
         <Class IRI="#Parties"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Characters"/>
+        <Class IRI="http://comicmeta.org/cbo/Agent"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Continent"/>
         <Class IRI="#Location"/>
     </SubClassOf>
@@ -497,7 +550,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Fiction"/>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Genres"/>
+        <Class IRI="#Fiction"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Human"/>
@@ -509,7 +566,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Non-Fiction"/>
-        <Class IRI="#Genres"/>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Non-Human"/>
@@ -553,11 +610,51 @@
         <Class IRI="#Other"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/Adult"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/Comix"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/Crime"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/FunnyAnimal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/Horror"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/Romance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/ScienceFiction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/SuperHero"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/War"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
+        <NamedIndividual IRI="http://comicmeta.org/vocab/Western"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Story"/>
         <NamedIndividual IRI="#Adam_and_Eve"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Genres"/>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
         <NamedIndividual IRI="#Adventure"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -631,7 +728,7 @@
         <NamedIndividual IRI="#Female"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Genres"/>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
         <NamedIndividual IRI="#Folklore"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -719,11 +816,11 @@
         <NamedIndividual IRI="#Protagonist"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Genres"/>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
         <NamedIndividual IRI="#Proverb"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Genres"/>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
         <NamedIndividual IRI="#Religious"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1517,6 +1614,10 @@
         <Class IRI="#Story"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="http://comicmeta.org/cbo/genre"/>
+        <Class IRI="http://comicmeta.org/cbo/Genres"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#byParties"/>
         <Class IRI="#Parties"/>
     </ObjectPropertyRange>
@@ -1624,6 +1725,36 @@
         <DataProperty IRI="#minTargetAge"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://comicmeta.org/cbo/Agent</IRI>
+        <Literal xml:lang="en">A person, organization, or intelligence in a comic universe.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://comicmeta.org/cbo/Agent</IRI>
+        <Literal>Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>http://comicmeta.org/cbo/Agent</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://comicmeta.org/cbo/Genres</IRI>
+        <Literal xml:lang="en">A comics genre.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://comicmeta.org/cbo/Genres</IRI>
+        <Literal xml:lang="en">Genre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>http://comicmeta.org/cbo/Genres</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:title"/>
         <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
@@ -1871,7 +2002,7 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <AnonymousIndividual nodeID="_:genid2147483648"/>
+        <AnonymousIndividual nodeID="_:genid2147483661"/>
         <Literal>One thing to figure out is whether or not this tells us what we want; that is, does this imply that we must have at least one property of humanCreator, which could be either hasAuthor or hasEditor?</Literal>
     </AnnotationAssertion>
 </Ontology>
