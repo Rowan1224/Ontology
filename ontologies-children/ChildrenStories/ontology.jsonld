@@ -1,0 +1,1686 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://children-story.owl#Story"
+    }, {
+      "@id" : "_:genid3"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://children-story.owl#Country"
+    }, {
+      "@id" : "_:genid12"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://children-story.owl#Europe"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://children-story.owl#hasLocation"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://children-story.owl#Country"
+    }, {
+      "@id" : "_:genid16"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://children-story.owl#Europe"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://children-story.owl#hasLocation"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://children-story.owl#Country"
+    }, {
+      "@id" : "_:genid20"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://children-story.owl#Asia"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://children-story.owl#hasLocation"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://children-story.owl#Country"
+    }, {
+      "@id" : "_:genid24"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://children-story.owl#Asia"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://children-story.owl#hasLocation"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#complementOf" : [ {
+    "@id" : "_:genid27"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://children-story.owl#hasMedium"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://children-story.owl#Lexical"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://children-story.owl#Country"
+    }, {
+      "@id" : "_:genid30"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://children-story.owl#minTargetAge"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://children-story.owl#North_America"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://children-story.owl#hasLocation"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://children-story.owl#Country"
+    }, {
+      "@id" : "_:genid34"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://children-story.owl#Europe"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://children-story.owl#hasLocation"
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://children-story.owl#Male"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://children-story.owl#hasGender"
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://children-story.owl#Female"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://children-story.owl#hasGender"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://children-story.owl#Male"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://children-story.owl#hasGender"
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://children-story.owl#Female"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://children-story.owl#hasGender"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@list" : [ {
+      "@id" : "_:genid8"
+    }, {
+      "@id" : "_:genid6"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "One thing to figure out is whether or not this tells us what we want; that is, does this imply that we must have at least one property of humanCreator, which could be either hasAuthor or hasEditor?"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://children-story.owl#Human"
+    }, {
+      "@id" : "https://children-story.owl#Non-Human"
+    }, {
+      "@id" : "https://children-story.owl#Other"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://children-story.owl#Anna"
+    }, {
+      "@id" : "https://children-story.owl#Elsa"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid48",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://children-story.owl#Antagonist"
+    }, {
+      "@id" : "https://children-story.owl#Protagonist"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://children-story.owl#Female"
+    }, {
+      "@id" : "https://children-story.owl#Male"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid54",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://children-story.owl#Female"
+    }, {
+      "@id" : "https://children-story.owl#Others"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "http://www.w3.org/2001/XMLSchema#maxExclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "18"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://comicmeta.org/cbo/Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person, organization, or intelligence in a comic universe."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Agent"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "unstable"
+  } ]
+}, {
+  "@id" : "http://comicmeta.org/cbo/Genres",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A comics genre."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Genre"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "unstable"
+  } ]
+}, {
+  "@id" : "http://comicmeta.org/cbo/Team",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://comicmeta.org/cbo/Agent"
+  } ]
+}, {
+  "@id" : "http://comicmeta.org/cbo/genre",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ]
+}, {
+  "@id" : "http://comicmeta.org/vocab/Adult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ]
+}, {
+  "@id" : "http://comicmeta.org/vocab/Comix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ]
+}, {
+  "@id" : "http://comicmeta.org/vocab/Crime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ]
+}, {
+  "@id" : "http://comicmeta.org/vocab/FunnyAnimal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ]
+}, {
+  "@id" : "http://comicmeta.org/vocab/Horror",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ]
+}, {
+  "@id" : "http://comicmeta.org/vocab/Romance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ]
+}, {
+  "@id" : "http://comicmeta.org/vocab/ScienceFiction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ]
+}, {
+  "@id" : "http://comicmeta.org/vocab/SuperHero",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ]
+}, {
+  "@id" : "http://comicmeta.org/vocab/War",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ]
+}, {
+  "@id" : "http://comicmeta.org/vocab/Western",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "this is a test title"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/subject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/bibliographicCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://children-story.owl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "mit.edu>",
+    "@value" : "Nick Knouf <nknouf"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2003-12-29"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Transformation of bibTeX into an OWL ontology"
+  } ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://visus.mit.edu/bibtex/0.01/bibtex.owl"
+  } ],
+  "http://purl.org/dc/elements/1.1/subject" : [ {
+    "@value" : "fMRI, ontology, fMRI analysis, foo, bar"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "bibtex.owl: an ontology for bibTeX entries"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Possible ontology to describe bibTeX entries."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "bibtex ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.01"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Adam_and_Eve",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Adventure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Africa",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Continent"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Animal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://children-story.owl#Non-Human"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://children-story.owl#Object"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Anna",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Characters"
+  } ],
+  "https://children-story.owl#hasGender" : [ {
+    "@id" : "https://children-story.owl#Female"
+  } ],
+  "https://children-story.owl#hasNature" : [ {
+    "@id" : "https://children-story.owl#girl"
+  } ],
+  "https://children-story.owl#hasRole" : [ {
+    "@id" : "https://children-story.owl#Protagonist"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Antagonist",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Role"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Ariel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Characters"
+  } ],
+  "https://children-story.owl#hasGender" : [ {
+    "@id" : "https://children-story.owl#Female"
+  } ],
+  "https://children-story.owl#hasNature" : [ {
+    "@id" : "https://children-story.owl#Mermaid"
+  } ],
+  "https://children-story.owl#hasRole" : [ {
+    "@id" : "https://children-story.owl#Protagonist"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Asia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Continent"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Audio",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "an engaging form of communication that combines speech and music into compelling narratives"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://children-story.owl#Medium"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Australia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Continent"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Author",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a writer of a book, article, or document. (Oxford Languages)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://children-story.owl#Parties"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://children-story.owl#Organization"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Baby_Shark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ],
+  "https://children-story.owl#hasCharacter" : [ {
+    "@id" : "https://children-story.owl#baby_shark"
+  }, {
+    "@id" : "https://children-story.owl#daddy_shark"
+  }, {
+    "@id" : "https://children-story.owl#grandma_shark"
+  }, {
+    "@id" : "https://children-story.owl#grandpa_shark"
+  }, {
+    "@id" : "https://children-story.owl#mommy_shark"
+  } ],
+  "https://children-story.owl#hasLocation" : [ {
+    "@id" : "https://children-story.owl#South_Korea"
+  } ],
+  "https://children-story.owl#hasMedium" : [ {
+    "@id" : "https://children-story.owl#song"
+  } ],
+  "https://children-story.owl#hasPurpose" : [ {
+    "@id" : "https://children-story.owl#Entertainment"
+  } ],
+  "https://children-story.owl#hasYear" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2017"
+  } ],
+  "https://children-story.owl#minTargetAge" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Biography",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Non-Fiction"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Characters",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "person in a novel, play, or film. (oxford languages)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://comicmeta.org/cbo/Agent"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Children's_Story",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Continent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "any of the world's main continuous expanses of land (Europe, Asia, Africa, North and South America, Australia, Antarctica). (Oxford Languages)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://children-story.owl#Location"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Country",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a nation with its own government, occupying a particular territory. (oxford Languages)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://children-story.owl#Location"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Denmark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:genid10"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Disney",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Organization"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Educational",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Purpose"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Elsa",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Characters"
+  } ],
+  "https://children-story.owl#hasGender" : [ {
+    "@id" : "https://children-story.owl#Female"
+  } ],
+  "https://children-story.owl#hasNature" : [ {
+    "@id" : "https://children-story.owl#girl"
+  } ],
+  "https://children-story.owl#hasRole" : [ {
+    "@id" : "https://children-story.owl#Protagonist"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Entertainment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Purpose"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Europe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Continent"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Fantasy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Fiction"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Female",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Gender"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Fiction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "literature in the form of prose that describes imaginary events and people. (oxford languages)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://children-story.owl#Non-Fiction"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Folklore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Frozen",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ],
+  "https://children-story.owl#byParties" : [ {
+    "@id" : "https://children-story.owl#Disney"
+  } ],
+  "https://children-story.owl#hasCharacter" : [ {
+    "@id" : "https://children-story.owl#Anna"
+  }, {
+    "@id" : "https://children-story.owl#Elsa"
+  } ],
+  "https://children-story.owl#hasLocation" : [ {
+    "@id" : "https://children-story.owl#USA"
+  } ],
+  "https://children-story.owl#hasMedium" : [ {
+    "@id" : "https://children-story.owl#video"
+  } ],
+  "https://children-story.owl#hasYear" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2013"
+  } ],
+  "https://children-story.owl#minTargetAge" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Gender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "the male sex or the female sex, especially when considered with reference to social and cultural differences rather than biological ones, or one of a range of other identities that do not correspond to established ideas of male and female. (oxford languages)"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Germany",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:genid14"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Goldilocks",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Characters"
+  } ],
+  "https://children-story.owl#hasGender" : [ {
+    "@id" : "https://children-story.owl#Female"
+  } ],
+  "https://children-story.owl#hasNature" : [ {
+    "@id" : "https://children-story.owl#girl"
+  } ],
+  "https://children-story.owl#hasRole" : [ {
+    "@id" : "https://children-story.owl#Protagonist"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Goldilocks_and_the_Three_Bears",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ],
+  "https://children-story.owl#hasCharacter" : [ {
+    "@id" : "https://children-story.owl#Goldilocks"
+  }, {
+    "@id" : "https://children-story.owl#big_bear"
+  }, {
+    "@id" : "https://children-story.owl#medium_bear"
+  }, {
+    "@id" : "https://children-story.owl#small_bear"
+  } ],
+  "https://children-story.owl#hasGenres" : [ {
+    "@id" : "https://children-story.owl#Folklore"
+  } ],
+  "https://children-story.owl#hasYear" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1837"
+  } ],
+  "https://children-story.owl#minTargetAge" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Gretel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Characters"
+  } ],
+  "https://children-story.owl#hasGender" : [ {
+    "@id" : "https://children-story.owl#Female"
+  } ],
+  "https://children-story.owl#hasNature" : [ {
+    "@id" : "https://children-story.owl#girl"
+  } ],
+  "https://children-story.owl#hasRole" : [ {
+    "@id" : "https://children-story.owl#Protagonist"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Hans_Christian_Anderson",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Author"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Hansel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Characters"
+  } ],
+  "https://children-story.owl#hasGender" : [ {
+    "@id" : "https://children-story.owl#Male"
+  } ],
+  "https://children-story.owl#hasNature" : [ {
+    "@id" : "https://children-story.owl#boy"
+  } ],
+  "https://children-story.owl#hasRole" : [ {
+    "@id" : "https://children-story.owl#Protagonist"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Hansel_and_Gretel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ],
+  "https://children-story.owl#hasCharacter" : [ {
+    "@id" : "https://children-story.owl#Gretel"
+  }, {
+    "@id" : "https://children-story.owl#Hansel"
+  } ],
+  "https://children-story.owl#hasGenres" : [ {
+    "@id" : "https://children-story.owl#Folklore"
+  } ],
+  "https://children-story.owl#hasLocation" : [ {
+    "@id" : "https://children-story.owl#Germany"
+  } ],
+  "https://children-story.owl#hasMedium" : [ {
+    "@id" : "https://children-story.owl#book"
+  } ],
+  "https://children-story.owl#hasPurpose" : [ {
+    "@id" : "https://children-story.owl#Educational"
+  } ],
+  "https://children-story.owl#hasYear" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1812"
+  } ],
+  "https://children-story.owl#minTargetAge" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Historical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Non-Fiction"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Human",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "relating to or characteristic of humankind. (Oxford Languages)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://children-story.owl#Nature"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Indoctrination",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Purpose"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Japan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:genid18"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Jerry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Characters"
+  } ],
+  "https://children-story.owl#hasGender" : [ {
+    "@id" : "https://children-story.owl#Male"
+  } ],
+  "https://children-story.owl#hasNature" : [ {
+    "@id" : "https://children-story.owl#mouse"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Lexical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://children-story.owl#Medium"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The place where story was published"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Male",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Gender"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Mama_Built_a_Little_Nest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ],
+  "https://children-story.owl#hasLocation" : [ {
+    "@id" : "https://children-story.owl#USA"
+  } ],
+  "https://children-story.owl#hasPurpose" : [ {
+    "@id" : "https://children-story.owl#Educational"
+  } ],
+  "https://children-story.owl#hasYear" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2014"
+  } ],
+  "https://children-story.owl#minTargetAge" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "6"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Medium",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The format of the story."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Medium"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Mermaid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Other"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Nature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "the basic or inherent features, character, or qualities of something. (oxford language)"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Non-Fiction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "prose writing that is informative or factual rather than fictional. (oxford languages)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Non-Human",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a creature that is not a human being. (Oxford Languages)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://children-story.owl#Nature"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#North_America",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Continent"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Object",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://children-story.owl#Non-Human"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "an organized group of people with a particular purpose, such as a business or a government department. (Oxford Languages)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://children-story.owl#Parties"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Other",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://children-story.owl#Nature"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Others",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Gender"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Parties",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Entites that create stories"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Protagonist",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Role"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Proverb",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Publication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "the preparation and issuing of a book, journal, or piece of music for public sale. (oxford language)"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Purpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "the reason for which something is done or created or for which something exists. (oxford languages)"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Religious",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://comicmeta.org/cbo/Genres"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Role",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "the function assumed or part played by a person or thing in a particular situation."
+  } ]
+}, {
+  "@id" : "https://children-story.owl#SeaWitch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Other"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#South_America",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Continent"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#South_Korea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:genid22"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Story",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Base class for all entries"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Story"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Supporting",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Role"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#TheLittleMermaid_1837",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ],
+  "https://children-story.owl#byParties" : [ {
+    "@id" : "https://children-story.owl#Hans_Christian_Anderson"
+  } ],
+  "https://children-story.owl#hasCharacter" : [ {
+    "@id" : "https://children-story.owl#Ariel"
+  }, {
+    "@id" : "https://children-story.owl#Ursula"
+  } ],
+  "https://children-story.owl#hasGenres" : [ {
+    "@id" : "https://children-story.owl#Fantasy"
+  }, {
+    "@id" : "https://children-story.owl#Folklore"
+  } ],
+  "https://children-story.owl#hasLocation" : [ {
+    "@id" : "https://children-story.owl#Denmark"
+  } ],
+  "https://children-story.owl#hasMedium" : [ {
+    "@id" : "https://children-story.owl#book"
+  } ],
+  "https://children-story.owl#hasOtherVersions" : [ {
+    "@id" : "https://children-story.owl#TheLittleMermaid_1989"
+  } ],
+  "https://children-story.owl#hasYear" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1837"
+  } ],
+  "https://children-story.owl#minTargetAge" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "6"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#TheLittleMermaid_1989",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@id" : "https://children-story.owl#TheLittleMermaid_1837"
+  } ],
+  "https://children-story.owl#byParties" : [ {
+    "@id" : "https://children-story.owl#Disney"
+  } ],
+  "https://children-story.owl#hasCharacter" : [ {
+    "@id" : "https://children-story.owl#Ariel"
+  }, {
+    "@id" : "https://children-story.owl#Ursula"
+  } ],
+  "https://children-story.owl#hasGenres" : [ {
+    "@id" : "https://children-story.owl#Fantasy"
+  }, {
+    "@id" : "https://children-story.owl#Folklore"
+  } ],
+  "https://children-story.owl#hasLocation" : [ {
+    "@id" : "https://children-story.owl#USA"
+  } ],
+  "https://children-story.owl#hasMedium" : [ {
+    "@id" : "https://children-story.owl#video"
+  } ],
+  "https://children-story.owl#hasPurpose" : [ {
+    "@id" : "https://children-story.owl#Entertainment"
+  } ],
+  "https://children-story.owl#hasYear" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1989"
+  } ],
+  "https://children-story.owl#minTargetAge" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "5"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#The_Poisonous_Mushroom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ],
+  "https://children-story.owl#hasLocation" : [ {
+    "@id" : "https://children-story.owl#Germany"
+  } ],
+  "https://children-story.owl#hasPurpose" : [ {
+    "@id" : "https://children-story.owl#Indoctrination"
+  } ],
+  "https://children-story.owl#hasYear" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1938"
+  } ],
+  "https://children-story.owl#minTargetAge" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "7"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Tom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Characters"
+  } ],
+  "https://children-story.owl#hasGender" : [ {
+    "@id" : "https://children-story.owl#Male"
+  } ],
+  "https://children-story.owl#hasNature" : [ {
+    "@id" : "https://children-story.owl#cat"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Tom_and_Jerry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Story"
+  }, {
+    "@id" : "_:genid26"
+  } ],
+  "https://children-story.owl#byParties" : [ {
+    "@id" : "https://children-story.owl#Warner_Bros"
+  }, {
+    "@id" : "https://children-story.owl#William_Hanna"
+  } ],
+  "https://children-story.owl#hasCharacter" : [ {
+    "@id" : "https://children-story.owl#Jerry"
+  }, {
+    "@id" : "https://children-story.owl#Tom"
+  } ],
+  "https://children-story.owl#hasMedium" : [ {
+    "@id" : "https://children-story.owl#video"
+  } ],
+  "https://children-story.owl#hasYear" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1940"
+  } ],
+  "https://children-story.owl#minTargetAge" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "5"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#USA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:genid28"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#United_Kingdom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:genid32"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Ursula",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Characters"
+  } ],
+  "https://children-story.owl#hasGender" : [ {
+    "@id" : "https://children-story.owl#Female"
+  } ],
+  "https://children-story.owl#hasNature" : [ {
+    "@id" : "https://children-story.owl#SeaWitch"
+  } ],
+  "https://children-story.owl#hasRole" : [ {
+    "@id" : "https://children-story.owl#Antagonist"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Visual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://children-story.owl#Medium"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#Warner_Bros",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Organization"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#William_Hanna",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Author"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#baby_shark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://children-story.owl#hasGender" : [ {
+    "@id" : "https://children-story.owl#Others"
+  } ],
+  "https://children-story.owl#hasNature" : [ {
+    "@id" : "https://children-story.owl#shark"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#bear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Animal"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#belongsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://children-story.owl#Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#big_bear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://children-story.owl#hasNature" : [ {
+    "@id" : "https://children-story.owl#bear"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#book",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Lexical"
+  }, {
+    "@id" : "https://children-story.owl#Visual"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#boy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Human"
+  }, {
+    "@id" : "_:genid36"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#byParties",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://children-story.owl#Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://children-story.owl#Parties"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#cat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Animal"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#comics",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Visual"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#daddy_shark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://children-story.owl#hasGender" : [ {
+    "@id" : "https://children-story.owl#Male"
+  } ],
+  "https://children-story.owl#hasNature" : [ {
+    "@id" : "https://children-story.owl#shark"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#girl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Human"
+  }, {
+    "@id" : "_:genid37"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#grandma_shark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://children-story.owl#hasGender" : [ {
+    "@id" : "https://children-story.owl#Female"
+  } ],
+  "https://children-story.owl#hasNature" : [ {
+    "@id" : "https://children-story.owl#shark"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#grandpa_shark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://children-story.owl#hasGender" : [ {
+    "@id" : "https://children-story.owl#Male"
+  } ],
+  "https://children-story.owl#hasNature" : [ {
+    "@id" : "https://children-story.owl#shark"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasAuthor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "This is tricky due to the fact that order is not (generally) preserved in RDF documents.  The problem arises when you want to have an author list where the order is _extremely_ important.  How shall we do that?  Perhaps we want to define \"hasPrimaryAuthor\", \"hasSecondaryAuthor\", \"hasTertiaryAuthor\", and \"hasRemainingAuthors\", or something of that sort.  This will be have to given more thought."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The name(s) of the author(s), in the format described in the LaTeX book."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has author"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://children-story.owl#humanCreator"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasCharacter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://children-story.owl#Characters"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasContents",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Table of Contents."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has contents"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasEdition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The edition of a book--for example, \"Second\". This should be an ordinal, and should have the first letter capitalized, as shown here; the standard styles convert to lower case when necessary."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has edition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasEditor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Again, the same issues that arose with the \"hasAuthor\" property apply here."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Name(s) of editor(s), typed as indicated in the LaTeX book. If there is also an author field, then the editor field gives the editor of the book or collection in which the reference appears."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has editor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://children-story.owl#humanCreator"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasGender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://children-story.owl#Gender"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasGenres",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasLanguage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The language the document is in."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has language"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://children-story.owl#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasMedium",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://children-story.owl#Medium"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasNature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://children-story.owl#Characters"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://children-story.owl#Nature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasOtherVersions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasPublisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "This is a case where an ObjectProperty might be a better choice, where the range is some set of publisher names defined in another ontology.  That would allow all of the metadata for the publisher to be incorporated as needed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The publisher's name."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has publisher"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasPurpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://children-story.owl#Purpose"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://children-story.owl#Characters"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://children-story.owl#Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasSeries",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The name of a series or set of books. When citing an entire book, the the title field gives its title and an optional series field gives the name of a series or multi-volume set in which the book is published."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has series"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasTargetAudience",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasTitle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The work's title, typed as explained in the LaTeX book."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has title"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasURL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The WWW Universal Resource Locator that points to the item being referenced. This often is used for technical reports to point to the ftp or web site where the postscript source of the report is located."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#hasYear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://children-story.owl#Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#howPublished",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "How something strange has been published. The first word should be capitalized."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "how published"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#humanCreator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A generic human creator category, necessary in order to contain both author and editor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "human creator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#isPublication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://children-story.owl#Story"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://children-story.owl#Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#man",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Human"
+  }, {
+    "@id" : "_:genid38"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#medium_bear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://children-story.owl#hasNature" : [ {
+    "@id" : "https://children-story.owl#bear"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#minTargetAge",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#mommy_shark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://children-story.owl#hasGender" : [ {
+    "@id" : "https://children-story.owl#Female"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#mouse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Animal"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#shark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Animal"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#small_bear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://children-story.owl#hasNature" : [ {
+    "@id" : "https://children-story.owl#bear"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#song",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Audio"
+  }, {
+    "@id" : "https://children-story.owl#Lexical"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#video",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Visual"
+  } ]
+}, {
+  "@id" : "https://children-story.owl#woman",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://children-story.owl#Human"
+  }, {
+    "@id" : "_:genid39"
+  } ]
+} ]

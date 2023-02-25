@@ -1,0 +1,1065 @@
+@prefix : <https://children-story.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://children-story.owl#> .
+
+<https://children-story.owl> rdf:type owl:Ontology ;
+                              <http://purl.org/dc/elements/1.1/creator> "Nick Knouf <nknouf"@mit.edu> ;
+                              <http://purl.org/dc/elements/1.1/date> "2003-12-29" ;
+                              <http://purl.org/dc/elements/1.1/description> "Transformation of bibTeX into an OWL ontology" ;
+                              <http://purl.org/dc/elements/1.1/identifier> "http://visus.mit.edu/bibtex/0.01/bibtex.owl"^^xsd:anyURI ;
+                              <http://purl.org/dc/elements/1.1/subject> "fMRI, ontology, fMRI analysis, foo, bar" ;
+                              <http://purl.org/dc/elements/1.1/title> "bibtex.owl: an ontology for bibTeX entries" ;
+                              rdfs:comment "Possible ontology to describe bibTeX entries." ;
+                              rdfs:label "bibtex ontology" ;
+                              owl:versionInfo "0.01" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/source
+<http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/subject
+<http://purl.org/dc/elements/1.1/subject> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://comicmeta.org/cbo/genre
+<http://comicmeta.org/cbo/genre> rdf:type owl:ObjectProperty ;
+                                 rdfs:range <http://comicmeta.org/cbo/Genres> .
+
+
+###  https://children-story.owl#belongsTo
+:belongsTo rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :Publication .
+
+
+###  https://children-story.owl#byParties
+:byParties rdf:type owl:ObjectProperty ;
+           rdfs:domain :Publication ;
+           rdfs:range :Parties .
+
+
+###  https://children-story.owl#hasCharacter
+:hasCharacter rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain :Story ;
+              rdfs:range :Characters .
+
+
+###  https://children-story.owl#hasGender
+:hasGender rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:range :Gender .
+
+
+###  https://children-story.owl#hasGenres
+:hasGenres rdf:type owl:ObjectProperty ;
+           rdfs:domain :Story .
+
+
+###  https://children-story.owl#hasLocation
+:hasLocation rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdf:type owl:TransitiveProperty ;
+             rdfs:range :Location .
+
+
+###  https://children-story.owl#hasMedium
+:hasMedium rdf:type owl:ObjectProperty ;
+           rdfs:domain :Story ;
+           rdfs:range :Medium .
+
+
+###  https://children-story.owl#hasNature
+:hasNature rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :Characters ;
+           rdfs:range :Nature .
+
+
+###  https://children-story.owl#hasOtherVersions
+:hasOtherVersions rdf:type owl:ObjectProperty ,
+                           owl:SymmetricProperty ,
+                           owl:TransitiveProperty ;
+                  rdfs:domain :Story ;
+                  rdfs:range :Story .
+
+
+###  https://children-story.owl#hasPurpose
+:hasPurpose rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Story ;
+            rdfs:range :Purpose .
+
+
+###  https://children-story.owl#hasRole
+:hasRole rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdfs:domain :Characters ;
+         rdfs:range :Role .
+
+
+###  https://children-story.owl#hasTargetAudience
+:hasTargetAudience rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Story .
+
+
+###  https://children-story.owl#isPublication
+:isPublication rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :Story ;
+               rdfs:range :Publication .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://children-story.owl#hasAuthor
+:hasAuthor rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :humanCreator ;
+           rdfs:range xsd:string ;
+           <http://purl.org/dc/elements/1.1/description> "This is tricky due to the fact that order is not (generally) preserved in RDF documents.  The problem arises when you want to have an author list where the order is _extremely_ important.  How shall we do that?  Perhaps we want to define \"hasPrimaryAuthor\", \"hasSecondaryAuthor\", \"hasTertiaryAuthor\", and \"hasRemainingAuthors\", or something of that sort.  This will be have to given more thought." ;
+           rdfs:comment "The name(s) of the author(s), in the format described in the LaTeX book."@en ;
+           rdfs:label "has author"@en .
+
+
+###  https://children-story.owl#hasContents
+:hasContents rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:comment "A Table of Contents."@en ;
+             rdfs:label "has contents"@en .
+
+
+###  https://children-story.owl#hasEdition
+:hasEdition rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The edition of a book--for example, \"Second\". This should be an ordinal, and should have the first letter capitalized, as shown here; the standard styles convert to lower case when necessary."@en ;
+            rdfs:label "has edition"@en .
+
+
+###  https://children-story.owl#hasEditor
+:hasEditor rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :humanCreator ;
+           rdfs:range xsd:string ;
+           <http://purl.org/dc/elements/1.1/description> "Again, the same issues that arose with the \"hasAuthor\" property apply here." ;
+           rdfs:comment "Name(s) of editor(s), typed as indicated in the LaTeX book. If there is also an author field, then the editor field gives the editor of the book or collection in which the reference appears."@en ;
+           rdfs:label "has editor"@en .
+
+
+###  https://children-story.owl#hasLanguage
+:hasLanguage rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The language the document is in."@en ;
+             rdfs:label "has language"@en .
+
+
+###  https://children-story.owl#hasPublisher
+:hasPublisher rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string ;
+              <http://purl.org/dc/elements/1.1/description> "This is a case where an ObjectProperty might be a better choice, where the range is some set of publisher names defined in another ontology.  That would allow all of the metadata for the publisher to be incorporated as needed." ;
+              rdfs:comment "The publisher's name."@en ;
+              rdfs:label "has publisher"@en .
+
+
+###  https://children-story.owl#hasSeries
+:hasSeries rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string ;
+           rdfs:comment "The name of a series or set of books. When citing an entire book, the the title field gives its title and an optional series field gives the name of a series or multi-volume set in which the book is published."@en ;
+           rdfs:label "has series"@en .
+
+
+###  https://children-story.owl#hasTitle
+:hasTitle rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The work's title, typed as explained in the LaTeX book."@en ;
+          rdfs:label "has title"@en .
+
+
+###  https://children-story.owl#hasURL
+:hasURL rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:string ;
+        rdfs:comment "The WWW Universal Resource Locator that points to the item being referenced. This often is used for technical reports to point to the ftp or web site where the postscript source of the report is located."@en ;
+        rdfs:label "has URL"@en .
+
+
+###  https://children-story.owl#hasYear
+:hasYear rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Publication ;
+         rdfs:range xsd:integer .
+
+
+###  https://children-story.owl#howPublished
+:howPublished rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string ;
+              rdfs:comment "How something strange has been published. The first word should be capitalized."@en ;
+              rdfs:label "how published"@en .
+
+
+###  https://children-story.owl#humanCreator
+:humanCreator rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string ;
+              rdfs:comment "A generic human creator category, necessary in order to contain both author and editor."@en ;
+              rdfs:label "human creator"@en .
+
+
+###  https://children-story.owl#minTargetAge
+:minTargetAge rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://comicmeta.org/cbo/Agent
+<http://comicmeta.org/cbo/Agent> rdf:type owl:Class ;
+                                 rdfs:comment "A person, organization, or intelligence in a comic universe."@en ;
+                                 rdfs:label "Agent" ;
+                                 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+
+
+###  http://comicmeta.org/cbo/Genres
+<http://comicmeta.org/cbo/Genres> rdf:type owl:Class ;
+                                  rdfs:comment "A comics genre."@en ;
+                                  rdfs:label "Genre"@en ;
+                                  <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+
+
+###  http://comicmeta.org/cbo/Team
+<http://comicmeta.org/cbo/Team> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://comicmeta.org/cbo/Agent> .
+
+
+###  https://children-story.owl#Animal
+:Animal rdf:type owl:Class ;
+        rdfs:subClassOf :Non-Human ;
+        owl:disjointWith :Object .
+
+
+###  https://children-story.owl#Audio
+:Audio rdf:type owl:Class ;
+       rdfs:subClassOf :Medium ;
+       rdfs:comment "an engaging form of communication that combines speech and music into compelling narratives" .
+
+
+###  https://children-story.owl#Author
+:Author rdf:type owl:Class ;
+        rdfs:subClassOf :Parties ;
+        owl:disjointWith :Organization ;
+        rdfs:comment "a writer of a book, article, or document. (Oxford Languages)" .
+
+
+###  https://children-story.owl#Characters
+:Characters rdf:type owl:Class ;
+            rdfs:subClassOf <http://comicmeta.org/cbo/Agent> ;
+            rdfs:comment "person in a novel, play, or film. (oxford languages)" .
+
+
+###  https://children-story.owl#Continent
+:Continent rdf:type owl:Class ;
+           rdfs:subClassOf :Location ;
+           rdfs:comment "any of the world's main continuous expanses of land (Europe, Asia, Africa, North and South America, Australia, Antarctica). (Oxford Languages)" .
+
+
+###  https://children-story.owl#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf :Location ;
+         rdfs:comment "a nation with its own government, occupying a particular territory. (oxford Languages)" .
+
+
+###  https://children-story.owl#Fiction
+:Fiction rdf:type owl:Class ;
+         rdfs:subClassOf <http://comicmeta.org/cbo/Genres> ;
+         owl:disjointWith :Non-Fiction ;
+         rdfs:comment "literature in the form of prose that describes imaginary events and people. (oxford languages)" .
+
+
+###  https://children-story.owl#Gender
+:Gender rdf:type owl:Class ;
+        rdfs:comment "the male sex or the female sex, especially when considered with reference to social and cultural differences rather than biological ones, or one of a range of other identities that do not correspond to established ideas of male and female. (oxford languages)" .
+
+
+###  https://children-story.owl#Human
+:Human rdf:type owl:Class ;
+       rdfs:subClassOf :Nature ;
+       rdfs:comment "relating to or characteristic of humankind. (Oxford Languages)" .
+
+
+###  https://children-story.owl#Lexical
+:Lexical rdf:type owl:Class ;
+         rdfs:subClassOf :Medium .
+
+
+###  https://children-story.owl#Location
+:Location rdf:type owl:Class ;
+          rdfs:comment "The place where story was published" .
+
+
+###  https://children-story.owl#Medium
+:Medium rdf:type owl:Class ;
+        rdfs:comment "The format of the story."@en ;
+        rdfs:label "Medium"@en .
+
+
+###  https://children-story.owl#Nature
+:Nature rdf:type owl:Class ;
+        rdfs:comment "the basic or inherent features, character, or qualities of something. (oxford language)" .
+
+
+###  https://children-story.owl#Non-Fiction
+:Non-Fiction rdf:type owl:Class ;
+             rdfs:subClassOf <http://comicmeta.org/cbo/Genres> ;
+             rdfs:comment "prose writing that is informative or factual rather than fictional. (oxford languages)" .
+
+
+###  https://children-story.owl#Non-Human
+:Non-Human rdf:type owl:Class ;
+           rdfs:subClassOf :Nature ;
+           rdfs:comment "a creature that is not a human being. (Oxford Languages)" .
+
+
+###  https://children-story.owl#Object
+:Object rdf:type owl:Class ;
+        rdfs:subClassOf :Non-Human .
+
+
+###  https://children-story.owl#Organization
+:Organization rdf:type owl:Class ;
+              rdfs:subClassOf :Parties ;
+              rdfs:comment "an organized group of people with a particular purpose, such as a business or a government department. (Oxford Languages)" .
+
+
+###  https://children-story.owl#Other
+:Other rdf:type owl:Class ;
+       rdfs:subClassOf :Nature .
+
+
+###  https://children-story.owl#Parties
+:Parties rdf:type owl:Class ;
+         rdfs:comment "Entites that create stories" .
+
+
+###  https://children-story.owl#Publication
+:Publication rdf:type owl:Class ;
+             rdfs:comment "the preparation and issuing of a book, journal, or piece of music for public sale. (oxford language)" .
+
+
+###  https://children-story.owl#Purpose
+:Purpose rdf:type owl:Class ;
+         rdfs:comment "the reason for which something is done or created or for which something exists. (oxford languages)" .
+
+
+###  https://children-story.owl#Role
+:Role rdf:type owl:Class ;
+      rdfs:comment "the function assumed or part played by a person or thing in a particular situation." .
+
+
+###  https://children-story.owl#Story
+:Story rdf:type owl:Class ;
+       rdfs:comment "Base class for all entries"@en ;
+       rdfs:label "Story"@en .
+
+
+###  https://children-story.owl#Visual
+:Visual rdf:type owl:Class ;
+        rdfs:subClassOf :Medium .
+
+
+###  https://children-story.owl#Children's_Story
+<https://children-story.owl#Children's_Story> rdf:type owl:Class ;
+                                              owl:equivalentClass [ owl:intersectionOf ( :Story
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty :minTargetAge ;
+                                                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                owl:onDatatype xsd:integer ;
+                                                                                                                owl:withRestrictions ( [ xsd:minInclusive 0
+                                                                                                                                       ]
+                                                                                                                                       [ xsd:maxExclusive 18
+                                                                                                                                       ]
+                                                                                                                                     )
+                                                                                                              ]
+                                                                                         ]
+                                                                                       ) ;
+                                                                    rdf:type owl:Class
+                                                                  ] ;
+                                              rdfs:subClassOf :Story .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://comicmeta.org/vocab/Adult
+<http://comicmeta.org/vocab/Adult> rdf:type owl:NamedIndividual ,
+                                            <http://comicmeta.org/cbo/Genres> .
+
+
+###  http://comicmeta.org/vocab/Comix
+<http://comicmeta.org/vocab/Comix> rdf:type owl:NamedIndividual ,
+                                            <http://comicmeta.org/cbo/Genres> .
+
+
+###  http://comicmeta.org/vocab/Crime
+<http://comicmeta.org/vocab/Crime> rdf:type owl:NamedIndividual ,
+                                            <http://comicmeta.org/cbo/Genres> .
+
+
+###  http://comicmeta.org/vocab/FunnyAnimal
+<http://comicmeta.org/vocab/FunnyAnimal> rdf:type owl:NamedIndividual ,
+                                                  <http://comicmeta.org/cbo/Genres> .
+
+
+###  http://comicmeta.org/vocab/Horror
+<http://comicmeta.org/vocab/Horror> rdf:type owl:NamedIndividual ,
+                                             <http://comicmeta.org/cbo/Genres> .
+
+
+###  http://comicmeta.org/vocab/Romance
+<http://comicmeta.org/vocab/Romance> rdf:type owl:NamedIndividual ,
+                                              <http://comicmeta.org/cbo/Genres> .
+
+
+###  http://comicmeta.org/vocab/ScienceFiction
+<http://comicmeta.org/vocab/ScienceFiction> rdf:type owl:NamedIndividual ,
+                                                     <http://comicmeta.org/cbo/Genres> .
+
+
+###  http://comicmeta.org/vocab/SuperHero
+<http://comicmeta.org/vocab/SuperHero> rdf:type owl:NamedIndividual ,
+                                                <http://comicmeta.org/cbo/Genres> .
+
+
+###  http://comicmeta.org/vocab/War
+<http://comicmeta.org/vocab/War> rdf:type owl:NamedIndividual ,
+                                          <http://comicmeta.org/cbo/Genres> .
+
+
+###  http://comicmeta.org/vocab/Western
+<http://comicmeta.org/vocab/Western> rdf:type owl:NamedIndividual ,
+                                              <http://comicmeta.org/cbo/Genres> .
+
+
+###  https://children-story.owl#Adam_and_Eve
+:Adam_and_Eve rdf:type owl:NamedIndividual ,
+                       :Story .
+
+
+###  https://children-story.owl#Adventure
+:Adventure rdf:type owl:NamedIndividual ,
+                    <http://comicmeta.org/cbo/Genres> .
+
+
+###  https://children-story.owl#Africa
+:Africa rdf:type owl:NamedIndividual ,
+                 :Continent .
+
+
+###  https://children-story.owl#Anna
+:Anna rdf:type owl:NamedIndividual ,
+               :Characters ;
+      :hasGender :Female ;
+      :hasNature :girl ;
+      :hasRole :Protagonist .
+
+
+###  https://children-story.owl#Antagonist
+:Antagonist rdf:type owl:NamedIndividual ,
+                     :Role .
+
+
+###  https://children-story.owl#Ariel
+:Ariel rdf:type owl:NamedIndividual ,
+                :Characters ;
+       :hasGender :Female ;
+       :hasNature :Mermaid ;
+       :hasRole :Protagonist .
+
+
+###  https://children-story.owl#Asia
+:Asia rdf:type owl:NamedIndividual ,
+               :Continent .
+
+
+###  https://children-story.owl#Australia
+:Australia rdf:type owl:NamedIndividual ,
+                    :Continent .
+
+
+###  https://children-story.owl#Baby_Shark
+:Baby_Shark rdf:type owl:NamedIndividual ,
+                     :Story ;
+            :hasCharacter :baby_shark ,
+                          :daddy_shark ,
+                          :grandma_shark ,
+                          :grandpa_shark ,
+                          :mommy_shark ;
+            :hasLocation :South_Korea ;
+            :hasMedium :song ;
+            :hasPurpose :Entertainment ;
+            :hasYear 2017 ;
+            :minTargetAge 1 .
+
+
+###  https://children-story.owl#Biography
+:Biography rdf:type owl:NamedIndividual ,
+                    :Non-Fiction .
+
+
+###  https://children-story.owl#Denmark
+:Denmark rdf:type owl:NamedIndividual ,
+                  [ owl:intersectionOf ( :Country
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasLocation ;
+                                           owl:hasValue :Europe
+                                         ]
+                                       ) ;
+                    rdf:type owl:Class
+                  ] .
+
+
+###  https://children-story.owl#Disney
+:Disney rdf:type owl:NamedIndividual ,
+                 :Organization .
+
+
+###  https://children-story.owl#Educational
+:Educational rdf:type owl:NamedIndividual ,
+                      :Purpose .
+
+
+###  https://children-story.owl#Elsa
+:Elsa rdf:type owl:NamedIndividual ,
+               :Characters ;
+      :hasGender :Female ;
+      :hasNature :girl ;
+      :hasRole :Protagonist .
+
+
+###  https://children-story.owl#Entertainment
+:Entertainment rdf:type owl:NamedIndividual ,
+                        :Purpose .
+
+
+###  https://children-story.owl#Europe
+:Europe rdf:type owl:NamedIndividual ,
+                 :Continent .
+
+
+###  https://children-story.owl#Fantasy
+:Fantasy rdf:type owl:NamedIndividual ,
+                  :Fiction .
+
+
+###  https://children-story.owl#Female
+:Female rdf:type owl:NamedIndividual ,
+                 :Gender .
+
+
+###  https://children-story.owl#Folklore
+:Folklore rdf:type owl:NamedIndividual ,
+                   <http://comicmeta.org/cbo/Genres> .
+
+
+###  https://children-story.owl#Frozen
+:Frozen rdf:type owl:NamedIndividual ,
+                 :Story ;
+        :byParties :Disney ;
+        :hasCharacter :Anna ,
+                      :Elsa ;
+        :hasLocation :USA ;
+        :hasMedium :video ;
+        :hasYear 2013 ;
+        :minTargetAge 3 .
+
+
+###  https://children-story.owl#Germany
+:Germany rdf:type owl:NamedIndividual ,
+                  [ owl:intersectionOf ( :Country
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasLocation ;
+                                           owl:hasValue :Europe
+                                         ]
+                                       ) ;
+                    rdf:type owl:Class
+                  ] .
+
+
+###  https://children-story.owl#Goldilocks
+:Goldilocks rdf:type owl:NamedIndividual ,
+                     :Characters ;
+            :hasGender :Female ;
+            :hasNature :girl ;
+            :hasRole :Protagonist .
+
+
+###  https://children-story.owl#Goldilocks_and_the_Three_Bears
+:Goldilocks_and_the_Three_Bears rdf:type owl:NamedIndividual ,
+                                         :Story ;
+                                :hasCharacter :Goldilocks ,
+                                              :big_bear ,
+                                              :medium_bear ,
+                                              :small_bear ;
+                                :hasGenres :Folklore ;
+                                :hasYear 1837 ;
+                                :minTargetAge 3 .
+
+
+###  https://children-story.owl#Gretel
+:Gretel rdf:type owl:NamedIndividual ,
+                 :Characters ;
+        :hasGender :Female ;
+        :hasNature :girl ;
+        :hasRole :Protagonist .
+
+
+###  https://children-story.owl#Hans_Christian_Anderson
+:Hans_Christian_Anderson rdf:type owl:NamedIndividual ,
+                                  :Author .
+
+
+###  https://children-story.owl#Hansel
+:Hansel rdf:type owl:NamedIndividual ,
+                 :Characters ;
+        :hasGender :Male ;
+        :hasNature :boy ;
+        :hasRole :Protagonist .
+
+
+###  https://children-story.owl#Hansel_and_Gretel
+:Hansel_and_Gretel rdf:type owl:NamedIndividual ,
+                            :Story ;
+                   :hasCharacter :Gretel ,
+                                 :Hansel ;
+                   :hasGenres :Folklore ;
+                   :hasLocation :Germany ;
+                   :hasMedium :book ;
+                   :hasPurpose :Educational ;
+                   :hasYear 1812 ;
+                   :minTargetAge 3 .
+
+
+###  https://children-story.owl#Historical
+:Historical rdf:type owl:NamedIndividual ,
+                     :Non-Fiction .
+
+
+###  https://children-story.owl#Indoctrination
+:Indoctrination rdf:type owl:NamedIndividual ,
+                         :Purpose .
+
+
+###  https://children-story.owl#Japan
+:Japan rdf:type owl:NamedIndividual ,
+                [ owl:intersectionOf ( :Country
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasLocation ;
+                                         owl:hasValue :Asia
+                                       ]
+                                     ) ;
+                  rdf:type owl:Class
+                ] .
+
+
+###  https://children-story.owl#Jerry
+:Jerry rdf:type owl:NamedIndividual ,
+                :Characters ;
+       :hasGender :Male ;
+       :hasNature :mouse .
+
+
+###  https://children-story.owl#Male
+:Male rdf:type owl:NamedIndividual ,
+               :Gender .
+
+
+###  https://children-story.owl#Mama_Built_a_Little_Nest
+:Mama_Built_a_Little_Nest rdf:type owl:NamedIndividual ,
+                                   :Story ;
+                          :hasLocation :USA ;
+                          :hasPurpose :Educational ;
+                          :hasYear 2014 ;
+                          :minTargetAge 6 .
+
+
+###  https://children-story.owl#Mermaid
+:Mermaid rdf:type owl:NamedIndividual ,
+                  :Other .
+
+
+###  https://children-story.owl#North_America
+:North_America rdf:type owl:NamedIndividual ,
+                        :Continent .
+
+
+###  https://children-story.owl#Others
+:Others rdf:type owl:NamedIndividual ,
+                 :Gender .
+
+
+###  https://children-story.owl#Protagonist
+:Protagonist rdf:type owl:NamedIndividual ,
+                      :Role .
+
+
+###  https://children-story.owl#Proverb
+:Proverb rdf:type owl:NamedIndividual ,
+                  <http://comicmeta.org/cbo/Genres> .
+
+
+###  https://children-story.owl#Religious
+:Religious rdf:type owl:NamedIndividual ,
+                    <http://comicmeta.org/cbo/Genres> .
+
+
+###  https://children-story.owl#SeaWitch
+:SeaWitch rdf:type owl:NamedIndividual ,
+                   :Other .
+
+
+###  https://children-story.owl#South_America
+:South_America rdf:type owl:NamedIndividual ,
+                        :Continent .
+
+
+###  https://children-story.owl#South_Korea
+:South_Korea rdf:type owl:NamedIndividual ,
+                      [ owl:intersectionOf ( :Country
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasLocation ;
+                                               owl:hasValue :Asia
+                                             ]
+                                           ) ;
+                        rdf:type owl:Class
+                      ] .
+
+
+###  https://children-story.owl#Supporting
+:Supporting rdf:type owl:NamedIndividual ,
+                     :Role .
+
+
+###  https://children-story.owl#TheLittleMermaid_1837
+:TheLittleMermaid_1837 rdf:type owl:NamedIndividual ,
+                                :Story ;
+                       :byParties :Hans_Christian_Anderson ;
+                       :hasCharacter :Ariel ,
+                                     :Ursula ;
+                       :hasGenres :Fantasy ,
+                                  :Folklore ;
+                       :hasLocation :Denmark ;
+                       :hasMedium :book ;
+                       :hasOtherVersions :TheLittleMermaid_1989 ;
+                       :hasYear 1837 ;
+                       :minTargetAge 6 .
+
+
+###  https://children-story.owl#TheLittleMermaid_1989
+:TheLittleMermaid_1989 rdf:type owl:NamedIndividual ,
+                                :Story ;
+                       :byParties :Disney ;
+                       :hasCharacter :Ariel ,
+                                     :Ursula ;
+                       :hasGenres :Fantasy ,
+                                  :Folklore ;
+                       :hasLocation :USA ;
+                       :hasMedium :video ;
+                       :hasPurpose :Entertainment ;
+                       :hasYear 1989 ;
+                       :minTargetAge 5 ;
+                       owl:priorVersion :TheLittleMermaid_1837 .
+
+
+###  https://children-story.owl#The_Poisonous_Mushroom
+:The_Poisonous_Mushroom rdf:type owl:NamedIndividual ,
+                                 :Story ;
+                        :hasLocation :Germany ;
+                        :hasPurpose :Indoctrination ;
+                        :hasYear 1938 ;
+                        :minTargetAge 7 .
+
+
+###  https://children-story.owl#Tom
+:Tom rdf:type owl:NamedIndividual ,
+              :Characters ;
+     :hasGender :Male ;
+     :hasNature :cat .
+
+
+###  https://children-story.owl#Tom_and_Jerry
+:Tom_and_Jerry rdf:type owl:NamedIndividual ,
+                        :Story ,
+                        [ rdf:type owl:Class ;
+                          owl:complementOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasMedium ;
+                                             owl:someValuesFrom :Lexical
+                                           ]
+                        ] ;
+               :byParties :Warner_Bros ,
+                          :William_Hanna ;
+               :hasCharacter :Jerry ,
+                             :Tom ;
+               :hasMedium :video ;
+               :hasYear 1940 ;
+               :minTargetAge 5 .
+
+
+###  https://children-story.owl#USA
+:USA rdf:type owl:NamedIndividual ,
+              [ owl:intersectionOf ( :Country
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasLocation ;
+                                       owl:hasValue :North_America
+                                     ]
+                                   ) ;
+                rdf:type owl:Class
+              ] .
+
+
+###  https://children-story.owl#United_Kingdom
+:United_Kingdom rdf:type owl:NamedIndividual ,
+                         [ owl:intersectionOf ( :Country
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasLocation ;
+                                                  owl:hasValue :Europe
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] .
+
+
+###  https://children-story.owl#Ursula
+:Ursula rdf:type owl:NamedIndividual ,
+                 :Characters ;
+        :hasGender :Female ;
+        :hasNature :SeaWitch ;
+        :hasRole :Antagonist .
+
+
+###  https://children-story.owl#Warner_Bros
+:Warner_Bros rdf:type owl:NamedIndividual ,
+                      :Organization .
+
+
+###  https://children-story.owl#William_Hanna
+:William_Hanna rdf:type owl:NamedIndividual ,
+                        :Author .
+
+
+###  https://children-story.owl#baby_shark
+:baby_shark rdf:type owl:NamedIndividual ;
+            :hasGender :Others ;
+            :hasNature :shark .
+
+
+###  https://children-story.owl#bear
+:bear rdf:type owl:NamedIndividual ,
+               :Animal .
+
+
+###  https://children-story.owl#big_bear
+:big_bear rdf:type owl:NamedIndividual ;
+          :hasNature :bear .
+
+
+###  https://children-story.owl#book
+:book rdf:type owl:NamedIndividual ,
+               :Lexical ,
+               :Visual .
+
+
+###  https://children-story.owl#boy
+:boy rdf:type owl:NamedIndividual ,
+              :Human ,
+              [ rdf:type owl:Restriction ;
+                owl:onProperty :hasGender ;
+                owl:hasValue :Male
+              ] .
+
+
+###  https://children-story.owl#cat
+:cat rdf:type owl:NamedIndividual ,
+              :Animal .
+
+
+###  https://children-story.owl#comics
+:comics rdf:type owl:NamedIndividual ,
+                 :Visual .
+
+
+###  https://children-story.owl#daddy_shark
+:daddy_shark rdf:type owl:NamedIndividual ;
+             :hasGender :Male ;
+             :hasNature :shark .
+
+
+###  https://children-story.owl#girl
+:girl rdf:type owl:NamedIndividual ,
+               :Human ,
+               [ rdf:type owl:Restriction ;
+                 owl:onProperty :hasGender ;
+                 owl:hasValue :Female
+               ] .
+
+
+###  https://children-story.owl#grandma_shark
+:grandma_shark rdf:type owl:NamedIndividual ;
+               :hasGender :Female ;
+               :hasNature :shark .
+
+
+###  https://children-story.owl#grandpa_shark
+:grandpa_shark rdf:type owl:NamedIndividual ;
+               :hasGender :Male ;
+               :hasNature :shark .
+
+
+###  https://children-story.owl#man
+:man rdf:type owl:NamedIndividual ,
+              :Human ,
+              [ rdf:type owl:Restriction ;
+                owl:onProperty :hasGender ;
+                owl:hasValue :Male
+              ] .
+
+
+###  https://children-story.owl#medium_bear
+:medium_bear rdf:type owl:NamedIndividual ;
+             :hasNature :bear .
+
+
+###  https://children-story.owl#mommy_shark
+:mommy_shark rdf:type owl:NamedIndividual ;
+             :hasGender :Female .
+
+
+###  https://children-story.owl#mouse
+:mouse rdf:type owl:NamedIndividual ,
+                :Animal .
+
+
+###  https://children-story.owl#shark
+:shark rdf:type owl:NamedIndividual ,
+                :Animal .
+
+
+###  https://children-story.owl#small_bear
+:small_bear rdf:type owl:NamedIndividual ;
+            :hasNature :bear .
+
+
+###  https://children-story.owl#song
+:song rdf:type owl:NamedIndividual ,
+               :Audio ,
+               :Lexical .
+
+
+###  https://children-story.owl#video
+:video rdf:type owl:NamedIndividual ,
+                :Visual .
+
+
+###  https://children-story.owl#woman
+:woman rdf:type owl:NamedIndividual ,
+                :Human ,
+                [ rdf:type owl:Restriction ;
+                  owl:onProperty :hasGender ;
+                  owl:hasValue :Female
+                ] .
+
+
+[ <http://purl.org/dc/elements/1.1/description> "One thing to figure out is whether or not this tells us what we want; that is, does this imply that we must have at least one property of humanCreator, which could be either hasAuthor or hasEditor?"
+] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/elements/1.1/creator> <http://purl.org/dc/elements/1.1/title> "this is a test title" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Human
+                :Non-Human
+                :Other
+              )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Anna
+                        :Elsa
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Antagonist
+                        :Protagonist
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Female
+                        :Male
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Female
+                        :Others
+                      )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

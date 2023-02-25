@@ -1,0 +1,1736 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "mit.edu>", "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://comicmeta.org/cbo", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://children-story.owl" ],
+    "title" : {
+      "undefined" : "bibtex.owl: an ontology for bibTeX entries"
+    },
+    "iri" : "https://children-story.owl",
+    "version" : "0.01",
+    "author" : [ "Nick Knouf <nknouf" ],
+    "description" : {
+      "undefined" : "Transformation of bibTeX into an OWL ontology"
+    },
+    "labels" : {
+      "undefined" : "bibtex ontology"
+    },
+    "comments" : {
+      "undefined" : "Possible ontology to describe bibTeX entries."
+    },
+    "other" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2003-12-29",
+        "type" : "label"
+      } ],
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "http://visus.mit.edu/bibtex/0.01/bibtex.owl",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "mit.edu>",
+        "value" : "Nick Knouf <nknouf",
+        "type" : "label"
+      } ],
+      "subject" : [ {
+        "identifier" : "subject",
+        "language" : "undefined",
+        "value" : "fMRI, ontology, fMRI analysis, foo, bar",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.01",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "bibtex.owl: an ontology for bibTeX entries",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "35",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "39",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "40",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "41",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://children-story.owl#Parties",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Parties"
+    },
+    "subClasses" : [ "8", "9" ],
+    "comment" : {
+      "undefined" : "Entites that create stories"
+    },
+    "id" : "7"
+  }, {
+    "iri" : "https://children-story.owl#Animal",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Animal"
+    },
+    "individuals" : [ {
+      "iri" : "https://children-story.owl#mouse",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "mouse"
+      }
+    }, {
+      "iri" : "https://children-story.owl#shark",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "shark"
+      }
+    }, {
+      "iri" : "https://children-story.owl#cat",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "cat"
+      }
+    }, {
+      "iri" : "https://children-story.owl#bear",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "bear"
+      }
+    } ],
+    "id" : "10",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://children-story.owl#Purpose",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Purpose"
+    },
+    "individuals" : [ {
+      "iri" : "https://children-story.owl#Indoctrination",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Indoctrination"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Educational",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Educational"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Entertainment",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Entertainment"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "the reason for which something is done or created or for which something exists. (oxford languages)"
+    },
+    "id" : "15"
+  }, {
+    "iri" : "https://children-story.owl#Publication",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Publication"
+    },
+    "comment" : {
+      "undefined" : "the preparation and issuing of a book, journal, or piece of music for public sale. (oxford language)"
+    },
+    "id" : "5"
+  }, {
+    "iri" : "https://children-story.owl#Gender",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Gender"
+    },
+    "individuals" : [ {
+      "iri" : "https://children-story.owl#Others",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Others"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Male",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Male"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Female",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Female"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "the male sex or the female sex, especially when considered with reference to social and cultural differences rather than biological ones, or one of a range of other identities that do not correspond to established ideas of male and female. (oxford languages)"
+    },
+    "id" : "16"
+  }, {
+    "iri" : "https://children-story.owl#Human",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Human"
+    },
+    "individuals" : [ {
+      "iri" : "https://children-story.owl#woman",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "woman"
+      }
+    }, {
+      "iri" : "https://children-story.owl#boy",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "boy"
+      }
+    }, {
+      "iri" : "https://children-story.owl#girl",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "girl"
+      }
+    }, {
+      "iri" : "https://children-story.owl#man",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "man"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "relating to or characteristic of humankind. (Oxford Languages)"
+    },
+    "id" : "17",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "https://children-story.owl#Audio",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Audio"
+    },
+    "individuals" : [ {
+      "iri" : "https://children-story.owl#song",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "song"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "an engaging form of communication that combines speech and music into compelling narratives"
+    },
+    "id" : "32",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://children-story.owl#Object",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Object"
+    },
+    "id" : "33",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "34",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "35",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "39",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "40",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "41",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "13",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://children-story.owl#Story",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Story",
+      "en" : "Story"
+    },
+    "individuals" : [ {
+      "iri" : "https://children-story.owl#Frozen",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Frozen"
+      }
+    }, {
+      "iri" : "https://children-story.owl#TheLittleMermaid_1989",
+      "baseIri" : "https://children-story.owl",
+      "annotations" : {
+        "priorVersion" : [ {
+          "identifier" : "priorVersion",
+          "language" : "undefined",
+          "value" : "https://children-story.owl#TheLittleMermaid_1837",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "TheLittleMermaid_1989"
+      }
+    }, {
+      "iri" : "https://children-story.owl#TheLittleMermaid_1837",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "TheLittleMermaid_1837"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Adam_and_Eve",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Adam_and_Eve"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Hansel_and_Gretel",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Hansel_and_Gretel"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Mama_Built_a_Little_Nest",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Mama_Built_a_Little_Nest"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Baby_Shark",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Baby_Shark"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Goldilocks_and_the_Three_Bears",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Goldilocks_and_the_Three_Bears"
+      }
+    }, {
+      "iri" : "https://children-story.owl#The_Poisonous_Mushroom",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "The_Poisonous_Mushroom"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Tom_and_Jerry",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Tom_and_Jerry"
+      }
+    } ],
+    "subClasses" : [ "53" ],
+    "comment" : {
+      "en" : "Base class for all entries"
+    },
+    "id" : "4"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://children-story.owl#Lexical",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Lexical"
+    },
+    "individuals" : [ {
+      "iri" : "https://children-story.owl#song",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "song"
+      }
+    }, {
+      "iri" : "https://children-story.owl#book",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "book"
+      }
+    } ],
+    "id" : "30",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://children-story.owl#Country",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Country"
+    },
+    "comment" : {
+      "undefined" : "a nation with its own government, occupying a particular territory. (oxford Languages)"
+    },
+    "id" : "55",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "https://children-story.owl#Continent",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Continent"
+    },
+    "individuals" : [ {
+      "iri" : "https://children-story.owl#Australia",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Australia"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Africa",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Africa"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Europe",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Europe"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Asia",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Asia"
+      }
+    }, {
+      "iri" : "https://children-story.owl#North_America",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "North_America"
+      }
+    }, {
+      "iri" : "https://children-story.owl#South_America",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "South_America"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "any of the world's main continuous expanses of land (Europe, Asia, Africa, North and South America, Australia, Antarctica). (Oxford Languages)"
+    },
+    "id" : "56",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "https://children-story.owl#Fiction",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fiction"
+    },
+    "individuals" : [ {
+      "iri" : "https://children-story.owl#Fantasy",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Fantasy"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "literature in the form of prose that describes imaginary events and people. (oxford languages)"
+    },
+    "id" : "57",
+    "superClasses" : [ "58" ]
+  }, {
+    "iri" : "https://children-story.owl#Location",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Location"
+    },
+    "subClasses" : [ "55", "56" ],
+    "comment" : {
+      "undefined" : "The place where story was published"
+    },
+    "id" : "43"
+  }, {
+    "iri" : "https://children-story.owl#Medium",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Medium",
+      "en" : "Medium"
+    },
+    "subClasses" : [ "30", "32", "37" ],
+    "comment" : {
+      "en" : "The format of the story."
+    },
+    "id" : "31"
+  }, {
+    "iri" : "https://children-story.owl#Role",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Role"
+    },
+    "individuals" : [ {
+      "iri" : "https://children-story.owl#Antagonist",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Antagonist"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Supporting",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Supporting"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Protagonist",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Protagonist"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "the function assumed or part played by a person or thing in a particular situation."
+    },
+    "id" : "54"
+  }, {
+    "iri" : "https://children-story.owl#Other",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Other"
+    },
+    "individuals" : [ {
+      "iri" : "https://children-story.owl#Mermaid",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Mermaid"
+      }
+    }, {
+      "iri" : "https://children-story.owl#SeaWitch",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "SeaWitch"
+      }
+    } ],
+    "id" : "66",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://comicmeta.org/cbo/Agent",
+    "baseIri" : "http://comicmeta.org/cbo",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "unstable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Agent",
+      "undefined" : "Agent"
+    },
+    "subClasses" : [ "1", "72" ],
+    "comment" : {
+      "en" : "A person, organization, or intelligence in a comic universe."
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://children-story.owl#Characters",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Characters"
+    },
+    "individuals" : [ {
+      "iri" : "https://children-story.owl#Gretel",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Gretel"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Tom",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Tom"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Goldilocks",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Goldilocks"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Ariel",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Ariel"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Elsa",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Elsa"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Jerry",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Jerry"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Ursula",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Ursula"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Hansel",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Hansel"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Anna",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Anna"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "person in a novel, play, or film. (oxford languages)"
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://comicmeta.org/cbo/Team",
+    "baseIri" : "http://comicmeta.org/cbo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Team"
+    },
+    "attributes" : [ "external" ],
+    "id" : "72",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://children-story.owl#Non-Fiction",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Non-Fiction"
+    },
+    "individuals" : [ {
+      "iri" : "https://children-story.owl#Biography",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Biography"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Historical",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Historical"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "prose writing that is informative or factual rather than fictional. (oxford languages)"
+    },
+    "id" : "61",
+    "superClasses" : [ "58" ]
+  }, {
+    "iri" : "https://children-story.owl#Visual",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Visual"
+    },
+    "individuals" : [ {
+      "iri" : "https://children-story.owl#comics",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "comics"
+      }
+    }, {
+      "iri" : "https://children-story.owl#book",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "book"
+      }
+    }, {
+      "iri" : "https://children-story.owl#video",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "video"
+      }
+    } ],
+    "id" : "37",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://children-story.owl#Children's_Story",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Children's_Story"
+    },
+    "intersection" : [ "4" ],
+    "attributes" : [ "intersection" ],
+    "id" : "53",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "68",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "87",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "88",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "81",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://children-story.owl#Author",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Author"
+    },
+    "individuals" : [ {
+      "iri" : "https://children-story.owl#Hans_Christian_Anderson",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Hans_Christian_Anderson"
+      }
+    }, {
+      "iri" : "https://children-story.owl#William_Hanna",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "William_Hanna"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "a writer of a book, article, or document. (Oxford Languages)"
+    },
+    "id" : "9",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://children-story.owl#Non-Human",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Non-Human"
+    },
+    "subClasses" : [ "10", "33" ],
+    "comment" : {
+      "undefined" : "a creature that is not a human being. (Oxford Languages)"
+    },
+    "id" : "11",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "https://children-story.owl#Nature",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Nature"
+    },
+    "subClasses" : [ "17", "66", "11" ],
+    "comment" : {
+      "undefined" : "the basic or inherent features, character, or qualities of something. (oxford language)"
+    },
+    "id" : "18"
+  }, {
+    "iri" : "https://children-story.owl#Organization",
+    "baseIri" : "https://children-story.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization"
+    },
+    "individuals" : [ {
+      "iri" : "https://children-story.owl#Disney",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Disney"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Warner_Bros",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Warner_Bros"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "an organized group of people with a particular purpose, such as a business or a government department. (Oxford Languages)"
+    },
+    "id" : "8",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://comicmeta.org/cbo/Genres",
+    "baseIri" : "http://comicmeta.org/cbo",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "unstable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Genres",
+      "en" : "Genre"
+    },
+    "individuals" : [ {
+      "iri" : "http://comicmeta.org/vocab/Horror",
+      "baseIri" : "http://comicmeta.org/vocab",
+      "labels" : {
+        "IRI-based" : "Horror"
+      }
+    }, {
+      "iri" : "http://comicmeta.org/vocab/ScienceFiction",
+      "baseIri" : "http://comicmeta.org/vocab",
+      "labels" : {
+        "IRI-based" : "ScienceFiction"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Folklore",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Folklore"
+      }
+    }, {
+      "iri" : "http://comicmeta.org/vocab/Adult",
+      "baseIri" : "http://comicmeta.org/vocab",
+      "labels" : {
+        "IRI-based" : "Adult"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Religious",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Religious"
+      }
+    }, {
+      "iri" : "http://comicmeta.org/vocab/SuperHero",
+      "baseIri" : "http://comicmeta.org/vocab",
+      "labels" : {
+        "IRI-based" : "SuperHero"
+      }
+    }, {
+      "iri" : "http://comicmeta.org/vocab/Western",
+      "baseIri" : "http://comicmeta.org/vocab",
+      "labels" : {
+        "IRI-based" : "Western"
+      }
+    }, {
+      "iri" : "http://comicmeta.org/vocab/Romance",
+      "baseIri" : "http://comicmeta.org/vocab",
+      "labels" : {
+        "IRI-based" : "Romance"
+      }
+    }, {
+      "iri" : "http://comicmeta.org/vocab/Comix",
+      "baseIri" : "http://comicmeta.org/vocab",
+      "labels" : {
+        "IRI-based" : "Comix"
+      }
+    }, {
+      "iri" : "http://comicmeta.org/vocab/Crime",
+      "baseIri" : "http://comicmeta.org/vocab",
+      "labels" : {
+        "IRI-based" : "Crime"
+      }
+    }, {
+      "iri" : "http://comicmeta.org/vocab/War",
+      "baseIri" : "http://comicmeta.org/vocab",
+      "labels" : {
+        "IRI-based" : "War"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Adventure",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Adventure"
+      }
+    }, {
+      "iri" : "https://children-story.owl#Proverb",
+      "baseIri" : "https://children-story.owl",
+      "labels" : {
+        "IRI-based" : "Proverb"
+      }
+    }, {
+      "iri" : "http://comicmeta.org/vocab/FunnyAnimal",
+      "baseIri" : "http://comicmeta.org/vocab",
+      "labels" : {
+        "IRI-based" : "FunnyAnimal"
+      }
+    } ],
+    "subClasses" : [ "61", "57" ],
+    "comment" : {
+      "en" : "A comics genre."
+    },
+    "attributes" : [ "external" ],
+    "id" : "58"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "83",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "84",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "85",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "90",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://children-story.owl#isPublication",
+    "baseIri" : "https://children-story.owl",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "isPublication"
+    },
+    "superproperty" : [ "6" ],
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://children-story.owl#hasPublisher",
+    "baseIri" : "https://children-story.owl",
+    "range" : "14",
+    "description" : {
+      "undefined" : "This is a case where an ObjectProperty might be a better choice, where the range is some set of publisher names defined in another ontology.  That would allow all of the metadata for the publisher to be incorporated as needed."
+    },
+    "label" : {
+      "IRI-based" : "hasPublisher",
+      "en" : "has publisher"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "The publisher's name."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "12"
+  }, {
+    "range" : "7",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "19"
+  }, {
+    "range" : "7",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "13",
+    "subproperty" : [ "21", "3", "22", "23", "24", "25", "26" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://children-story.owl#hasLanguage",
+    "baseIri" : "https://children-story.owl",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "hasLanguage",
+      "en" : "has language"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "The language the document is in."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "27"
+  }, {
+    "range" : "31",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://children-story.owl#belongsTo",
+    "baseIri" : "https://children-story.owl",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "belongsTo"
+    },
+    "superproperty" : [ "6" ],
+    "domain" : "5",
+    "attributes" : [ "object" ],
+    "id" : "25"
+  }, {
+    "range" : "31",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "36"
+  }, {
+    "range" : "31",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://children-story.owl#hasGenres",
+    "baseIri" : "https://children-story.owl",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "hasGenres"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "42"
+  }, {
+    "iri" : "https://children-story.owl#hasLocation",
+    "baseIri" : "https://children-story.owl",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "hasLocation"
+    },
+    "superproperty" : [ "6" ],
+    "domain" : "40",
+    "attributes" : [ "transitive", "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://children-story.owl#hasPurpose",
+    "baseIri" : "https://children-story.owl",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "hasPurpose"
+    },
+    "superproperty" : [ "6" ],
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://children-story.owl#hasSeries",
+    "baseIri" : "https://children-story.owl",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "hasSeries",
+      "en" : "has series"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "The name of a series or set of books. When citing an entire book, the the title field gives its title and an optional series field gives the name of a series or multi-volume set in which the book is published."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://children-story.owl#hasTitle",
+    "baseIri" : "https://children-story.owl",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "hasTitle",
+      "en" : "has title"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "The work's title, typed as explained in the LaTeX book."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "50"
+  }, {
+    "iri" : "https://children-story.owl#hasNature",
+    "baseIri" : "https://children-story.owl",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "hasNature"
+    },
+    "superproperty" : [ "6" ],
+    "domain" : "1",
+    "attributes" : [ "object", "functional" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://children-story.owl#hasRole",
+    "baseIri" : "https://children-story.owl",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "hasRole"
+    },
+    "superproperty" : [ "6" ],
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "range" : "58",
+    "domain" : "57",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "59"
+  }, {
+    "range" : "58",
+    "domain" : "61",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "60"
+  }, {
+    "range" : "18",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "62"
+  }, {
+    "range" : "11",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "63"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "64"
+  }, {
+    "range" : "18",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://children-story.owl#hasAuthor",
+    "baseIri" : "https://children-story.owl",
+    "range" : "68",
+    "description" : {
+      "undefined" : "This is tricky due to the fact that order is not (generally) preserved in RDF documents.  The problem arises when you want to have an author list where the order is _extremely_ important.  How shall we do that?  Perhaps we want to define \"hasPrimaryAuthor\", \"hasSecondaryAuthor\", \"hasTertiaryAuthor\", and \"hasRemainingAuthors\", or something of that sort.  This will be have to given more thought."
+    },
+    "label" : {
+      "IRI-based" : "hasAuthor",
+      "en" : "has author"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "The name(s) of the author(s), in the format described in the LaTeX book."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "67"
+  }, {
+    "range" : "18",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "69"
+  }, {
+    "range" : "4",
+    "domain" : "53",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "70"
+  }, {
+    "range" : "2",
+    "domain" : "72",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "71"
+  }, {
+    "range" : "43",
+    "domain" : "56",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "73"
+  }, {
+    "range" : "43",
+    "domain" : "55",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "74"
+  }, {
+    "iri" : "https://children-story.owl#hasURL",
+    "baseIri" : "https://children-story.owl",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "hasURL",
+      "en" : "has URL"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "The WWW Universal Resource Locator that points to the item being referenced. This often is used for technical reports to point to the ftp or web site where the postscript source of the report is located."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "75"
+  }, {
+    "iri" : "https://children-story.owl#hasOtherVersions",
+    "baseIri" : "https://children-story.owl",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasOtherVersions"
+    },
+    "domain" : "4",
+    "attributes" : [ "transitive", "symmetric", "object" ],
+    "id" : "76"
+  }, {
+    "iri" : "https://children-story.owl#hasGender",
+    "baseIri" : "https://children-story.owl",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasGender"
+    },
+    "domain" : "39",
+    "attributes" : [ "object", "functional" ],
+    "id" : "77"
+  }, {
+    "iri" : "https://children-story.owl#hasYear",
+    "baseIri" : "https://children-story.owl",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "hasYear"
+    },
+    "domain" : "5",
+    "attributes" : [ "datatype" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://children-story.owl#howPublished",
+    "baseIri" : "https://children-story.owl",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "howPublished",
+      "en" : "how published"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "How something strange has been published. The first word should be capitalized."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "79"
+  }, {
+    "iri" : "https://children-story.owl#hasEditor",
+    "baseIri" : "https://children-story.owl",
+    "range" : "81",
+    "description" : {
+      "undefined" : "Again, the same issues that arose with the \"hasAuthor\" property apply here."
+    },
+    "label" : {
+      "IRI-based" : "hasEditor",
+      "en" : "has editor"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Name(s) of editor(s), typed as indicated in the LaTeX book. If there is also an author field, then the editor field gives the editor of the book or collection in which the reference appears."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "80"
+  }, {
+    "range" : "61",
+    "domain" : "57",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "82"
+  }, {
+    "range" : "11",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "83"
+  }, {
+    "range" : "66",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "84"
+  }, {
+    "range" : "66",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "85"
+  }, {
+    "iri" : "https://children-story.owl#minTargetAge",
+    "baseIri" : "https://children-story.owl",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "minTargetAge"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype" ],
+    "id" : "86"
+  }, {
+    "iri" : "https://children-story.owl#hasCharacter",
+    "baseIri" : "https://children-story.owl",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasCharacter"
+    },
+    "superproperty" : [ "6" ],
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "range" : "33",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "89"
+  }, {
+    "range" : "8",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "iri" : "https://children-story.owl#byParties",
+    "baseIri" : "https://children-story.owl",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "byParties"
+    },
+    "domain" : "5",
+    "attributes" : [ "object" ],
+    "id" : "91"
+  }, {
+    "iri" : "https://children-story.owl#humanCreator",
+    "baseIri" : "https://children-story.owl",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "humanCreator",
+      "en" : "human creator"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "A generic human creator category, necessary in order to contain both author and editor."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://children-story.owl#hasContents",
+    "baseIri" : "https://children-story.owl",
+    "range" : "87",
+    "label" : {
+      "IRI-based" : "hasContents",
+      "en" : "has contents"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "A Table of Contents."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "93"
+  }, {
+    "iri" : "https://children-story.owl#hasTargetAudience",
+    "baseIri" : "https://children-story.owl",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "hasTargetAudience"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "94"
+  }, {
+    "iri" : "https://children-story.owl#hasEdition",
+    "baseIri" : "https://children-story.owl",
+    "range" : "88",
+    "label" : {
+      "IRI-based" : "hasEdition",
+      "en" : "has edition"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "The edition of a book--for example, \"Second\". This should be an ordinal, and should have the first letter capitalized, as shown here; the standard styles convert to lower case when necessary."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "95"
+  }, {
+    "iri" : "https://children-story.owl#hasMedium",
+    "baseIri" : "https://children-story.owl",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "hasMedium"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "96"
+  }, {
+    "iri" : "http://comicmeta.org/cbo/genre",
+    "baseIri" : "http://comicmeta.org/cbo",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "genre"
+    },
+    "domain" : "34",
+    "attributes" : [ "external", "object" ],
+    "id" : "97"
+  } ]
+}

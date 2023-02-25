@@ -1,0 +1,4113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Children Stories Ontologies</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://children-story.owl","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://children-story.owl","name":"Children Stories Ontologies", "headline":"Children stories ontology that includes stories from various forms of media and across several time periods", "datePublished":"Fri Feb 24 23:52:55 CET 2023"}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Children Stories Ontologies</h1>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="https://children-story.owl">https://children-story.owl</a></dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<hr/>
+</div>
+<div id="toc"></div>   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Children Stories Ontologies classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Children Stories Ontologies.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://comicmeta.org/cbo/Agent" title="http://comicmeta.org/cbo/Agent">Agent</a>
+      </li>
+      <li>
+         <a href="#Animal" title="https://children-story.owl#Animal">
+            <span>animal</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Audio" title="https://children-story.owl#Audio">
+            <span>audio</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Author" title="https://children-story.owl#Author">
+            <span>author</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Characters" title="https://children-story.owl#Characters">
+            <span>characters</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Children's_Story" title="https://children-story.owl#Children's_Story">
+            <span>children's story</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Continent" title="https://children-story.owl#Continent">
+            <span>continent</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Country" title="https://children-story.owl#Country">
+            <span>country</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Fiction" title="https://children-story.owl#Fiction">
+            <span>fiction</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Gender" title="https://children-story.owl#Gender">
+            <span>gender</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+      </li>
+      <li>
+         <a href="#Human" title="https://children-story.owl#Human">
+            <span>human</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Lexical" title="https://children-story.owl#Lexical">
+            <span>lexical</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Location" title="https://children-story.owl#Location">
+            <span>location</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Medium" title="https://children-story.owl#Medium">Medium</a>
+      </li>
+      <li>
+         <a href="#Nature" title="https://children-story.owl#Nature">
+            <span>nature</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Non-Fiction" title="https://children-story.owl#Non-Fiction">
+            <span>non fiction</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Non-Human" title="https://children-story.owl#Non-Human">
+            <span>non human</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Object" title="https://children-story.owl#Object">
+            <span>object</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Organization" title="https://children-story.owl#Organization">
+            <span>organization</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Other" title="https://children-story.owl#Other">
+            <span>other</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Parties" title="https://children-story.owl#Parties">
+            <span>parties</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Publication" title="https://children-story.owl#Publication">
+            <span>publication</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Purpose" title="https://children-story.owl#Purpose">
+            <span>purpose</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Role" title="https://children-story.owl#Role">
+            <span>role</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Story" title="https://children-story.owl#Story">Story</a>
+      </li>
+      <li>
+         <a href="#http://comicmeta.org/cbo/Team" title="http://comicmeta.org/cbo/Team">
+            <span>team</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Visual" title="https://children-story.owl#Visual">
+            <span>visual</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://comicmeta.org/cbo/Agent">
+      <h3>Agent<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://comicmeta.org/cbo/Agent</p>
+      <div class="comment">
+         <span class="markdown">A person, organization, or intelligence in a comic universe.</span>
+      </div>
+      <dl>
+         <dt>Term status</dt>
+         <dd>unstable</dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Characters" title="https://children-story.owl#Characters">characters</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://comicmeta.org/cbo/Team" title="http://comicmeta.org/cbo/Team">team</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Animal">
+      <h3>animal<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Animal</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Non-Human" title="https://children-story.owl#Non-Human">non human</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#bear" title="https://children-story.owl#bear">bear</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#cat" title="https://children-story.owl#cat">cat</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#mouse" title="https://children-story.owl#mouse">mouse</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#shark" title="https://children-story.owl#shark">shark</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Object" title="https://children-story.owl#Object">object</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Audio">
+      <h3>audio<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Audio</p>
+      <div class="comment">
+         <span class="markdown">an engaging form of communication that combines speech and music into compelling narratives</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Medium" title="https://children-story.owl#Medium">Medium</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#song" title="https://children-story.owl#song">song</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Author">
+      <h3>author<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Author</p>
+      <div class="comment">
+         <span class="markdown">a writer of a book, article, or document. (Oxford Languages)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Parties" title="https://children-story.owl#Parties">parties</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Hans_Christian_Anderson"
+               title="https://children-story.owl#Hans_Christian_Anderson">hans christian anderson</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#William_Hanna" title="https://children-story.owl#William_Hanna">william hanna</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Organization" title="https://children-story.owl#Organization">organization</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Characters">
+      <h3>characters<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Characters</p>
+      <div class="comment">
+         <span class="markdown">person in a novel, play, or film. (oxford languages)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Agent" title="http://comicmeta.org/cbo/Agent">Agent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRole" title="https://children-story.owl#hasRole">has role</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Anna" title="https://children-story.owl#Anna">anna</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Ariel" title="https://children-story.owl#Ariel">ariel</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Elsa" title="https://children-story.owl#Elsa">elsa</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Goldilocks" title="https://children-story.owl#Goldilocks">goldilocks</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Gretel" title="https://children-story.owl#Gretel">gretel</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Hansel" title="https://children-story.owl#Hansel">hansel</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Jerry" title="https://children-story.owl#Jerry">jerry</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Tom" title="https://children-story.owl#Tom">tom</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Ursula" title="https://children-story.owl#Ursula">ursula</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Children's_Story">
+      <h3>children's story<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Children's_Story</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#Story" title="https://children-story.owl#Story">Story</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="#minTargetAge" title="https://children-story.owl#minTargetAge">min target age</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> )</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Story" title="https://children-story.owl#Story">Story</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Continent">
+      <h3>continent<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Continent</p>
+      <div class="comment">
+         <span class="markdown">any of the world's main continuous expanses of land (Europe, Asia, Africa, North and South America, Australia, Antarctica). (Oxford Languages)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Location" title="https://children-story.owl#Location">location</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Africa" title="https://children-story.owl#Africa">africa</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Asia" title="https://children-story.owl#Asia">asia</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Australia" title="https://children-story.owl#Australia">australia</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Europe" title="https://children-story.owl#Europe">europe</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#North_America" title="https://children-story.owl#North_America">north america</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#South_America" title="https://children-story.owl#South_America">south america</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Country">
+      <h3>country<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Country</p>
+      <div class="comment">
+         <span class="markdown">a nation with its own government, occupying a particular territory. (oxford Languages)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Location" title="https://children-story.owl#Location">location</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Fiction">
+      <h3>fiction<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Fiction</p>
+      <div class="comment">
+         <span class="markdown">literature in the form of prose that describes imaginary events and people. (oxford languages)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Fantasy" title="https://children-story.owl#Fantasy">fantasy</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Non-Fiction" title="https://children-story.owl#Non-Fiction">non fiction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Gender">
+      <h3>gender<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Gender</p>
+      <div class="comment">
+         <span class="markdown">the male sex or the female sex, especially when considered with reference to social and cultural differences rather than biological ones, or one of a range of other identities that do not correspond to established ideas of male and female. (oxford languages)</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasGender" title="https://children-story.owl#hasGender">has gender</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Female" title="https://children-story.owl#Female">female</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Male" title="https://children-story.owl#Male">male</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Others" title="https://children-story.owl#Others">others</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://comicmeta.org/cbo/Genres">
+      <h3>Genre<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://comicmeta.org/cbo/Genres</p>
+      <div class="comment">
+         <span class="markdown">A comics genre.</span>
+      </div>
+      <dl>
+         <dt>Term status</dt>
+         <dd>unstable</dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Fiction" title="https://children-story.owl#Fiction">fiction</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Non-Fiction" title="https://children-story.owl#Non-Fiction">non fiction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/genre" title="http://comicmeta.org/cbo/genre">genre</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://comicmeta.org/vocab/Adult" title="http://comicmeta.org/vocab/Adult">adult</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Adventure" title="https://children-story.owl#Adventure">adventure</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://comicmeta.org/vocab/Comix" title="http://comicmeta.org/vocab/Comix">comix</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://comicmeta.org/vocab/Crime" title="http://comicmeta.org/vocab/Crime">crime</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Folklore" title="https://children-story.owl#Folklore">folklore</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://comicmeta.org/vocab/FunnyAnimal" title="http://comicmeta.org/vocab/FunnyAnimal">funny animal</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://comicmeta.org/vocab/Horror" title="http://comicmeta.org/vocab/Horror">horror</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Proverb" title="https://children-story.owl#Proverb">proverb</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Religious" title="https://children-story.owl#Religious">religious</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://comicmeta.org/vocab/Romance" title="http://comicmeta.org/vocab/Romance">romance</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://comicmeta.org/vocab/ScienceFiction" title="http://comicmeta.org/vocab/ScienceFiction">science fiction</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://comicmeta.org/vocab/SuperHero" title="http://comicmeta.org/vocab/SuperHero">super hero</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://comicmeta.org/vocab/War" title="http://comicmeta.org/vocab/War">war</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://comicmeta.org/vocab/Western" title="http://comicmeta.org/vocab/Western">western</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Human">
+      <h3>human<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Human</p>
+      <div class="comment">
+         <span class="markdown">relating to or characteristic of humankind. (Oxford Languages)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Nature" title="https://children-story.owl#Nature">nature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#boy" title="https://children-story.owl#boy">boy</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#girl" title="https://children-story.owl#girl">girl</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#man" title="https://children-story.owl#man">man</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#woman" title="https://children-story.owl#woman">woman</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Non-Human" title="https://children-story.owl#Non-Human">non human</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Other" title="https://children-story.owl#Other">other</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Lexical">
+      <h3>lexical<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Lexical</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Medium" title="https://children-story.owl#Medium">Medium</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#book" title="https://children-story.owl#book">book</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#song" title="https://children-story.owl#song">song</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Location">
+      <h3>location<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Location</p>
+      <div class="comment">
+         <span class="markdown">The place where story was published</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Continent" title="https://children-story.owl#Continent">continent</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Country" title="https://children-story.owl#Country">country</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasLocation" title="https://children-story.owl#hasLocation">has location</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Medium">
+      <h3>Medium<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Medium</p>
+      <div class="comment">
+         <span class="markdown">The format of the story.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Audio" title="https://children-story.owl#Audio">audio</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Lexical" title="https://children-story.owl#Lexical">lexical</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Visual" title="https://children-story.owl#Visual">visual</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasMedium" title="https://children-story.owl#hasMedium">has medium</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Nature">
+      <h3>nature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Nature</p>
+      <div class="comment">
+         <span class="markdown">the basic or inherent features, character, or qualities of something. (oxford language)</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Human" title="https://children-story.owl#Human">human</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Non-Human" title="https://children-story.owl#Non-Human">non human</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Other" title="https://children-story.owl#Other">other</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Non-Fiction">
+      <h3>non fiction<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Non-Fiction</p>
+      <div class="comment">
+         <span class="markdown">prose writing that is informative or factual rather than fictional. (oxford languages)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Biography" title="https://children-story.owl#Biography">biography</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Historical" title="https://children-story.owl#Historical">historical</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Fiction" title="https://children-story.owl#Fiction">fiction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Non-Human">
+      <h3>non human<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Non-Human</p>
+      <div class="comment">
+         <span class="markdown">a creature that is not a human being. (Oxford Languages)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Nature" title="https://children-story.owl#Nature">nature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Animal" title="https://children-story.owl#Animal">animal</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Object" title="https://children-story.owl#Object">object</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Human" title="https://children-story.owl#Human">human</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Other" title="https://children-story.owl#Other">other</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Object">
+      <h3>object<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Object</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Non-Human" title="https://children-story.owl#Non-Human">non human</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Animal" title="https://children-story.owl#Animal">animal</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Organization">
+      <h3>organization<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Organization</p>
+      <div class="comment">
+         <span class="markdown">an organized group of people with a particular purpose, such as a business or a government department. (Oxford Languages)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Parties" title="https://children-story.owl#Parties">parties</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Disney" title="https://children-story.owl#Disney">disney</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Warner_Bros" title="https://children-story.owl#Warner_Bros">warner bros</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Author" title="https://children-story.owl#Author">author</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Other">
+      <h3>other<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Other</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Nature" title="https://children-story.owl#Nature">nature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Mermaid" title="https://children-story.owl#Mermaid">mermaid</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#SeaWitch" title="https://children-story.owl#SeaWitch">sea witch</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Human" title="https://children-story.owl#Human">human</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Non-Human" title="https://children-story.owl#Non-Human">non human</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Parties">
+      <h3>parties<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Parties</p>
+      <div class="comment">
+         <span class="markdown">Entites that create stories</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Author" title="https://children-story.owl#Author">author</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Organization" title="https://children-story.owl#Organization">organization</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#byParties" title="https://children-story.owl#byParties">by parties</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Publication">
+      <h3>publication<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Publication</p>
+      <div class="comment">
+         <span class="markdown">the preparation and issuing of a book, journal, or piece of music for public sale. (oxford language)</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#belongsTo" title="https://children-story.owl#belongsTo">belongs to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#byParties" title="https://children-story.owl#byParties">by parties</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasYear" title="https://children-story.owl#hasYear">has year</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isPublication" title="https://children-story.owl#isPublication">is publication</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Purpose">
+      <h3>purpose<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Purpose</p>
+      <div class="comment">
+         <span class="markdown">the reason for which something is done or created or for which something exists. (oxford languages)</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasPurpose" title="https://children-story.owl#hasPurpose">has purpose</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Educational" title="https://children-story.owl#Educational">educational</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Entertainment" title="https://children-story.owl#Entertainment">entertainment</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Indoctrination" title="https://children-story.owl#Indoctrination">indoctrination</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Role">
+      <h3>role<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Role</p>
+      <div class="comment">
+         <span class="markdown">the function assumed or part played by a person or thing in a particular situation.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasRole" title="https://children-story.owl#hasRole">has role</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Antagonist" title="https://children-story.owl#Antagonist">antagonist</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Protagonist" title="https://children-story.owl#Protagonist">protagonist</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Supporting" title="https://children-story.owl#Supporting">supporting</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Story">
+      <h3>Story<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Story</p>
+      <div class="comment">
+         <span class="markdown">Base class for all entries</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Children's_Story" title="https://children-story.owl#Children's_Story">children's story</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasGenres" title="https://children-story.owl#hasGenres">has genres</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasMedium" title="https://children-story.owl#hasMedium">has medium</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasOtherVersions" title="https://children-story.owl#hasOtherVersions">has other versions</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPurpose" title="https://children-story.owl#hasPurpose">has purpose</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasTargetAudience" title="https://children-story.owl#hasTargetAudience">has target audience</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isPublication" title="https://children-story.owl#isPublication">is publication</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasOtherVersions" title="https://children-story.owl#hasOtherVersions">has other versions</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Adam_and_Eve" title="https://children-story.owl#Adam_and_Eve">adam and eve</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Baby_Shark" title="https://children-story.owl#Baby_Shark">baby shark</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Frozen" title="https://children-story.owl#Frozen">frozen</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Goldilocks_and_the_Three_Bears"
+               title="https://children-story.owl#Goldilocks_and_the_Three_Bears">goldilocks and the three bears</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Hansel_and_Gretel" title="https://children-story.owl#Hansel_and_Gretel">hansel and gretel</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Mama_Built_a_Little_Nest"
+               title="https://children-story.owl#Mama_Built_a_Little_Nest">mama built a little nest</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#TheLittleMermaid_1837"
+               title="https://children-story.owl#TheLittleMermaid_1837">the little mermaid 1837</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#TheLittleMermaid_1989"
+               title="https://children-story.owl#TheLittleMermaid_1989">the little mermaid 1989</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#The_Poisonous_Mushroom"
+               title="https://children-story.owl#The_Poisonous_Mushroom">the poisonous mushroom</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Tom_and_Jerry" title="https://children-story.owl#Tom_and_Jerry">tom and jerry</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://comicmeta.org/cbo/Team">
+      <h3>team<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://comicmeta.org/cbo/Team</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Agent" title="http://comicmeta.org/cbo/Agent">Agent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Visual">
+      <h3>visual<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Visual</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Medium" title="https://children-story.owl#Medium">Medium</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#book" title="https://children-story.owl#book">book</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#comics" title="https://children-story.owl#comics">comics</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#video" title="https://children-story.owl#video">video</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#belongsTo" title="https://children-story.owl#belongsTo">
+            <span>belongs to</span>
+         </a>
+      </li>
+      <li>
+         <a href="#byParties" title="https://children-story.owl#byParties">
+            <span>by parties</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://comicmeta.org/cbo/genre" title="http://comicmeta.org/cbo/genre">
+            <span>genre</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">
+            <span>has character</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasGender" title="https://children-story.owl#hasGender">
+            <span>has gender</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasGenres" title="https://children-story.owl#hasGenres">
+            <span>has genres</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasLocation" title="https://children-story.owl#hasLocation">
+            <span>has location</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasMedium" title="https://children-story.owl#hasMedium">
+            <span>has medium</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasNature" title="https://children-story.owl#hasNature">
+            <span>has nature</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasOtherVersions" title="https://children-story.owl#hasOtherVersions">
+            <span>has other versions</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasPurpose" title="https://children-story.owl#hasPurpose">
+            <span>has purpose</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasRole" title="https://children-story.owl#hasRole">
+            <span>has role</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasTargetAudience" title="https://children-story.owl#hasTargetAudience">
+            <span>has target audience</span>
+         </a>
+      </li>
+      <li>
+         <a href="#isPublication" title="https://children-story.owl#isPublication">
+            <span>is publication</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="belongsTo">
+      <h3>belongs to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#belongsTo</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Publication" title="https://children-story.owl#Publication">publication</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="byParties">
+      <h3>by parties<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#byParties</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Publication" title="https://children-story.owl#Publication">publication</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Parties" title="https://children-story.owl#Parties">parties</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://comicmeta.org/cbo/genre">
+      <h3>genre<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://comicmeta.org/cbo/genre</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCharacter">
+      <h3>has character<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasCharacter</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Story" title="https://children-story.owl#Story">Story</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Characters" title="https://children-story.owl#Characters">characters</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasGender">
+      <h3>has gender<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasGender</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Gender" title="https://children-story.owl#Gender">gender</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasGenres">
+      <h3>has genres<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasGenres</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Story" title="https://children-story.owl#Story">Story</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasLocation">
+      <h3>has location<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasLocation</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> transitive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Location" title="https://children-story.owl#Location">location</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasMedium">
+      <h3>has medium<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasMedium</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Story" title="https://children-story.owl#Story">Story</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Medium" title="https://children-story.owl#Medium">Medium</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasNature">
+      <h3>has nature<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasNature</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Characters" title="https://children-story.owl#Characters">characters</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Nature" title="https://children-story.owl#Nature">nature</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasOtherVersions">
+      <h3>has other versions<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasOtherVersions</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> symmetric, transitive</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Story" title="https://children-story.owl#Story">Story</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Story" title="https://children-story.owl#Story">Story</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPurpose">
+      <h3>has purpose<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasPurpose</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Story" title="https://children-story.owl#Story">Story</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Purpose" title="https://children-story.owl#Purpose">purpose</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRole">
+      <h3>has role<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasRole</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Characters" title="https://children-story.owl#Characters">characters</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Role" title="https://children-story.owl#Role">role</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTargetAudience">
+      <h3>has target audience<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasTargetAudience</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Story" title="https://children-story.owl#Story">Story</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isPublication">
+      <h3>is publication<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#isPublication</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Story" title="https://children-story.owl#Story">Story</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Publication" title="https://children-story.owl#Publication">publication</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasAuthor" title="https://children-story.owl#hasAuthor">has author</a>
+      </li>
+      <li>
+         <a href="#hasContents" title="https://children-story.owl#hasContents">has contents</a>
+      </li>
+      <li>
+         <a href="#hasEdition" title="https://children-story.owl#hasEdition">has edition</a>
+      </li>
+      <li>
+         <a href="#hasEditor" title="https://children-story.owl#hasEditor">has editor</a>
+      </li>
+      <li>
+         <a href="#hasLanguage" title="https://children-story.owl#hasLanguage">has language</a>
+      </li>
+      <li>
+         <a href="#hasPublisher" title="https://children-story.owl#hasPublisher">has publisher</a>
+      </li>
+      <li>
+         <a href="#hasSeries" title="https://children-story.owl#hasSeries">has series</a>
+      </li>
+      <li>
+         <a href="#hasTitle" title="https://children-story.owl#hasTitle">has title</a>
+      </li>
+      <li>
+         <a href="#hasURL" title="https://children-story.owl#hasURL">has URL</a>
+      </li>
+      <li>
+         <a href="#hasYear" title="https://children-story.owl#hasYear">
+            <span>has year</span>
+         </a>
+      </li>
+      <li>
+         <a href="#howPublished" title="https://children-story.owl#howPublished">how published</a>
+      </li>
+      <li>
+         <a href="#humanCreator" title="https://children-story.owl#humanCreator">human creator</a>
+      </li>
+      <li>
+         <a href="#minTargetAge" title="https://children-story.owl#minTargetAge">
+            <span>min target age</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="hasAuthor">
+      <h3>has author<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasAuthor</p>
+      <div class="comment">
+         <span class="markdown">The name(s) of the author(s), in the format described in the LaTeX book.</span>
+      </div>
+      <div class="info">
+         <span class="markdown">This is tricky due to the fact that order is not (generally) preserved in RDF documents.  The problem arises when you want to have an author list where the order is _extremely_ important.  How shall we do that?  Perhaps we want to define "hasPrimaryAuthor", "hasSecondaryAuthor", "hasTertiaryAuthor", and "hasRemainingAuthors", or something of that sort.  This will be have to given more thought.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#humanCreator" title="https://children-story.owl#humanCreator">human creator</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasContents">
+      <h3>has contents<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasContents</p>
+      <div class="comment">
+         <span class="markdown">A Table of Contents.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasEdition">
+      <h3>has edition<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasEdition</p>
+      <div class="comment">
+         <span class="markdown">The edition of a book--for example, "Second". This should be an ordinal, and should have the first letter capitalized, as shown here; the standard styles convert to lower case when necessary.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasEditor">
+      <h3>has editor<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasEditor</p>
+      <div class="comment">
+         <span class="markdown">Name(s) of editor(s), typed as indicated in the LaTeX book. If there is also an author field, then the editor field gives the editor of the book or collection in which the reference appears.</span>
+      </div>
+      <div class="info">
+         <span class="markdown">Again, the same issues that arose with the "hasAuthor" property apply here.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#humanCreator" title="https://children-story.owl#humanCreator">human creator</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasLanguage">
+      <h3>has language<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasLanguage</p>
+      <div class="comment">
+         <span class="markdown">The language the document is in.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPublisher">
+      <h3>has publisher<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasPublisher</p>
+      <div class="comment">
+         <span class="markdown">The publisher's name.</span>
+      </div>
+      <div class="info">
+         <span class="markdown">This is a case where an ObjectProperty might be a better choice, where the range is some set of publisher names defined in another ontology.  That would allow all of the metadata for the publisher to be incorporated as needed.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSeries">
+      <h3>has series<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasSeries</p>
+      <div class="comment">
+         <span class="markdown">The name of a series or set of books. When citing an entire book, the the title field gives its title and an optional series field gives the name of a series or multi-volume set in which the book is published.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTitle">
+      <h3>has title<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasTitle</p>
+      <div class="comment">
+         <span class="markdown">The work's title, typed as explained in the LaTeX book.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasURL">
+      <h3>has URL<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasURL</p>
+      <div class="comment">
+         <span class="markdown">The WWW Universal Resource Locator that points to the item being referenced. This often is used for technical reports to point to the ftp or web site where the postscript source of the report is located.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasYear">
+      <h3>has year<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#hasYear</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Publication" title="https://children-story.owl#Publication">publication</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="howPublished">
+      <h3>how published<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#howPublished</p>
+      <div class="comment">
+         <span class="markdown">How something strange has been published. The first word should be capitalized.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="humanCreator">
+      <h3>human creator<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#humanCreator</p>
+      <div class="comment">
+         <span class="markdown">A generic human creator category, necessary in order to contain both author and editor.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasAuthor" title="https://children-story.owl#hasAuthor">has author</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#hasEditor" title="https://children-story.owl#hasEditor">has editor</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="minTargetAge">
+      <h3>min target age<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#minTargetAge</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="annotationproperties">
+   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract">
+            <span>abstract</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/bibliographicCitation" title="http://purl.org/dc/terms/bibliographicCitation">
+            <span>bibliographic citation</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">
+            <span>creator</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/elements/1.1/date" title="http://purl.org/dc/elements/1.1/date">
+            <span>date</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">
+            <span>description</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/elements/1.1/identifier" title="http://purl.org/dc/elements/1.1/identifier">
+            <span>identifier</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/elements/1.1/source" title="http://purl.org/dc/elements/1.1/source">
+            <span>source</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/elements/1.1/subject" title="http://purl.org/dc/elements/1.1/subject">
+            <span>subject</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
+            title="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
+            <span>term status</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title">
+            <span>title</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/dc/terms/abstract">
+      <h3>abstract<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/abstract</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/bibliographicCitation">
+      <h3>bibliographic citation<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/bibliographicCitation</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/creator">
+      <h3>creator<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/creator</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/date">
+      <h3>date<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/date</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/description">
+      <h3>description<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/description</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/identifier">
+      <h3>identifier<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/identifier</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/source">
+      <h3>source<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/source</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/subject">
+      <h3>subject<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/subject</p>
+   </div>
+   <div class="entity" id="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
+      <h3>term status<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2003/06/sw-vocab-status/ns#term_status</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/title">
+      <h3>title<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/title</p>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Adam_and_Eve" title="https://children-story.owl#Adam_and_Eve">
+            <span>adam and eve</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://comicmeta.org/vocab/Adult" title="http://comicmeta.org/vocab/Adult">
+            <span>adult</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Adventure" title="https://children-story.owl#Adventure">
+            <span>adventure</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Africa" title="https://children-story.owl#Africa">
+            <span>africa</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Anna" title="https://children-story.owl#Anna">
+            <span>anna</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Antagonist" title="https://children-story.owl#Antagonist">
+            <span>antagonist</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Ariel" title="https://children-story.owl#Ariel">
+            <span>ariel</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Asia" title="https://children-story.owl#Asia">
+            <span>asia</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Australia" title="https://children-story.owl#Australia">
+            <span>australia</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Baby_Shark" title="https://children-story.owl#Baby_Shark">
+            <span>baby shark</span>
+         </a>
+      </li>
+      <li>
+         <a href="#baby_shark" title="https://children-story.owl#baby_shark">
+            <span>baby shark</span>
+         </a>
+      </li>
+      <li>
+         <a href="#bear" title="https://children-story.owl#bear">
+            <span>bear</span>
+         </a>
+      </li>
+      <li>
+         <a href="#big_bear" title="https://children-story.owl#big_bear">
+            <span>big bear</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Biography" title="https://children-story.owl#Biography">
+            <span>biography</span>
+         </a>
+      </li>
+      <li>
+         <a href="#book" title="https://children-story.owl#book">
+            <span>book</span>
+         </a>
+      </li>
+      <li>
+         <a href="#boy" title="https://children-story.owl#boy">
+            <span>boy</span>
+         </a>
+      </li>
+      <li>
+         <a href="#cat" title="https://children-story.owl#cat">
+            <span>cat</span>
+         </a>
+      </li>
+      <li>
+         <a href="#comics" title="https://children-story.owl#comics">
+            <span>comics</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://comicmeta.org/vocab/Comix" title="http://comicmeta.org/vocab/Comix">
+            <span>comix</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://comicmeta.org/vocab/Crime" title="http://comicmeta.org/vocab/Crime">
+            <span>crime</span>
+         </a>
+      </li>
+      <li>
+         <a href="#daddy_shark" title="https://children-story.owl#daddy_shark">
+            <span>daddy shark</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Denmark" title="https://children-story.owl#Denmark">
+            <span>denmark</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Disney" title="https://children-story.owl#Disney">
+            <span>disney</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Educational" title="https://children-story.owl#Educational">
+            <span>educational</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Elsa" title="https://children-story.owl#Elsa">
+            <span>elsa</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Entertainment" title="https://children-story.owl#Entertainment">
+            <span>entertainment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Europe" title="https://children-story.owl#Europe">
+            <span>europe</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Fantasy" title="https://children-story.owl#Fantasy">
+            <span>fantasy</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Female" title="https://children-story.owl#Female">
+            <span>female</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Folklore" title="https://children-story.owl#Folklore">
+            <span>folklore</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Frozen" title="https://children-story.owl#Frozen">
+            <span>frozen</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://comicmeta.org/vocab/FunnyAnimal" title="http://comicmeta.org/vocab/FunnyAnimal">
+            <span>funny animal</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Germany" title="https://children-story.owl#Germany">
+            <span>germany</span>
+         </a>
+      </li>
+      <li>
+         <a href="#girl" title="https://children-story.owl#girl">
+            <span>girl</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Goldilocks" title="https://children-story.owl#Goldilocks">
+            <span>goldilocks</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Goldilocks_and_the_Three_Bears"
+            title="https://children-story.owl#Goldilocks_and_the_Three_Bears">
+            <span>goldilocks and the three bears</span>
+         </a>
+      </li>
+      <li>
+         <a href="#grandma_shark" title="https://children-story.owl#grandma_shark">
+            <span>grandma shark</span>
+         </a>
+      </li>
+      <li>
+         <a href="#grandpa_shark" title="https://children-story.owl#grandpa_shark">
+            <span>grandpa shark</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Gretel" title="https://children-story.owl#Gretel">
+            <span>gretel</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Hans_Christian_Anderson"
+            title="https://children-story.owl#Hans_Christian_Anderson">
+            <span>hans christian anderson</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Hansel" title="https://children-story.owl#Hansel">
+            <span>hansel</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Hansel_and_Gretel" title="https://children-story.owl#Hansel_and_Gretel">
+            <span>hansel and gretel</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Historical" title="https://children-story.owl#Historical">
+            <span>historical</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://comicmeta.org/vocab/Horror" title="http://comicmeta.org/vocab/Horror">
+            <span>horror</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Indoctrination" title="https://children-story.owl#Indoctrination">
+            <span>indoctrination</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Japan" title="https://children-story.owl#Japan">
+            <span>japan</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Jerry" title="https://children-story.owl#Jerry">
+            <span>jerry</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Male" title="https://children-story.owl#Male">
+            <span>male</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Mama_Built_a_Little_Nest"
+            title="https://children-story.owl#Mama_Built_a_Little_Nest">
+            <span>mama built a little nest</span>
+         </a>
+      </li>
+      <li>
+         <a href="#man" title="https://children-story.owl#man">
+            <span>man</span>
+         </a>
+      </li>
+      <li>
+         <a href="#medium_bear" title="https://children-story.owl#medium_bear">
+            <span>medium bear</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Mermaid" title="https://children-story.owl#Mermaid">
+            <span>mermaid</span>
+         </a>
+      </li>
+      <li>
+         <a href="#mommy_shark" title="https://children-story.owl#mommy_shark">
+            <span>mommy shark</span>
+         </a>
+      </li>
+      <li>
+         <a href="#mouse" title="https://children-story.owl#mouse">
+            <span>mouse</span>
+         </a>
+      </li>
+      <li>
+         <a href="#North_America" title="https://children-story.owl#North_America">
+            <span>north america</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Others" title="https://children-story.owl#Others">
+            <span>others</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Protagonist" title="https://children-story.owl#Protagonist">
+            <span>protagonist</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Proverb" title="https://children-story.owl#Proverb">
+            <span>proverb</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Religious" title="https://children-story.owl#Religious">
+            <span>religious</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://comicmeta.org/vocab/Romance" title="http://comicmeta.org/vocab/Romance">
+            <span>romance</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://comicmeta.org/vocab/ScienceFiction" title="http://comicmeta.org/vocab/ScienceFiction">
+            <span>science fiction</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SeaWitch" title="https://children-story.owl#SeaWitch">
+            <span>sea witch</span>
+         </a>
+      </li>
+      <li>
+         <a href="#shark" title="https://children-story.owl#shark">
+            <span>shark</span>
+         </a>
+      </li>
+      <li>
+         <a href="#small_bear" title="https://children-story.owl#small_bear">
+            <span>small bear</span>
+         </a>
+      </li>
+      <li>
+         <a href="#song" title="https://children-story.owl#song">
+            <span>song</span>
+         </a>
+      </li>
+      <li>
+         <a href="#South_America" title="https://children-story.owl#South_America">
+            <span>south america</span>
+         </a>
+      </li>
+      <li>
+         <a href="#South_Korea" title="https://children-story.owl#South_Korea">
+            <span>south korea</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://comicmeta.org/vocab/SuperHero" title="http://comicmeta.org/vocab/SuperHero">
+            <span>super hero</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Supporting" title="https://children-story.owl#Supporting">
+            <span>supporting</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TheLittleMermaid_1837"
+            title="https://children-story.owl#TheLittleMermaid_1837">
+            <span>the little mermaid 1837</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TheLittleMermaid_1989"
+            title="https://children-story.owl#TheLittleMermaid_1989">
+            <span>the little mermaid 1989</span>
+         </a>
+      </li>
+      <li>
+         <a href="#The_Poisonous_Mushroom"
+            title="https://children-story.owl#The_Poisonous_Mushroom">
+            <span>the poisonous mushroom</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Tom" title="https://children-story.owl#Tom">
+            <span>tom</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Tom_and_Jerry" title="https://children-story.owl#Tom_and_Jerry">
+            <span>tom and jerry</span>
+         </a>
+      </li>
+      <li>
+         <a href="#USA" title="https://children-story.owl#USA">
+            <span>u s a</span>
+         </a>
+      </li>
+      <li>
+         <a href="#United_Kingdom" title="https://children-story.owl#United_Kingdom">
+            <span>united kingdom</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Ursula" title="https://children-story.owl#Ursula">
+            <span>ursula</span>
+         </a>
+      </li>
+      <li>
+         <a href="#video" title="https://children-story.owl#video">
+            <span>video</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://comicmeta.org/vocab/War" title="http://comicmeta.org/vocab/War">
+            <span>war</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Warner_Bros" title="https://children-story.owl#Warner_Bros">
+            <span>warner bros</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://comicmeta.org/vocab/Western" title="http://comicmeta.org/vocab/Western">
+            <span>western</span>
+         </a>
+      </li>
+      <li>
+         <a href="#William_Hanna" title="https://children-story.owl#William_Hanna">
+            <span>william hanna</span>
+         </a>
+      </li>
+      <li>
+         <a href="#woman" title="https://children-story.owl#woman">
+            <span>woman</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="Adam_and_Eve">
+      <h3>adam and eve<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Adam_and_Eve</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Story" title="https://children-story.owl#Story">Story</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://comicmeta.org/vocab/Adult">
+      <h3>adult<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://comicmeta.org/vocab/Adult</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Adventure">
+      <h3>adventure<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Adventure</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Africa">
+      <h3>africa<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Africa</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Continent" title="https://children-story.owl#Continent">continent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Anna">
+      <h3>anna<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Anna</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Characters" title="https://children-story.owl#Characters">characters</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasGender" title="https://children-story.owl#hasGender">has gender</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Female" title="https://children-story.owl#Female">female</a>
+         </dd>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#girl" title="https://children-story.owl#girl">girl</a>
+         </dd>
+         <dd>
+            <a href="#hasRole" title="https://children-story.owl#hasRole">has role</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Protagonist" title="https://children-story.owl#Protagonist">protagonist</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Antagonist">
+      <h3>antagonist<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Antagonist</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Role" title="https://children-story.owl#Role">role</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Ariel">
+      <h3>ariel<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Ariel</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Characters" title="https://children-story.owl#Characters">characters</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasGender" title="https://children-story.owl#hasGender">has gender</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Female" title="https://children-story.owl#Female">female</a>
+         </dd>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Mermaid" title="https://children-story.owl#Mermaid">mermaid</a>
+         </dd>
+         <dd>
+            <a href="#hasRole" title="https://children-story.owl#hasRole">has role</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Protagonist" title="https://children-story.owl#Protagonist">protagonist</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Asia">
+      <h3>asia<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Asia</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Continent" title="https://children-story.owl#Continent">continent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Australia">
+      <h3>australia<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Australia</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Continent" title="https://children-story.owl#Continent">continent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Baby_Shark">
+      <h3>baby shark<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Baby_Shark</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Story" title="https://children-story.owl#Story">Story</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#baby_shark" title="https://children-story.owl#baby_shark">baby shark</a>
+         </dd>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#daddy_shark" title="https://children-story.owl#daddy_shark">daddy shark</a>
+         </dd>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#grandma_shark" title="https://children-story.owl#grandma_shark">grandma shark</a>
+         </dd>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#grandpa_shark" title="https://children-story.owl#grandpa_shark">grandpa shark</a>
+         </dd>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#mommy_shark" title="https://children-story.owl#mommy_shark">mommy shark</a>
+         </dd>
+         <dd>
+            <a href="#hasLocation" title="https://children-story.owl#hasLocation">has location</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#South_Korea" title="https://children-story.owl#South_Korea">south korea</a>
+         </dd>
+         <dd>
+            <a href="#hasMedium" title="https://children-story.owl#hasMedium">has medium</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#song" title="https://children-story.owl#song">song</a>
+         </dd>
+         <dd>
+            <a href="#hasPurpose" title="https://children-story.owl#hasPurpose">has purpose</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Entertainment" title="https://children-story.owl#Entertainment">entertainment</a>
+         </dd>
+         <dd>
+            <a href="#hasYear" title="https://children-story.owl#hasYear">has year</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"2017"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+         <dd>
+            <a href="#minTargetAge" title="https://children-story.owl#minTargetAge">min target age</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="baby_shark">
+      <h3>baby shark<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#baby_shark</p>
+      <dl class="description">
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasGender" title="https://children-story.owl#hasGender">has gender</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Others" title="https://children-story.owl#Others">others</a>
+         </dd>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#shark" title="https://children-story.owl#shark">shark</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="bear">
+      <h3>bear<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#bear</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Animal" title="https://children-story.owl#Animal">animal</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="big_bear">
+      <h3>big bear<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#big_bear</p>
+      <dl class="description">
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#bear" title="https://children-story.owl#bear">bear</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Biography">
+      <h3>biography<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Biography</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Non-Fiction" title="https://children-story.owl#Non-Fiction">non fiction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="book">
+      <h3>book<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#book</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Lexical" title="https://children-story.owl#Lexical">lexical</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#Visual" title="https://children-story.owl#Visual">visual</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="boy">
+      <h3>boy<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#boy</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Human" title="https://children-story.owl#Human">human</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="cat">
+      <h3>cat<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#cat</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Animal" title="https://children-story.owl#Animal">animal</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="comics">
+      <h3>comics<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#comics</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Visual" title="https://children-story.owl#Visual">visual</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://comicmeta.org/vocab/Comix">
+      <h3>comix<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://comicmeta.org/vocab/Comix</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://comicmeta.org/vocab/Crime">
+      <h3>crime<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://comicmeta.org/vocab/Crime</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="daddy_shark">
+      <h3>daddy shark<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#daddy_shark</p>
+      <dl class="description">
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasGender" title="https://children-story.owl#hasGender">has gender</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Male" title="https://children-story.owl#Male">male</a>
+         </dd>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#shark" title="https://children-story.owl#shark">shark</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Denmark">
+      <h3>denmark<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Denmark</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="Disney">
+      <h3>disney<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Disney</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Organization" title="https://children-story.owl#Organization">organization</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Educational">
+      <h3>educational<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Educational</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Purpose" title="https://children-story.owl#Purpose">purpose</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Elsa">
+      <h3>elsa<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Elsa</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Characters" title="https://children-story.owl#Characters">characters</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasGender" title="https://children-story.owl#hasGender">has gender</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Female" title="https://children-story.owl#Female">female</a>
+         </dd>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#girl" title="https://children-story.owl#girl">girl</a>
+         </dd>
+         <dd>
+            <a href="#hasRole" title="https://children-story.owl#hasRole">has role</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Protagonist" title="https://children-story.owl#Protagonist">protagonist</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Entertainment">
+      <h3>entertainment<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Entertainment</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Purpose" title="https://children-story.owl#Purpose">purpose</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Europe">
+      <h3>europe<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Europe</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Continent" title="https://children-story.owl#Continent">continent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Fantasy">
+      <h3>fantasy<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Fantasy</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Fiction" title="https://children-story.owl#Fiction">fiction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Female">
+      <h3>female<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Female</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Gender" title="https://children-story.owl#Gender">gender</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Folklore">
+      <h3>folklore<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Folklore</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Frozen">
+      <h3>frozen<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Frozen</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Story" title="https://children-story.owl#Story">Story</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#byParties" title="https://children-story.owl#byParties">by parties</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Disney" title="https://children-story.owl#Disney">disney</a>
+         </dd>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Anna" title="https://children-story.owl#Anna">anna</a>
+         </dd>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Elsa" title="https://children-story.owl#Elsa">elsa</a>
+         </dd>
+         <dd>
+            <a href="#hasLocation" title="https://children-story.owl#hasLocation">has location</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#USA" title="https://children-story.owl#USA">u s a</a>
+         </dd>
+         <dd>
+            <a href="#hasMedium" title="https://children-story.owl#hasMedium">has medium</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#video" title="https://children-story.owl#video">video</a>
+         </dd>
+         <dd>
+            <a href="#hasYear" title="https://children-story.owl#hasYear">has year</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"2013"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+         <dd>
+            <a href="#minTargetAge" title="https://children-story.owl#minTargetAge">min target age</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"3"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://comicmeta.org/vocab/FunnyAnimal">
+      <h3>funny animal<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://comicmeta.org/vocab/FunnyAnimal</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Germany">
+      <h3>germany<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Germany</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="girl">
+      <h3>girl<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#girl</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Human" title="https://children-story.owl#Human">human</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="Goldilocks">
+      <h3>goldilocks<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Goldilocks</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Characters" title="https://children-story.owl#Characters">characters</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasGender" title="https://children-story.owl#hasGender">has gender</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Female" title="https://children-story.owl#Female">female</a>
+         </dd>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#girl" title="https://children-story.owl#girl">girl</a>
+         </dd>
+         <dd>
+            <a href="#hasRole" title="https://children-story.owl#hasRole">has role</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Protagonist" title="https://children-story.owl#Protagonist">protagonist</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Goldilocks_and_the_Three_Bears">
+      <h3>goldilocks and the three bears<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Goldilocks_and_the_Three_Bears</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Story" title="https://children-story.owl#Story">Story</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Goldilocks" title="https://children-story.owl#Goldilocks">goldilocks</a>
+         </dd>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#big_bear" title="https://children-story.owl#big_bear">big bear</a>
+         </dd>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#medium_bear" title="https://children-story.owl#medium_bear">medium bear</a>
+         </dd>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#small_bear" title="https://children-story.owl#small_bear">small bear</a>
+         </dd>
+         <dd>
+            <a href="#hasGenres" title="https://children-story.owl#hasGenres">has genres</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Folklore" title="https://children-story.owl#Folklore">folklore</a>
+         </dd>
+         <dd>
+            <a href="#hasYear" title="https://children-story.owl#hasYear">has year</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"1837"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+         <dd>
+            <a href="#minTargetAge" title="https://children-story.owl#minTargetAge">min target age</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"3"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="grandma_shark">
+      <h3>grandma shark<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#grandma_shark</p>
+      <dl class="description">
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasGender" title="https://children-story.owl#hasGender">has gender</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Female" title="https://children-story.owl#Female">female</a>
+         </dd>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#shark" title="https://children-story.owl#shark">shark</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="grandpa_shark">
+      <h3>grandpa shark<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#grandpa_shark</p>
+      <dl class="description">
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasGender" title="https://children-story.owl#hasGender">has gender</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Male" title="https://children-story.owl#Male">male</a>
+         </dd>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#shark" title="https://children-story.owl#shark">shark</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Gretel">
+      <h3>gretel<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Gretel</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Characters" title="https://children-story.owl#Characters">characters</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasGender" title="https://children-story.owl#hasGender">has gender</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Female" title="https://children-story.owl#Female">female</a>
+         </dd>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#girl" title="https://children-story.owl#girl">girl</a>
+         </dd>
+         <dd>
+            <a href="#hasRole" title="https://children-story.owl#hasRole">has role</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Protagonist" title="https://children-story.owl#Protagonist">protagonist</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Hans_Christian_Anderson">
+      <h3>hans christian anderson<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Hans_Christian_Anderson</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Author" title="https://children-story.owl#Author">author</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Hansel">
+      <h3>hansel<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Hansel</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Characters" title="https://children-story.owl#Characters">characters</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasGender" title="https://children-story.owl#hasGender">has gender</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Male" title="https://children-story.owl#Male">male</a>
+         </dd>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#boy" title="https://children-story.owl#boy">boy</a>
+         </dd>
+         <dd>
+            <a href="#hasRole" title="https://children-story.owl#hasRole">has role</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Protagonist" title="https://children-story.owl#Protagonist">protagonist</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Hansel_and_Gretel">
+      <h3>hansel and gretel<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Hansel_and_Gretel</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Story" title="https://children-story.owl#Story">Story</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Gretel" title="https://children-story.owl#Gretel">gretel</a>
+         </dd>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Hansel" title="https://children-story.owl#Hansel">hansel</a>
+         </dd>
+         <dd>
+            <a href="#hasGenres" title="https://children-story.owl#hasGenres">has genres</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Folklore" title="https://children-story.owl#Folklore">folklore</a>
+         </dd>
+         <dd>
+            <a href="#hasLocation" title="https://children-story.owl#hasLocation">has location</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Germany" title="https://children-story.owl#Germany">germany</a>
+         </dd>
+         <dd>
+            <a href="#hasMedium" title="https://children-story.owl#hasMedium">has medium</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#book" title="https://children-story.owl#book">book</a>
+         </dd>
+         <dd>
+            <a href="#hasPurpose" title="https://children-story.owl#hasPurpose">has purpose</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Educational" title="https://children-story.owl#Educational">educational</a>
+         </dd>
+         <dd>
+            <a href="#hasYear" title="https://children-story.owl#hasYear">has year</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"1812"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+         <dd>
+            <a href="#minTargetAge" title="https://children-story.owl#minTargetAge">min target age</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"3"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Historical">
+      <h3>historical<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Historical</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Non-Fiction" title="https://children-story.owl#Non-Fiction">non fiction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://comicmeta.org/vocab/Horror">
+      <h3>horror<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://comicmeta.org/vocab/Horror</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Indoctrination">
+      <h3>indoctrination<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Indoctrination</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Purpose" title="https://children-story.owl#Purpose">purpose</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Japan">
+      <h3>japan<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Japan</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="Jerry">
+      <h3>jerry<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Jerry</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Characters" title="https://children-story.owl#Characters">characters</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasGender" title="https://children-story.owl#hasGender">has gender</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Male" title="https://children-story.owl#Male">male</a>
+         </dd>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#mouse" title="https://children-story.owl#mouse">mouse</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Male">
+      <h3>male<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Male</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Gender" title="https://children-story.owl#Gender">gender</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Mama_Built_a_Little_Nest">
+      <h3>mama built a little nest<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Mama_Built_a_Little_Nest</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Story" title="https://children-story.owl#Story">Story</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasLocation" title="https://children-story.owl#hasLocation">has location</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#USA" title="https://children-story.owl#USA">u s a</a>
+         </dd>
+         <dd>
+            <a href="#hasPurpose" title="https://children-story.owl#hasPurpose">has purpose</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Educational" title="https://children-story.owl#Educational">educational</a>
+         </dd>
+         <dd>
+            <a href="#hasYear" title="https://children-story.owl#hasYear">has year</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"2014"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+         <dd>
+            <a href="#minTargetAge" title="https://children-story.owl#minTargetAge">min target age</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"6"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="man">
+      <h3>man<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#man</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Human" title="https://children-story.owl#Human">human</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="medium_bear">
+      <h3>medium bear<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#medium_bear</p>
+      <dl class="description">
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#bear" title="https://children-story.owl#bear">bear</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Mermaid">
+      <h3>mermaid<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Mermaid</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Other" title="https://children-story.owl#Other">other</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="mommy_shark">
+      <h3>mommy shark<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#mommy_shark</p>
+      <dl class="description">
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasGender" title="https://children-story.owl#hasGender">has gender</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Female" title="https://children-story.owl#Female">female</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="mouse">
+      <h3>mouse<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#mouse</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Animal" title="https://children-story.owl#Animal">animal</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="North_America">
+      <h3>north america<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#North_America</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Continent" title="https://children-story.owl#Continent">continent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Others">
+      <h3>others<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Others</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Gender" title="https://children-story.owl#Gender">gender</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Protagonist">
+      <h3>protagonist<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Protagonist</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Role" title="https://children-story.owl#Role">role</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Proverb">
+      <h3>proverb<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Proverb</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Religious">
+      <h3>religious<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Religious</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://comicmeta.org/vocab/Romance">
+      <h3>romance<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://comicmeta.org/vocab/Romance</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://comicmeta.org/vocab/ScienceFiction">
+      <h3>science fiction<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://comicmeta.org/vocab/ScienceFiction</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SeaWitch">
+      <h3>sea witch<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#SeaWitch</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Other" title="https://children-story.owl#Other">other</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="shark">
+      <h3>shark<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#shark</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Animal" title="https://children-story.owl#Animal">animal</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="small_bear">
+      <h3>small bear<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#small_bear</p>
+      <dl class="description">
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#bear" title="https://children-story.owl#bear">bear</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="song">
+      <h3>song<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#song</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Audio" title="https://children-story.owl#Audio">audio</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#Lexical" title="https://children-story.owl#Lexical">lexical</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="South_America">
+      <h3>south america<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#South_America</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Continent" title="https://children-story.owl#Continent">continent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="South_Korea">
+      <h3>south korea<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#South_Korea</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://comicmeta.org/vocab/SuperHero">
+      <h3>super hero<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://comicmeta.org/vocab/SuperHero</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Supporting">
+      <h3>supporting<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Supporting</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Role" title="https://children-story.owl#Role">role</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TheLittleMermaid_1837">
+      <h3>the little mermaid 1837<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#TheLittleMermaid_1837</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Story" title="https://children-story.owl#Story">Story</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#byParties" title="https://children-story.owl#byParties">by parties</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Hans_Christian_Anderson"
+               title="https://children-story.owl#Hans_Christian_Anderson">hans christian anderson</a>
+         </dd>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Ariel" title="https://children-story.owl#Ariel">ariel</a>
+         </dd>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Ursula" title="https://children-story.owl#Ursula">ursula</a>
+         </dd>
+         <dd>
+            <a href="#hasGenres" title="https://children-story.owl#hasGenres">has genres</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Fantasy" title="https://children-story.owl#Fantasy">fantasy</a>
+         </dd>
+         <dd>
+            <a href="#hasGenres" title="https://children-story.owl#hasGenres">has genres</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Folklore" title="https://children-story.owl#Folklore">folklore</a>
+         </dd>
+         <dd>
+            <a href="#hasLocation" title="https://children-story.owl#hasLocation">has location</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Denmark" title="https://children-story.owl#Denmark">denmark</a>
+         </dd>
+         <dd>
+            <a href="#hasMedium" title="https://children-story.owl#hasMedium">has medium</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#book" title="https://children-story.owl#book">book</a>
+         </dd>
+         <dd>
+            <a href="#hasOtherVersions" title="https://children-story.owl#hasOtherVersions">has other versions</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#TheLittleMermaid_1989"
+               title="https://children-story.owl#TheLittleMermaid_1989">the little mermaid 1989</a>
+         </dd>
+         <dd>
+            <a href="#hasYear" title="https://children-story.owl#hasYear">has year</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"1837"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+         <dd>
+            <a href="#minTargetAge" title="https://children-story.owl#minTargetAge">min target age</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"6"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TheLittleMermaid_1989">
+      <h3>the little mermaid 1989<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#TheLittleMermaid_1989</p>
+      <dl>
+         <dt>Previous version:
+        </dt>
+         <dd>
+            <a href="https://children-story.owl#TheLittleMermaid_1837">https://children-story.owl#TheLittleMermaid_1837</a> (<a href="http://www.essepuntato.it/lode/owlapi/https://children-story.owl#TheLittleMermaid_1837">visualise it with LODE
+                    </a>)</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Story" title="https://children-story.owl#Story">Story</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#byParties" title="https://children-story.owl#byParties">by parties</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Disney" title="https://children-story.owl#Disney">disney</a>
+         </dd>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Ariel" title="https://children-story.owl#Ariel">ariel</a>
+         </dd>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Ursula" title="https://children-story.owl#Ursula">ursula</a>
+         </dd>
+         <dd>
+            <a href="#hasGenres" title="https://children-story.owl#hasGenres">has genres</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Fantasy" title="https://children-story.owl#Fantasy">fantasy</a>
+         </dd>
+         <dd>
+            <a href="#hasGenres" title="https://children-story.owl#hasGenres">has genres</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Folklore" title="https://children-story.owl#Folklore">folklore</a>
+         </dd>
+         <dd>
+            <a href="#hasLocation" title="https://children-story.owl#hasLocation">has location</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#USA" title="https://children-story.owl#USA">u s a</a>
+         </dd>
+         <dd>
+            <a href="#hasMedium" title="https://children-story.owl#hasMedium">has medium</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#video" title="https://children-story.owl#video">video</a>
+         </dd>
+         <dd>
+            <a href="#hasPurpose" title="https://children-story.owl#hasPurpose">has purpose</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Entertainment" title="https://children-story.owl#Entertainment">entertainment</a>
+         </dd>
+         <dd>
+            <a href="#hasYear" title="https://children-story.owl#hasYear">has year</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"1989"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+         <dd>
+            <a href="#minTargetAge" title="https://children-story.owl#minTargetAge">min target age</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="The_Poisonous_Mushroom">
+      <h3>the poisonous mushroom<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#The_Poisonous_Mushroom</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Story" title="https://children-story.owl#Story">Story</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasLocation" title="https://children-story.owl#hasLocation">has location</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Germany" title="https://children-story.owl#Germany">germany</a>
+         </dd>
+         <dd>
+            <a href="#hasPurpose" title="https://children-story.owl#hasPurpose">has purpose</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Indoctrination" title="https://children-story.owl#Indoctrination">indoctrination</a>
+         </dd>
+         <dd>
+            <a href="#hasYear" title="https://children-story.owl#hasYear">has year</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"1938"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+         <dd>
+            <a href="#minTargetAge" title="https://children-story.owl#minTargetAge">min target age</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"7"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Tom">
+      <h3>tom<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Tom</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Characters" title="https://children-story.owl#Characters">characters</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasGender" title="https://children-story.owl#hasGender">has gender</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Male" title="https://children-story.owl#Male">male</a>
+         </dd>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#cat" title="https://children-story.owl#cat">cat</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Tom_and_Jerry">
+      <h3>tom and jerry<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Tom_and_Jerry</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Story" title="https://children-story.owl#Story">Story</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd/>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#byParties" title="https://children-story.owl#byParties">by parties</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Warner_Bros" title="https://children-story.owl#Warner_Bros">warner bros</a>
+         </dd>
+         <dd>
+            <a href="#byParties" title="https://children-story.owl#byParties">by parties</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#William_Hanna" title="https://children-story.owl#William_Hanna">william hanna</a>
+         </dd>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Jerry" title="https://children-story.owl#Jerry">jerry</a>
+         </dd>
+         <dd>
+            <a href="#hasCharacter" title="https://children-story.owl#hasCharacter">has character</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Tom" title="https://children-story.owl#Tom">tom</a>
+         </dd>
+         <dd>
+            <a href="#hasMedium" title="https://children-story.owl#hasMedium">has medium</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#video" title="https://children-story.owl#video">video</a>
+         </dd>
+         <dd>
+            <a href="#hasYear" title="https://children-story.owl#hasYear">has year</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"1940"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+         <dd>
+            <a href="#minTargetAge" title="https://children-story.owl#minTargetAge">min target age</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="USA">
+      <h3>u s a<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#USA</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="United_Kingdom">
+      <h3>united kingdom<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#United_Kingdom</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="Ursula">
+      <h3>ursula<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Ursula</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Characters" title="https://children-story.owl#Characters">characters</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasGender" title="https://children-story.owl#hasGender">has gender</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Female" title="https://children-story.owl#Female">female</a>
+         </dd>
+         <dd>
+            <a href="#hasNature" title="https://children-story.owl#hasNature">has nature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#SeaWitch" title="https://children-story.owl#SeaWitch">sea witch</a>
+         </dd>
+         <dd>
+            <a href="#hasRole" title="https://children-story.owl#hasRole">has role</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Antagonist" title="https://children-story.owl#Antagonist">antagonist</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="video">
+      <h3>video<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#video</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Visual" title="https://children-story.owl#Visual">visual</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://comicmeta.org/vocab/War">
+      <h3>war<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://comicmeta.org/vocab/War</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Warner_Bros">
+      <h3>warner bros<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#Warner_Bros</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Organization" title="https://children-story.owl#Organization">organization</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://comicmeta.org/vocab/Western">
+      <h3>western<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://comicmeta.org/vocab/Western</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://comicmeta.org/cbo/Genres" title="http://comicmeta.org/cbo/Genres">Genre</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="William_Hanna">
+      <h3>william hanna<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#William_Hanna</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Author" title="https://children-story.owl#Author">author</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="woman">
+      <h3>woman<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://children-story.owl#woman</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Human" title="https://children-story.owl#Human">human</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd/>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

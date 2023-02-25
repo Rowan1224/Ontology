@@ -1,0 +1,984 @@
+<https://children-story.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://children-story.owl> <http://purl.org/dc/elements/1.1/creator> "Nick Knouf <nknouf"@mit.edu> .
+<https://children-story.owl> <http://purl.org/dc/elements/1.1/date> "2003-12-29" .
+<https://children-story.owl> <http://purl.org/dc/elements/1.1/description> "Transformation of bibTeX into an OWL ontology" .
+<https://children-story.owl> <http://purl.org/dc/elements/1.1/identifier> "http://visus.mit.edu/bibtex/0.01/bibtex.owl"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://children-story.owl> <http://purl.org/dc/elements/1.1/subject> "fMRI, ontology, fMRI analysis, foo, bar" .
+<https://children-story.owl> <http://purl.org/dc/elements/1.1/title> "bibtex.owl: an ontology for bibTeX entries" .
+<https://children-story.owl> <http://www.w3.org/2000/01/rdf-schema#comment> "Possible ontology to describe bibTeX entries." .
+<https://children-story.owl> <http://www.w3.org/2000/01/rdf-schema#label> "bibtex ontology" .
+<https://children-story.owl> <http://www.w3.org/2002/07/owl#versionInfo> "0.01" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/source
+<http://purl.org/dc/elements/1.1/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/subject
+<http://purl.org/dc/elements/1.1/subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://comicmeta.org/cbo/genre
+<http://comicmeta.org/cbo/genre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://comicmeta.org/cbo/genre> <http://www.w3.org/2000/01/rdf-schema#range> <http://comicmeta.org/cbo/Genres> .
+# 
+# https://children-story.owl#belongsTo
+<https://children-story.owl#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://children-story.owl#belongsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://children-story.owl#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://children-story.owl#Publication> .
+# 
+# https://children-story.owl#byParties
+<https://children-story.owl#byParties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://children-story.owl#byParties> <http://www.w3.org/2000/01/rdf-schema#domain> <https://children-story.owl#Publication> .
+<https://children-story.owl#byParties> <http://www.w3.org/2000/01/rdf-schema#range> <https://children-story.owl#Parties> .
+# 
+# https://children-story.owl#hasCharacter
+<https://children-story.owl#hasCharacter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://children-story.owl#hasCharacter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://children-story.owl#hasCharacter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://children-story.owl#Story> .
+<https://children-story.owl#hasCharacter> <http://www.w3.org/2000/01/rdf-schema#range> <https://children-story.owl#Characters> .
+# 
+# https://children-story.owl#hasGender
+<https://children-story.owl#hasGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://children-story.owl#hasGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://children-story.owl#hasGender> <http://www.w3.org/2000/01/rdf-schema#range> <https://children-story.owl#Gender> .
+# 
+# https://children-story.owl#hasGenres
+<https://children-story.owl#hasGenres> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://children-story.owl#hasGenres> <http://www.w3.org/2000/01/rdf-schema#domain> <https://children-story.owl#Story> .
+# 
+# https://children-story.owl#hasLocation
+<https://children-story.owl#hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://children-story.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://children-story.owl#hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://children-story.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://children-story.owl#Location> .
+# 
+# https://children-story.owl#hasMedium
+<https://children-story.owl#hasMedium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://children-story.owl#hasMedium> <http://www.w3.org/2000/01/rdf-schema#domain> <https://children-story.owl#Story> .
+<https://children-story.owl#hasMedium> <http://www.w3.org/2000/01/rdf-schema#range> <https://children-story.owl#Medium> .
+# 
+# https://children-story.owl#hasNature
+<https://children-story.owl#hasNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://children-story.owl#hasNature> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://children-story.owl#hasNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://children-story.owl#hasNature> <http://www.w3.org/2000/01/rdf-schema#domain> <https://children-story.owl#Characters> .
+<https://children-story.owl#hasNature> <http://www.w3.org/2000/01/rdf-schema#range> <https://children-story.owl#Nature> .
+# 
+# https://children-story.owl#hasOtherVersions
+<https://children-story.owl#hasOtherVersions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://children-story.owl#hasOtherVersions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://children-story.owl#hasOtherVersions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://children-story.owl#hasOtherVersions> <http://www.w3.org/2000/01/rdf-schema#domain> <https://children-story.owl#Story> .
+<https://children-story.owl#hasOtherVersions> <http://www.w3.org/2000/01/rdf-schema#range> <https://children-story.owl#Story> .
+# 
+# https://children-story.owl#hasPurpose
+<https://children-story.owl#hasPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://children-story.owl#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://children-story.owl#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <https://children-story.owl#Story> .
+<https://children-story.owl#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <https://children-story.owl#Purpose> .
+# 
+# https://children-story.owl#hasRole
+<https://children-story.owl#hasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://children-story.owl#hasRole> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://children-story.owl#hasRole> <http://www.w3.org/2000/01/rdf-schema#domain> <https://children-story.owl#Characters> .
+<https://children-story.owl#hasRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://children-story.owl#Role> .
+# 
+# https://children-story.owl#hasTargetAudience
+<https://children-story.owl#hasTargetAudience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://children-story.owl#hasTargetAudience> <http://www.w3.org/2000/01/rdf-schema#domain> <https://children-story.owl#Story> .
+# 
+# https://children-story.owl#isPublication
+<https://children-story.owl#isPublication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://children-story.owl#isPublication> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://children-story.owl#isPublication> <http://www.w3.org/2000/01/rdf-schema#domain> <https://children-story.owl#Story> .
+<https://children-story.owl#isPublication> <http://www.w3.org/2000/01/rdf-schema#range> <https://children-story.owl#Publication> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://children-story.owl#hasAuthor
+<https://children-story.owl#hasAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://children-story.owl#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://children-story.owl#humanCreator> .
+<https://children-story.owl#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://children-story.owl#hasAuthor> <http://purl.org/dc/elements/1.1/description> "This is tricky due to the fact that order is not (generally) preserved in RDF documents.  The problem arises when you want to have an author list where the order is _extremely_ important.  How shall we do that?  Perhaps we want to define \"hasPrimaryAuthor\", \"hasSecondaryAuthor\", \"hasTertiaryAuthor\", and \"hasRemainingAuthors\", or something of that sort.  This will be have to given more thought." .
+<https://children-story.owl#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#comment> "The name(s) of the author(s), in the format described in the LaTeX book."@en .
+<https://children-story.owl#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#label> "has author"@en .
+# 
+# https://children-story.owl#hasContents
+<https://children-story.owl#hasContents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://children-story.owl#hasContents> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://children-story.owl#hasContents> <http://www.w3.org/2000/01/rdf-schema#comment> "A Table of Contents."@en .
+<https://children-story.owl#hasContents> <http://www.w3.org/2000/01/rdf-schema#label> "has contents"@en .
+# 
+# https://children-story.owl#hasEdition
+<https://children-story.owl#hasEdition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://children-story.owl#hasEdition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://children-story.owl#hasEdition> <http://www.w3.org/2000/01/rdf-schema#comment> "The edition of a book--for example, \"Second\". This should be an ordinal, and should have the first letter capitalized, as shown here; the standard styles convert to lower case when necessary."@en .
+<https://children-story.owl#hasEdition> <http://www.w3.org/2000/01/rdf-schema#label> "has edition"@en .
+# 
+# https://children-story.owl#hasEditor
+<https://children-story.owl#hasEditor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://children-story.owl#hasEditor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://children-story.owl#humanCreator> .
+<https://children-story.owl#hasEditor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://children-story.owl#hasEditor> <http://purl.org/dc/elements/1.1/description> "Again, the same issues that arose with the \"hasAuthor\" property apply here." .
+<https://children-story.owl#hasEditor> <http://www.w3.org/2000/01/rdf-schema#comment> "Name(s) of editor(s), typed as indicated in the LaTeX book. If there is also an author field, then the editor field gives the editor of the book or collection in which the reference appears."@en .
+<https://children-story.owl#hasEditor> <http://www.w3.org/2000/01/rdf-schema#label> "has editor"@en .
+# 
+# https://children-story.owl#hasLanguage
+<https://children-story.owl#hasLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://children-story.owl#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://children-story.owl#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "The language the document is in."@en .
+<https://children-story.owl#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "has language"@en .
+# 
+# https://children-story.owl#hasPublisher
+<https://children-story.owl#hasPublisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://children-story.owl#hasPublisher> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://children-story.owl#hasPublisher> <http://purl.org/dc/elements/1.1/description> "This is a case where an ObjectProperty might be a better choice, where the range is some set of publisher names defined in another ontology.  That would allow all of the metadata for the publisher to be incorporated as needed." .
+<https://children-story.owl#hasPublisher> <http://www.w3.org/2000/01/rdf-schema#comment> "The publisher's name."@en .
+<https://children-story.owl#hasPublisher> <http://www.w3.org/2000/01/rdf-schema#label> "has publisher"@en .
+# 
+# https://children-story.owl#hasSeries
+<https://children-story.owl#hasSeries> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://children-story.owl#hasSeries> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://children-story.owl#hasSeries> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of a series or set of books. When citing an entire book, the the title field gives its title and an optional series field gives the name of a series or multi-volume set in which the book is published."@en .
+<https://children-story.owl#hasSeries> <http://www.w3.org/2000/01/rdf-schema#label> "has series"@en .
+# 
+# https://children-story.owl#hasTitle
+<https://children-story.owl#hasTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://children-story.owl#hasTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://children-story.owl#hasTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "The work's title, typed as explained in the LaTeX book."@en .
+<https://children-story.owl#hasTitle> <http://www.w3.org/2000/01/rdf-schema#label> "has title"@en .
+# 
+# https://children-story.owl#hasURL
+<https://children-story.owl#hasURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://children-story.owl#hasURL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://children-story.owl#hasURL> <http://www.w3.org/2000/01/rdf-schema#comment> "The WWW Universal Resource Locator that points to the item being referenced. This often is used for technical reports to point to the ftp or web site where the postscript source of the report is located."@en .
+<https://children-story.owl#hasURL> <http://www.w3.org/2000/01/rdf-schema#label> "has URL"@en .
+# 
+# https://children-story.owl#hasYear
+<https://children-story.owl#hasYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://children-story.owl#hasYear> <http://www.w3.org/2000/01/rdf-schema#domain> <https://children-story.owl#Publication> .
+<https://children-story.owl#hasYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://children-story.owl#howPublished
+<https://children-story.owl#howPublished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://children-story.owl#howPublished> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://children-story.owl#howPublished> <http://www.w3.org/2000/01/rdf-schema#comment> "How something strange has been published. The first word should be capitalized."@en .
+<https://children-story.owl#howPublished> <http://www.w3.org/2000/01/rdf-schema#label> "how published"@en .
+# 
+# https://children-story.owl#humanCreator
+<https://children-story.owl#humanCreator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://children-story.owl#humanCreator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://children-story.owl#humanCreator> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic human creator category, necessary in order to contain both author and editor."@en .
+<https://children-story.owl#humanCreator> <http://www.w3.org/2000/01/rdf-schema#label> "human creator"@en .
+# 
+# https://children-story.owl#minTargetAge
+<https://children-story.owl#minTargetAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://children-story.owl#minTargetAge> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://comicmeta.org/cbo/Agent
+<http://comicmeta.org/cbo/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://comicmeta.org/cbo/Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "A person, organization, or intelligence in a comic universe."@en .
+<http://comicmeta.org/cbo/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
+<http://comicmeta.org/cbo/Agent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# http://comicmeta.org/cbo/Genres
+<http://comicmeta.org/cbo/Genres> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://comicmeta.org/cbo/Genres> <http://www.w3.org/2000/01/rdf-schema#comment> "A comics genre."@en .
+<http://comicmeta.org/cbo/Genres> <http://www.w3.org/2000/01/rdf-schema#label> "Genre"@en .
+<http://comicmeta.org/cbo/Genres> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# http://comicmeta.org/cbo/Team
+<http://comicmeta.org/cbo/Team> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://comicmeta.org/cbo/Team> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://comicmeta.org/cbo/Agent> .
+# 
+# https://children-story.owl#Animal
+<https://children-story.owl#Animal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Animal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://children-story.owl#Non-Human> .
+<https://children-story.owl#Animal> <http://www.w3.org/2002/07/owl#disjointWith> <https://children-story.owl#Object> .
+# 
+# https://children-story.owl#Audio
+<https://children-story.owl#Audio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Audio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://children-story.owl#Medium> .
+<https://children-story.owl#Audio> <http://www.w3.org/2000/01/rdf-schema#comment> "an engaging form of communication that combines speech and music into compelling narratives" .
+# 
+# https://children-story.owl#Author
+<https://children-story.owl#Author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Author> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://children-story.owl#Parties> .
+<https://children-story.owl#Author> <http://www.w3.org/2002/07/owl#disjointWith> <https://children-story.owl#Organization> .
+<https://children-story.owl#Author> <http://www.w3.org/2000/01/rdf-schema#comment> "a writer of a book, article, or document. (Oxford Languages)" .
+# 
+# https://children-story.owl#Characters
+<https://children-story.owl#Characters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Characters> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://comicmeta.org/cbo/Agent> .
+<https://children-story.owl#Characters> <http://www.w3.org/2000/01/rdf-schema#comment> "person in a novel, play, or film. (oxford languages)" .
+# 
+# https://children-story.owl#Continent
+<https://children-story.owl#Continent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Continent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://children-story.owl#Location> .
+<https://children-story.owl#Continent> <http://www.w3.org/2000/01/rdf-schema#comment> "any of the world's main continuous expanses of land (Europe, Asia, Africa, North and South America, Australia, Antarctica). (Oxford Languages)" .
+# 
+# https://children-story.owl#Country
+<https://children-story.owl#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://children-story.owl#Location> .
+<https://children-story.owl#Country> <http://www.w3.org/2000/01/rdf-schema#comment> "a nation with its own government, occupying a particular territory. (oxford Languages)" .
+# 
+# https://children-story.owl#Fiction
+<https://children-story.owl#Fiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Fiction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://comicmeta.org/cbo/Genres> .
+<https://children-story.owl#Fiction> <http://www.w3.org/2002/07/owl#disjointWith> <https://children-story.owl#Non-Fiction> .
+<https://children-story.owl#Fiction> <http://www.w3.org/2000/01/rdf-schema#comment> "literature in the form of prose that describes imaginary events and people. (oxford languages)" .
+# 
+# https://children-story.owl#Gender
+<https://children-story.owl#Gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Gender> <http://www.w3.org/2000/01/rdf-schema#comment> "the male sex or the female sex, especially when considered with reference to social and cultural differences rather than biological ones, or one of a range of other identities that do not correspond to established ideas of male and female. (oxford languages)" .
+# 
+# https://children-story.owl#Human
+<https://children-story.owl#Human> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Human> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://children-story.owl#Nature> .
+<https://children-story.owl#Human> <http://www.w3.org/2000/01/rdf-schema#comment> "relating to or characteristic of humankind. (Oxford Languages)" .
+# 
+# https://children-story.owl#Lexical
+<https://children-story.owl#Lexical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Lexical> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://children-story.owl#Medium> .
+# 
+# https://children-story.owl#Location
+<https://children-story.owl#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Location> <http://www.w3.org/2000/01/rdf-schema#comment> "The place where story was published" .
+# 
+# https://children-story.owl#Medium
+<https://children-story.owl#Medium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Medium> <http://www.w3.org/2000/01/rdf-schema#comment> "The format of the story."@en .
+<https://children-story.owl#Medium> <http://www.w3.org/2000/01/rdf-schema#label> "Medium"@en .
+# 
+# https://children-story.owl#Nature
+<https://children-story.owl#Nature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Nature> <http://www.w3.org/2000/01/rdf-schema#comment> "the basic or inherent features, character, or qualities of something. (oxford language)" .
+# 
+# https://children-story.owl#Non-Fiction
+<https://children-story.owl#Non-Fiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Non-Fiction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://comicmeta.org/cbo/Genres> .
+<https://children-story.owl#Non-Fiction> <http://www.w3.org/2000/01/rdf-schema#comment> "prose writing that is informative or factual rather than fictional. (oxford languages)" .
+# 
+# https://children-story.owl#Non-Human
+<https://children-story.owl#Non-Human> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Non-Human> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://children-story.owl#Nature> .
+<https://children-story.owl#Non-Human> <http://www.w3.org/2000/01/rdf-schema#comment> "a creature that is not a human being. (Oxford Languages)" .
+# 
+# https://children-story.owl#Object
+<https://children-story.owl#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://children-story.owl#Non-Human> .
+# 
+# https://children-story.owl#Organization
+<https://children-story.owl#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://children-story.owl#Parties> .
+<https://children-story.owl#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "an organized group of people with a particular purpose, such as a business or a government department. (Oxford Languages)" .
+# 
+# https://children-story.owl#Other
+<https://children-story.owl#Other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Other> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://children-story.owl#Nature> .
+# 
+# https://children-story.owl#Parties
+<https://children-story.owl#Parties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Parties> <http://www.w3.org/2000/01/rdf-schema#comment> "Entites that create stories" .
+# 
+# https://children-story.owl#Publication
+<https://children-story.owl#Publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Publication> <http://www.w3.org/2000/01/rdf-schema#comment> "the preparation and issuing of a book, journal, or piece of music for public sale. (oxford language)" .
+# 
+# https://children-story.owl#Purpose
+<https://children-story.owl#Purpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Purpose> <http://www.w3.org/2000/01/rdf-schema#comment> "the reason for which something is done or created or for which something exists. (oxford languages)" .
+# 
+# https://children-story.owl#Role
+<https://children-story.owl#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "the function assumed or part played by a person or thing in a particular situation." .
+# 
+# https://children-story.owl#Story
+<https://children-story.owl#Story> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Story> <http://www.w3.org/2000/01/rdf-schema#comment> "Base class for all entries"@en .
+<https://children-story.owl#Story> <http://www.w3.org/2000/01/rdf-schema#label> "Story"@en .
+# 
+# https://children-story.owl#Visual
+<https://children-story.owl#Visual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Visual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://children-story.owl#Medium> .
+# 
+# https://children-story.owl#Children's_Story
+<https://children-story.owl#Children's_Story> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Children's_Story> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid6 .
+_:genid6 <http://www.w3.org/2001/XMLSchema#maxExclusive> "18"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
+_:genid8 <http://www.w3.org/2001/XMLSchema#minInclusive> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://children-story.owl#minTargetAge> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Story> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://children-story.owl#Children's_Story> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://children-story.owl#Story> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://comicmeta.org/vocab/Adult
+<http://comicmeta.org/vocab/Adult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://comicmeta.org/vocab/Adult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://comicmeta.org/cbo/Genres> .
+# 
+# http://comicmeta.org/vocab/Comix
+<http://comicmeta.org/vocab/Comix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://comicmeta.org/vocab/Comix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://comicmeta.org/cbo/Genres> .
+# 
+# http://comicmeta.org/vocab/Crime
+<http://comicmeta.org/vocab/Crime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://comicmeta.org/vocab/Crime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://comicmeta.org/cbo/Genres> .
+# 
+# http://comicmeta.org/vocab/FunnyAnimal
+<http://comicmeta.org/vocab/FunnyAnimal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://comicmeta.org/vocab/FunnyAnimal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://comicmeta.org/cbo/Genres> .
+# 
+# http://comicmeta.org/vocab/Horror
+<http://comicmeta.org/vocab/Horror> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://comicmeta.org/vocab/Horror> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://comicmeta.org/cbo/Genres> .
+# 
+# http://comicmeta.org/vocab/Romance
+<http://comicmeta.org/vocab/Romance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://comicmeta.org/vocab/Romance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://comicmeta.org/cbo/Genres> .
+# 
+# http://comicmeta.org/vocab/ScienceFiction
+<http://comicmeta.org/vocab/ScienceFiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://comicmeta.org/vocab/ScienceFiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://comicmeta.org/cbo/Genres> .
+# 
+# http://comicmeta.org/vocab/SuperHero
+<http://comicmeta.org/vocab/SuperHero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://comicmeta.org/vocab/SuperHero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://comicmeta.org/cbo/Genres> .
+# 
+# http://comicmeta.org/vocab/War
+<http://comicmeta.org/vocab/War> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://comicmeta.org/vocab/War> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://comicmeta.org/cbo/Genres> .
+# 
+# http://comicmeta.org/vocab/Western
+<http://comicmeta.org/vocab/Western> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://comicmeta.org/vocab/Western> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://comicmeta.org/cbo/Genres> .
+# 
+# https://children-story.owl#Adam_and_Eve
+<https://children-story.owl#Adam_and_Eve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Adam_and_Eve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Story> .
+# 
+# https://children-story.owl#Adventure
+<https://children-story.owl#Adventure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Adventure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://comicmeta.org/cbo/Genres> .
+# 
+# https://children-story.owl#Africa
+<https://children-story.owl#Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Continent> .
+# 
+# https://children-story.owl#Anna
+<https://children-story.owl#Anna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Anna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Characters> .
+<https://children-story.owl#Anna> <https://children-story.owl#hasGender> <https://children-story.owl#Female> .
+<https://children-story.owl#Anna> <https://children-story.owl#hasNature> <https://children-story.owl#girl> .
+<https://children-story.owl#Anna> <https://children-story.owl#hasRole> <https://children-story.owl#Protagonist> .
+# 
+# https://children-story.owl#Antagonist
+<https://children-story.owl#Antagonist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Antagonist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Role> .
+# 
+# https://children-story.owl#Ariel
+<https://children-story.owl#Ariel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Ariel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Characters> .
+<https://children-story.owl#Ariel> <https://children-story.owl#hasGender> <https://children-story.owl#Female> .
+<https://children-story.owl#Ariel> <https://children-story.owl#hasNature> <https://children-story.owl#Mermaid> .
+<https://children-story.owl#Ariel> <https://children-story.owl#hasRole> <https://children-story.owl#Protagonist> .
+# 
+# https://children-story.owl#Asia
+<https://children-story.owl#Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Continent> .
+# 
+# https://children-story.owl#Australia
+<https://children-story.owl#Australia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Australia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Continent> .
+# 
+# https://children-story.owl#Baby_Shark
+<https://children-story.owl#Baby_Shark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Baby_Shark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Story> .
+<https://children-story.owl#Baby_Shark> <https://children-story.owl#hasCharacter> <https://children-story.owl#baby_shark> .
+<https://children-story.owl#Baby_Shark> <https://children-story.owl#hasCharacter> <https://children-story.owl#daddy_shark> .
+<https://children-story.owl#Baby_Shark> <https://children-story.owl#hasCharacter> <https://children-story.owl#grandma_shark> .
+<https://children-story.owl#Baby_Shark> <https://children-story.owl#hasCharacter> <https://children-story.owl#grandpa_shark> .
+<https://children-story.owl#Baby_Shark> <https://children-story.owl#hasCharacter> <https://children-story.owl#mommy_shark> .
+<https://children-story.owl#Baby_Shark> <https://children-story.owl#hasLocation> <https://children-story.owl#South_Korea> .
+<https://children-story.owl#Baby_Shark> <https://children-story.owl#hasMedium> <https://children-story.owl#song> .
+<https://children-story.owl#Baby_Shark> <https://children-story.owl#hasPurpose> <https://children-story.owl#Entertainment> .
+<https://children-story.owl#Baby_Shark> <https://children-story.owl#hasYear> "2017"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://children-story.owl#Baby_Shark> <https://children-story.owl#minTargetAge> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://children-story.owl#Biography
+<https://children-story.owl#Biography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Biography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Non-Fiction> .
+# 
+# https://children-story.owl#Denmark
+<https://children-story.owl#Denmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Denmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid10 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#hasValue> <https://children-story.owl#Europe> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://children-story.owl#hasLocation> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Country> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://children-story.owl#Disney
+<https://children-story.owl#Disney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Disney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Organization> .
+# 
+# https://children-story.owl#Educational
+<https://children-story.owl#Educational> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Educational> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Purpose> .
+# 
+# https://children-story.owl#Elsa
+<https://children-story.owl#Elsa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Elsa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Characters> .
+<https://children-story.owl#Elsa> <https://children-story.owl#hasGender> <https://children-story.owl#Female> .
+<https://children-story.owl#Elsa> <https://children-story.owl#hasNature> <https://children-story.owl#girl> .
+<https://children-story.owl#Elsa> <https://children-story.owl#hasRole> <https://children-story.owl#Protagonist> .
+# 
+# https://children-story.owl#Entertainment
+<https://children-story.owl#Entertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Entertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Purpose> .
+# 
+# https://children-story.owl#Europe
+<https://children-story.owl#Europe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Europe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Continent> .
+# 
+# https://children-story.owl#Fantasy
+<https://children-story.owl#Fantasy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Fantasy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Fiction> .
+# 
+# https://children-story.owl#Female
+<https://children-story.owl#Female> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Female> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Gender> .
+# 
+# https://children-story.owl#Folklore
+<https://children-story.owl#Folklore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Folklore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://comicmeta.org/cbo/Genres> .
+# 
+# https://children-story.owl#Frozen
+<https://children-story.owl#Frozen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Frozen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Story> .
+<https://children-story.owl#Frozen> <https://children-story.owl#byParties> <https://children-story.owl#Disney> .
+<https://children-story.owl#Frozen> <https://children-story.owl#hasCharacter> <https://children-story.owl#Anna> .
+<https://children-story.owl#Frozen> <https://children-story.owl#hasCharacter> <https://children-story.owl#Elsa> .
+<https://children-story.owl#Frozen> <https://children-story.owl#hasLocation> <https://children-story.owl#USA> .
+<https://children-story.owl#Frozen> <https://children-story.owl#hasMedium> <https://children-story.owl#video> .
+<https://children-story.owl#Frozen> <https://children-story.owl#hasYear> "2013"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://children-story.owl#Frozen> <https://children-story.owl#minTargetAge> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://children-story.owl#Germany
+<https://children-story.owl#Germany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Germany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid14 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#hasValue> <https://children-story.owl#Europe> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://children-story.owl#hasLocation> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Country> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://children-story.owl#Goldilocks
+<https://children-story.owl#Goldilocks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Goldilocks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Characters> .
+<https://children-story.owl#Goldilocks> <https://children-story.owl#hasGender> <https://children-story.owl#Female> .
+<https://children-story.owl#Goldilocks> <https://children-story.owl#hasNature> <https://children-story.owl#girl> .
+<https://children-story.owl#Goldilocks> <https://children-story.owl#hasRole> <https://children-story.owl#Protagonist> .
+# 
+# https://children-story.owl#Goldilocks_and_the_Three_Bears
+<https://children-story.owl#Goldilocks_and_the_Three_Bears> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Goldilocks_and_the_Three_Bears> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Story> .
+<https://children-story.owl#Goldilocks_and_the_Three_Bears> <https://children-story.owl#hasCharacter> <https://children-story.owl#Goldilocks> .
+<https://children-story.owl#Goldilocks_and_the_Three_Bears> <https://children-story.owl#hasCharacter> <https://children-story.owl#big_bear> .
+<https://children-story.owl#Goldilocks_and_the_Three_Bears> <https://children-story.owl#hasCharacter> <https://children-story.owl#medium_bear> .
+<https://children-story.owl#Goldilocks_and_the_Three_Bears> <https://children-story.owl#hasCharacter> <https://children-story.owl#small_bear> .
+<https://children-story.owl#Goldilocks_and_the_Three_Bears> <https://children-story.owl#hasGenres> <https://children-story.owl#Folklore> .
+<https://children-story.owl#Goldilocks_and_the_Three_Bears> <https://children-story.owl#hasYear> "1837"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://children-story.owl#Goldilocks_and_the_Three_Bears> <https://children-story.owl#minTargetAge> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://children-story.owl#Gretel
+<https://children-story.owl#Gretel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Gretel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Characters> .
+<https://children-story.owl#Gretel> <https://children-story.owl#hasGender> <https://children-story.owl#Female> .
+<https://children-story.owl#Gretel> <https://children-story.owl#hasNature> <https://children-story.owl#girl> .
+<https://children-story.owl#Gretel> <https://children-story.owl#hasRole> <https://children-story.owl#Protagonist> .
+# 
+# https://children-story.owl#Hans_Christian_Anderson
+<https://children-story.owl#Hans_Christian_Anderson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Hans_Christian_Anderson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Author> .
+# 
+# https://children-story.owl#Hansel
+<https://children-story.owl#Hansel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Hansel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Characters> .
+<https://children-story.owl#Hansel> <https://children-story.owl#hasGender> <https://children-story.owl#Male> .
+<https://children-story.owl#Hansel> <https://children-story.owl#hasNature> <https://children-story.owl#boy> .
+<https://children-story.owl#Hansel> <https://children-story.owl#hasRole> <https://children-story.owl#Protagonist> .
+# 
+# https://children-story.owl#Hansel_and_Gretel
+<https://children-story.owl#Hansel_and_Gretel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Hansel_and_Gretel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Story> .
+<https://children-story.owl#Hansel_and_Gretel> <https://children-story.owl#hasCharacter> <https://children-story.owl#Gretel> .
+<https://children-story.owl#Hansel_and_Gretel> <https://children-story.owl#hasCharacter> <https://children-story.owl#Hansel> .
+<https://children-story.owl#Hansel_and_Gretel> <https://children-story.owl#hasGenres> <https://children-story.owl#Folklore> .
+<https://children-story.owl#Hansel_and_Gretel> <https://children-story.owl#hasLocation> <https://children-story.owl#Germany> .
+<https://children-story.owl#Hansel_and_Gretel> <https://children-story.owl#hasMedium> <https://children-story.owl#book> .
+<https://children-story.owl#Hansel_and_Gretel> <https://children-story.owl#hasPurpose> <https://children-story.owl#Educational> .
+<https://children-story.owl#Hansel_and_Gretel> <https://children-story.owl#hasYear> "1812"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://children-story.owl#Hansel_and_Gretel> <https://children-story.owl#minTargetAge> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://children-story.owl#Historical
+<https://children-story.owl#Historical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Historical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Non-Fiction> .
+# 
+# https://children-story.owl#Indoctrination
+<https://children-story.owl#Indoctrination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Indoctrination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Purpose> .
+# 
+# https://children-story.owl#Japan
+<https://children-story.owl#Japan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Japan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid18 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#hasValue> <https://children-story.owl#Asia> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://children-story.owl#hasLocation> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Country> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://children-story.owl#Jerry
+<https://children-story.owl#Jerry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Jerry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Characters> .
+<https://children-story.owl#Jerry> <https://children-story.owl#hasGender> <https://children-story.owl#Male> .
+<https://children-story.owl#Jerry> <https://children-story.owl#hasNature> <https://children-story.owl#mouse> .
+# 
+# https://children-story.owl#Male
+<https://children-story.owl#Male> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Male> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Gender> .
+# 
+# https://children-story.owl#Mama_Built_a_Little_Nest
+<https://children-story.owl#Mama_Built_a_Little_Nest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Mama_Built_a_Little_Nest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Story> .
+<https://children-story.owl#Mama_Built_a_Little_Nest> <https://children-story.owl#hasLocation> <https://children-story.owl#USA> .
+<https://children-story.owl#Mama_Built_a_Little_Nest> <https://children-story.owl#hasPurpose> <https://children-story.owl#Educational> .
+<https://children-story.owl#Mama_Built_a_Little_Nest> <https://children-story.owl#hasYear> "2014"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://children-story.owl#Mama_Built_a_Little_Nest> <https://children-story.owl#minTargetAge> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://children-story.owl#Mermaid
+<https://children-story.owl#Mermaid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Mermaid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Other> .
+# 
+# https://children-story.owl#North_America
+<https://children-story.owl#North_America> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#North_America> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Continent> .
+# 
+# https://children-story.owl#Others
+<https://children-story.owl#Others> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Others> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Gender> .
+# 
+# https://children-story.owl#Protagonist
+<https://children-story.owl#Protagonist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Protagonist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Role> .
+# 
+# https://children-story.owl#Proverb
+<https://children-story.owl#Proverb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Proverb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://comicmeta.org/cbo/Genres> .
+# 
+# https://children-story.owl#Religious
+<https://children-story.owl#Religious> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Religious> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://comicmeta.org/cbo/Genres> .
+# 
+# https://children-story.owl#SeaWitch
+<https://children-story.owl#SeaWitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#SeaWitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Other> .
+# 
+# https://children-story.owl#South_America
+<https://children-story.owl#South_America> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#South_America> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Continent> .
+# 
+# https://children-story.owl#South_Korea
+<https://children-story.owl#South_Korea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#South_Korea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid22 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#hasValue> <https://children-story.owl#Asia> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://children-story.owl#hasLocation> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Country> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://children-story.owl#Supporting
+<https://children-story.owl#Supporting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Supporting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Role> .
+# 
+# https://children-story.owl#TheLittleMermaid_1837
+<https://children-story.owl#TheLittleMermaid_1837> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#TheLittleMermaid_1837> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Story> .
+<https://children-story.owl#TheLittleMermaid_1837> <https://children-story.owl#byParties> <https://children-story.owl#Hans_Christian_Anderson> .
+<https://children-story.owl#TheLittleMermaid_1837> <https://children-story.owl#hasCharacter> <https://children-story.owl#Ariel> .
+<https://children-story.owl#TheLittleMermaid_1837> <https://children-story.owl#hasCharacter> <https://children-story.owl#Ursula> .
+<https://children-story.owl#TheLittleMermaid_1837> <https://children-story.owl#hasGenres> <https://children-story.owl#Fantasy> .
+<https://children-story.owl#TheLittleMermaid_1837> <https://children-story.owl#hasGenres> <https://children-story.owl#Folklore> .
+<https://children-story.owl#TheLittleMermaid_1837> <https://children-story.owl#hasLocation> <https://children-story.owl#Denmark> .
+<https://children-story.owl#TheLittleMermaid_1837> <https://children-story.owl#hasMedium> <https://children-story.owl#book> .
+<https://children-story.owl#TheLittleMermaid_1837> <https://children-story.owl#hasOtherVersions> <https://children-story.owl#TheLittleMermaid_1989> .
+<https://children-story.owl#TheLittleMermaid_1837> <https://children-story.owl#hasYear> "1837"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://children-story.owl#TheLittleMermaid_1837> <https://children-story.owl#minTargetAge> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://children-story.owl#TheLittleMermaid_1989
+<https://children-story.owl#TheLittleMermaid_1989> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#TheLittleMermaid_1989> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Story> .
+<https://children-story.owl#TheLittleMermaid_1989> <https://children-story.owl#byParties> <https://children-story.owl#Disney> .
+<https://children-story.owl#TheLittleMermaid_1989> <https://children-story.owl#hasCharacter> <https://children-story.owl#Ariel> .
+<https://children-story.owl#TheLittleMermaid_1989> <https://children-story.owl#hasCharacter> <https://children-story.owl#Ursula> .
+<https://children-story.owl#TheLittleMermaid_1989> <https://children-story.owl#hasGenres> <https://children-story.owl#Fantasy> .
+<https://children-story.owl#TheLittleMermaid_1989> <https://children-story.owl#hasGenres> <https://children-story.owl#Folklore> .
+<https://children-story.owl#TheLittleMermaid_1989> <https://children-story.owl#hasLocation> <https://children-story.owl#USA> .
+<https://children-story.owl#TheLittleMermaid_1989> <https://children-story.owl#hasMedium> <https://children-story.owl#video> .
+<https://children-story.owl#TheLittleMermaid_1989> <https://children-story.owl#hasPurpose> <https://children-story.owl#Entertainment> .
+<https://children-story.owl#TheLittleMermaid_1989> <https://children-story.owl#hasYear> "1989"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://children-story.owl#TheLittleMermaid_1989> <https://children-story.owl#minTargetAge> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://children-story.owl#TheLittleMermaid_1989> <http://www.w3.org/2002/07/owl#priorVersion> <https://children-story.owl#TheLittleMermaid_1837> .
+# 
+# https://children-story.owl#The_Poisonous_Mushroom
+<https://children-story.owl#The_Poisonous_Mushroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#The_Poisonous_Mushroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Story> .
+<https://children-story.owl#The_Poisonous_Mushroom> <https://children-story.owl#hasLocation> <https://children-story.owl#Germany> .
+<https://children-story.owl#The_Poisonous_Mushroom> <https://children-story.owl#hasPurpose> <https://children-story.owl#Indoctrination> .
+<https://children-story.owl#The_Poisonous_Mushroom> <https://children-story.owl#hasYear> "1938"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://children-story.owl#The_Poisonous_Mushroom> <https://children-story.owl#minTargetAge> "7"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://children-story.owl#Tom
+<https://children-story.owl#Tom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Tom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Characters> .
+<https://children-story.owl#Tom> <https://children-story.owl#hasGender> <https://children-story.owl#Male> .
+<https://children-story.owl#Tom> <https://children-story.owl#hasNature> <https://children-story.owl#cat> .
+# 
+# https://children-story.owl#Tom_and_Jerry
+<https://children-story.owl#Tom_and_Jerry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Tom_and_Jerry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Story> .
+<https://children-story.owl#Tom_and_Jerry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#complementOf> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://children-story.owl#Lexical> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://children-story.owl#hasMedium> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://children-story.owl#Tom_and_Jerry> <https://children-story.owl#byParties> <https://children-story.owl#Warner_Bros> .
+<https://children-story.owl#Tom_and_Jerry> <https://children-story.owl#byParties> <https://children-story.owl#William_Hanna> .
+<https://children-story.owl#Tom_and_Jerry> <https://children-story.owl#hasCharacter> <https://children-story.owl#Jerry> .
+<https://children-story.owl#Tom_and_Jerry> <https://children-story.owl#hasCharacter> <https://children-story.owl#Tom> .
+<https://children-story.owl#Tom_and_Jerry> <https://children-story.owl#hasMedium> <https://children-story.owl#video> .
+<https://children-story.owl#Tom_and_Jerry> <https://children-story.owl#hasYear> "1940"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://children-story.owl#Tom_and_Jerry> <https://children-story.owl#minTargetAge> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://children-story.owl#USA
+<https://children-story.owl#USA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#USA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid28 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#hasValue> <https://children-story.owl#North_America> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://children-story.owl#hasLocation> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Country> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://children-story.owl#United_Kingdom
+<https://children-story.owl#United_Kingdom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#United_Kingdom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid32 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#hasValue> <https://children-story.owl#Europe> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://children-story.owl#hasLocation> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Country> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://children-story.owl#Ursula
+<https://children-story.owl#Ursula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Ursula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Characters> .
+<https://children-story.owl#Ursula> <https://children-story.owl#hasGender> <https://children-story.owl#Female> .
+<https://children-story.owl#Ursula> <https://children-story.owl#hasNature> <https://children-story.owl#SeaWitch> .
+<https://children-story.owl#Ursula> <https://children-story.owl#hasRole> <https://children-story.owl#Antagonist> .
+# 
+# https://children-story.owl#Warner_Bros
+<https://children-story.owl#Warner_Bros> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#Warner_Bros> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Organization> .
+# 
+# https://children-story.owl#William_Hanna
+<https://children-story.owl#William_Hanna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#William_Hanna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Author> .
+# 
+# https://children-story.owl#baby_shark
+<https://children-story.owl#baby_shark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#baby_shark> <https://children-story.owl#hasGender> <https://children-story.owl#Others> .
+<https://children-story.owl#baby_shark> <https://children-story.owl#hasNature> <https://children-story.owl#shark> .
+# 
+# https://children-story.owl#bear
+<https://children-story.owl#bear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#bear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Animal> .
+# 
+# https://children-story.owl#big_bear
+<https://children-story.owl#big_bear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#big_bear> <https://children-story.owl#hasNature> <https://children-story.owl#bear> .
+# 
+# https://children-story.owl#book
+<https://children-story.owl#book> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#book> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Lexical> .
+<https://children-story.owl#book> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Visual> .
+# 
+# https://children-story.owl#boy
+<https://children-story.owl#boy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#boy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Human> .
+<https://children-story.owl#boy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#hasValue> <https://children-story.owl#Male> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://children-story.owl#hasGender> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://children-story.owl#cat
+<https://children-story.owl#cat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#cat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Animal> .
+# 
+# https://children-story.owl#comics
+<https://children-story.owl#comics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#comics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Visual> .
+# 
+# https://children-story.owl#daddy_shark
+<https://children-story.owl#daddy_shark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#daddy_shark> <https://children-story.owl#hasGender> <https://children-story.owl#Male> .
+<https://children-story.owl#daddy_shark> <https://children-story.owl#hasNature> <https://children-story.owl#shark> .
+# 
+# https://children-story.owl#girl
+<https://children-story.owl#girl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#girl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Human> .
+<https://children-story.owl#girl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#hasValue> <https://children-story.owl#Female> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://children-story.owl#hasGender> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://children-story.owl#grandma_shark
+<https://children-story.owl#grandma_shark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#grandma_shark> <https://children-story.owl#hasGender> <https://children-story.owl#Female> .
+<https://children-story.owl#grandma_shark> <https://children-story.owl#hasNature> <https://children-story.owl#shark> .
+# 
+# https://children-story.owl#grandpa_shark
+<https://children-story.owl#grandpa_shark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#grandpa_shark> <https://children-story.owl#hasGender> <https://children-story.owl#Male> .
+<https://children-story.owl#grandpa_shark> <https://children-story.owl#hasNature> <https://children-story.owl#shark> .
+# 
+# https://children-story.owl#man
+<https://children-story.owl#man> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#man> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Human> .
+<https://children-story.owl#man> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid38 .
+_:genid38 <http://www.w3.org/2002/07/owl#hasValue> <https://children-story.owl#Male> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://children-story.owl#hasGender> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://children-story.owl#medium_bear
+<https://children-story.owl#medium_bear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#medium_bear> <https://children-story.owl#hasNature> <https://children-story.owl#bear> .
+# 
+# https://children-story.owl#mommy_shark
+<https://children-story.owl#mommy_shark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#mommy_shark> <https://children-story.owl#hasGender> <https://children-story.owl#Female> .
+# 
+# https://children-story.owl#mouse
+<https://children-story.owl#mouse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#mouse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Animal> .
+# 
+# https://children-story.owl#shark
+<https://children-story.owl#shark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#shark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Animal> .
+# 
+# https://children-story.owl#small_bear
+<https://children-story.owl#small_bear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#small_bear> <https://children-story.owl#hasNature> <https://children-story.owl#bear> .
+# 
+# https://children-story.owl#song
+<https://children-story.owl#song> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#song> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Audio> .
+<https://children-story.owl#song> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Lexical> .
+# 
+# https://children-story.owl#video
+<https://children-story.owl#video> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#video> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Visual> .
+# 
+# https://children-story.owl#woman
+<https://children-story.owl#woman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://children-story.owl#woman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://children-story.owl#Human> .
+<https://children-story.owl#woman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#hasValue> <https://children-story.owl#Female> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://children-story.owl#hasGender> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+_:genid40 <http://purl.org/dc/elements/1.1/description> "One thing to figure out is whether or not this tells us what we want; that is, does this imply that we must have at least one property of humanCreator, which could be either hasAuthor or hasEditor?" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://purl.org/dc/elements/1.1/creator> <http://purl.org/dc/elements/1.1/title> "this is a test title" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid41 <http://www.w3.org/2002/07/owl#members> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Other> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Non-Human> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Human> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid45 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Elsa> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Anna> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid48 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Protagonist> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Antagonist> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid51 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Male> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Female> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid54 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Others> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://children-story.owl#Female> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
